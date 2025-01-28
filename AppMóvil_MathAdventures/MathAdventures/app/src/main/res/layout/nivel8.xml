@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/fondonv2"
+    android:gravity="center">
+
+    <!-- Nivel y nombre con estilo mejorado -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nivel 8"
+        style="@style/LevelTitleText"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="4dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Distribución de Cajas"
+        style="@style/InstructionText"
+        android:textSize="24sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Instrucción del nivel con estilo -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Distribuye las cajas correctamente en cada vagón."
+        style="@style/InstructionText"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Área de pregunta con MaterialCardView -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/textPregunta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Divide las cajas entre los vagones"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:background="#2196F3"
+            android:padding="10dp"
+            android:gravity="center"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Icono del tren con MaterialCardView -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp">
+
+        <ImageView
+            android:id="@+id/trenIcon"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:src="@drawable/tren"
+            android:scaleType="centerCrop"
+            android:contentDescription="Tren para distribución de cajas"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Texto del vagon actual con estilo -->
+    <TextView
+        android:id="@+id/textVagonActual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vagón 1 de 5"
+        style="@style/InstructionText"
+        android:textSize="22sp"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Contenedor para opciones de respuesta -->
+    <GridLayout
+        android:id="@+id/opcionesContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:useDefaultMargins="true"
+        android:alignmentMode="alignBounds"
+        android:gravity="center"
+        android:layout_marginStart="55dp"/>
+
+    <!-- Espacio flexible -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Botones inferiores -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="30dp">
+
+        <!-- Botón Regresar -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:src="@drawable/btnreturn"
+            android:scaleType="centerInside"
+            android:background="@null"
+            android:contentDescription="Botón de Regresar"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <!-- Botón Consejos -->
+        <ImageButton
+            android:id="@+id/btnTips"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/btnconsejo"
+            android:scaleType="centerInside"
+            android:background="@null"
+            android:contentDescription="Botón de Consejos"/>
+    </LinearLayout>
+</LinearLayout>

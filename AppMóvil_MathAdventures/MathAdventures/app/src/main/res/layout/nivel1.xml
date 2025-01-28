@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/fondonv2"
+    android:gravity="center">
+
+    <!-- Nivel y nombre con estilo mejorado -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nivel 1"
+        style="@style/LevelTitleText"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="4dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sumas y Restas con Múltiplos de 10 y 100"
+        style="@style/InstructionText"
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Instrucción del nivel con estilo -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Arrastra y suelta los números para completar las operaciones."
+        style="@style/InstructionText"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Área de pregunta con MaterialCardView -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/textPregunta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aquí irá el enunciado de la pregunta"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:background="#1976D2"
+            android:padding="16dp"
+            android:gravity="center"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Área de respuesta -->
+    <TextView
+        android:id="@+id/dropArea"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="___"
+        android:textSize="22sp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:background="@drawable/interactive_background"
+        android:layout_marginBottom="32dp"
+        android:elevation="4dp"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <!-- Contenedor de opciones -->
+    <LinearLayout
+        android:id="@+id/opcionesContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/opcion1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textSize="22sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/ripple_effect"
+            android:padding="16dp"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:elevation="4dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <TextView
+            android:id="@+id/opcion2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20"
+            android:textSize="22sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/ripple_effect"
+            android:padding="16dp"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:elevation="4dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <TextView
+            android:id="@+id/opcion3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30"
+            android:textSize="22sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/ripple_effect"
+            android:padding="16dp"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:elevation="4dp"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+    <!-- Resultado -->
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Espacio flexible -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Botones inferiores -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:weightSum="2">
+
+        <!-- Botón Regresar -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:src="@drawable/btnreturn"
+            android:scaleType="centerInside"
+            android:background="@null"
+            android:contentDescription="Botón de Regresar"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <!-- Botón Consejos -->
+        <ImageButton
+            android:id="@+id/btnTips"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/btnconsejo"
+            android:scaleType="centerInside"
+            android:background="@null"
+            android:contentDescription="Botón de Consejos"/>
+    </LinearLayout>
+</LinearLayout>

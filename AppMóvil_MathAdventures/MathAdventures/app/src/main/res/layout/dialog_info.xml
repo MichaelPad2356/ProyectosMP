@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Información del Proyecto"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/roboto"/>
+
+    <TextView
+        android:id="@+id/infoMateria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Materia"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"/>
+    <TextView
+            android:id="@+id/nomMateria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Programación de Dispositivos Móviles"
+            android:layout_marginBottom="5dp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto"/>
+
+    <TextView
+        android:id="@+id/infoIntegrantes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Integrantes"
+        android:layout_marginTop="15dp"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"
+        android:fontFamily="@font/roboto"/>
+
+    <TextView
+         android:id="@+id/nomIntegrante1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Rubén Eduardo Dávila Flores"
+         android:layout_marginTop="5dp"
+         android:textColor="@android:color/white"
+         android:layout_gravity="center"
+         android:fontFamily="@font/roboto"/>
+   <TextView
+        android:id="@+id/nomIntegrante2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Michael Giovanny Miguel Padilla"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"
+        android:fontFamily="@font/roboto"/>
+
+    <Button
+        android:id="@+id/btnCerrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cerrar"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/sky_blue"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/roboto"/>
+</LinearLayout>

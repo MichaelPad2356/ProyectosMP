@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F0F4F8"
+    android:elevation="4dp"
+    android:layout_margin="8dp">
+
+    <TextView
+        android:id="@+id/tvGrupoNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre del grupo"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:background="#FF5722"
+        android:padding="12dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:elevation="2dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:padding="12dp"
+        android:elevation="2dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/tvServicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Servicio: --"
+            android:textSize="16sp"
+            android:textColor="#2196F3"
+            android:drawableStart="@android:drawable/ic_menu_info_details"
+            android:drawablePadding="8dp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvUsuarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Usuarios: --"
+            android:textSize="16sp"
+            android:textColor="#2196F3"
+            android:drawableStart="@android:drawable/ic_input_get"
+            android:drawablePadding="8dp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvCosto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Costo: --"
+            android:textSize="16sp"
+            android:textColor="#2196F3"
+            android:drawableStart="@drawable/money"
+            android:drawablePadding="8dp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvPolitica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Política: --"
+            android:textSize="16sp"
+            android:textColor="#2196F3"
+            android:drawableStart="@android:drawable/ic_menu_manage"
+            android:drawablePadding="8dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnUnirseGrupo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unirse al Grupo"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#FF5722"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:elevation="2dp"
+        android:padding="12dp"
+        android:textSize="16sp" />
+
+</LinearLayout>

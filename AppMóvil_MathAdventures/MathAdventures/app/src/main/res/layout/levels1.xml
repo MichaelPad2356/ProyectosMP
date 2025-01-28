@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondolvl"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tvSelectLevel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selecciona el Nivel"
+        android:textSize="48sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="bold"
+        android:padding="3dp"
+        android:gravity="center"
+        android:background="@drawable/title_background"
+        android:shadowColor="#000000"
+        android:shadowDx="6"
+        android:shadowDy="6"
+        android:shadowRadius="8"
+        />
+
+    <!-- ScrollView -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Nivel 1 -->
+            <ImageView
+                android:id="@+id/lvl1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/lvl1desbloqueado"
+                android:background="@drawable/fondolvl"
+                android:contentDescription="Nivel 1 desbloqueado"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <!-- Línea entre Nivel 1 y Nivel 2 -->
+            <View
+                android:layout_width="2dp"
+                android:layout_height="50dp"
+                android:background="@color/black"
+                android:layout_marginTop="0dp" />
+
+            <!-- Nivel 2 -->
+            <ImageView
+                android:id="@+id/lvl2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/lvl2desbloqueado"
+                android:contentDescription="Nivel 2 desbloqueado" />
+
+            <!-- Línea entre Nivel 2 y Nivel 3 -->
+
+            <!-- Nivel 3 -->
+            <View
+                android:layout_width="2dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/black" />
+
+            <ImageView
+                android:id="@+id/lvl3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/lvl3desbloqueado"
+                android:contentDescription="Nivel 3 desbloqueado"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <!-- Línea entre Nivel 3 y Nivel 4 -->
+            <View
+                android:layout_width="2dp"
+                android:layout_height="50dp"
+                android:background="@color/black"
+                android:layout_marginTop="0dp" />
+
+            <!-- Nivel 4 -->
+            <ImageView
+                android:id="@+id/lvl4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/lvl4desbloqueado"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Nivel 4 bloqueado" />
+
+            <!-- Línea entre Nivel 4 y Nivel 5 -->
+            <View
+                android:layout_width="2dp"
+                android:layout_height="50dp"
+                android:background="@color/black"
+                android:layout_marginTop="0dp" />
+
+            <!-- Nivel 5 -->
+            <ImageView
+                android:id="@+id/lvl5"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/lvl5bloqueado"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Nivel 5 bloqueado" />
+
+            <!-- Línea entre Nivel 5 y Nivel 6 -->
+            <View
+                android:layout_width="2dp"
+                android:layout_height="50dp"
+                android:background="@color/black"
+                android:layout_marginTop="0dp" />
+
+            <!-- Nivel 6 -->
+            <ImageView
+                android:id="@+id/lvl6"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/lvl6bloqueado"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Nivel 6 bloqueado" />
+
+            <!-- Línea entre Nivel 6 y Nivel 7 -->
+            <View
+                android:layout_width="2dp"
+                android:layout_height="50dp"
+                android:background="@color/black"
+                android:layout_marginTop="0dp" />
+
+            <!-- Nivel 7 -->
+            <ImageView
+                android:id="@+id/lvl7"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/lvl7bloqueado"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Nivel 7 bloqueado" />
+
+            <!-- Línea entre Nivel 7 y Nivel 8 -->
+            <View
+                android:layout_width="2dp"
+                android:layout_height="50dp"
+                android:background="@color/black"
+                android:layout_marginTop="0dp" />
+
+            <!-- Nivel 8 -->
+            <ImageView
+                android:id="@+id/lvl8"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/lvl8bloqueado"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Nivel 8 bloqueado" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/barraprog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total completado"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="bold"
+        android:padding="3dp"
+        android:gravity="center"
+        android:background="@drawable/title_background"
+        android:shadowColor="#000000"
+        android:shadowDx="6"
+        android:shadowDy="6"
+        android:shadowRadius="8"
+        android:layout_marginTop="60dp"
+        android:layout_above="@id/progressBar"
+        />
+
+    <!-- Barra de Progreso con un 20% completado -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:progress="20"
+        android:max="100"
+        android:visibility="visible"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        />
+
+    <TextView
+        android:id="@+id/percentageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="20%"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"
+        android:layout_alignTop="@id/progressBar"
+        android:layout_alignBottom="@id/progressBar"
+        android:layout_alignStart="@id/progressBar"
+        android:layout_alignEnd="@id/progressBar"
+        android:gravity="center"
+        android:shadowColor="#000000"
+        android:shadowDx="6"
+        android:shadowDy="6"
+        android:shadowRadius="8"
+        />
+</RelativeLayout>

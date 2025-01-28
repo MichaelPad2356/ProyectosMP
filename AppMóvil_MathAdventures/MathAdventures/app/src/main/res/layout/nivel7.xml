@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@drawable/fondonv2">
+
+    <!-- Nivel y nombre con estilo mejorado -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nivel 7"
+        style="@style/LevelTitleText"
+        android:elevation="4dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Factores de Multiplicaciones"
+        style="@style/InstructionText"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:background="#1565C0"
+        android:padding="4dp"
+        android:gravity="center"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:elevation="8dp"
+        android:shadowColor="#000000"
+        android:shadowRadius="3"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.05"
+        />
+
+    <!-- Instrucción del nivel con estilo -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Identifica los valores que completan la multiplicación"
+        style="@style/InstructionText"
+        android:textColor="#FFFFFF"
+        android:background="#CD3708"
+        android:padding="4dp"
+        android:gravity="center"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="24dp"
+        android:elevation="8dp"
+        android:shadowColor="#000000"
+        android:shadowRadius="3"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:fontFamily="sans-serif-medium"
+        android:lineSpacingExtra="4dp"
+    />
+    <!-- Texto de pregunta de multiplicación -->
+    <TextView
+        android:id="@+id/textPregunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="Pregunta de multiplicación"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Texto de operación actual -->
+    <TextView
+        android:id="@+id/textOperacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Selecciona dos factores:"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Contenedor de opciones de respuesta -->
+    <LinearLayout
+        android:id="@+id/opcionesContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center" />
+
+    <!-- Botones inferiores -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="40dp">
+
+        <!-- Botón Regresar -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:src="@drawable/btnreturn"
+            android:scaleType="centerInside"
+            android:background="@null"
+            android:contentDescription="Botón de Regresar"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <!-- Botón Consejos -->
+        <ImageButton
+            android:id="@+id/btnTips"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/btnconsejo"
+            android:scaleType="centerInside"
+            android:background="@null"
+            android:contentDescription="Botón de Consejos"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MathAdventures</string>
+    <string name="advice_title">Consejo</string>
+    <string name="advice_message">Observa el patrón en la secuencia antes de seleccionar la opción correcta. Los números podrían aumentar o disminuir siguiendo una regla lógica.</string>
+
+</resources>

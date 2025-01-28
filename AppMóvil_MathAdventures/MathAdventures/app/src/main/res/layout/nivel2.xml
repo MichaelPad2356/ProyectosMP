@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/fondonv2"
+    android:gravity="center">
+
+    <!-- Nivel y nombre con estilo mejorado -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nivel 2"
+        style="@style/LevelTitleText"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="4dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Multiplicaciones Básicas"
+        style="@style/InstructionText"
+        android:textSize="24sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Instrucción del nivel con estilo -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecciona la respuesta correcta para cada multiplicación."
+        style="@style/InstructionText"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Área de pregunta con MaterialCardView -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        android:layout_marginBottom="32dp">
+
+        <TextView
+            android:id="@+id/textPregunta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Cuánto es 4 × 3?"
+            android:textSize="28sp"
+            android:textColor="#FFFFFF"
+            android:background="#2196F3"
+            android:padding="10dp"
+            android:gravity="center"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Contenedor de opciones con MaterialButtons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="5dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/opcion1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="12"
+            android:textSize="22sp"
+            app:cornerRadius="12dp"
+            android:padding="12dp"
+            android:layout_margin="8dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/opcion2"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="9"
+            android:textSize="22sp"
+            app:cornerRadius="12dp"
+            android:padding="12dp"
+            android:layout_margin="8dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/opcion3"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="15"
+            android:textSize="22sp"
+            app:cornerRadius="12dp"
+            android:padding="12dp"
+            android:layout_margin="8dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+    </LinearLayout>
+
+    <!-- Resultado -->
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Espacio flexible -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Botones inferiores -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="30dp">
+
+        <!-- Botón Regresar -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:src="@drawable/btnreturn"
+            android:scaleType="centerInside"
+            android:background="@null"
+            android:contentDescription="Botón de Regresar"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <!-- Botón Consejos -->
+        <ImageButton
+            android:id="@+id/btnTips"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/btnconsejo"
+            android:scaleType="centerInside"
+            android:background="@null"
+            android:contentDescription="Botón de Consejos"/>
+    </LinearLayout>
+</LinearLayout>

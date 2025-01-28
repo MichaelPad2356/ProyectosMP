@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<particles>
+    <particle
+        speed="0.1, 0.5"
+        lifetime="1000"
+        scale="0.5, 1.0"
+        color="#FFD700"
+        shape="circle"/>
+</particles>

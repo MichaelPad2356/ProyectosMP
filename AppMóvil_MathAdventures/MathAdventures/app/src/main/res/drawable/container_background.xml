@@ -1,0 +1,6 @@
+<!-- res/drawable/container_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#E0E0E0" /> <!-- Color de fondo gris claro -->
+    <corners android:radius="8dp" /> <!-- Bordes redondeados -->
+    <stroke android:width="2dp" android:color="#BDBDBD" /> <!-- Borde gris oscuro -->
+</shape>

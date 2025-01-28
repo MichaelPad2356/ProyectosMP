@@ -1,0 +1,255 @@
+/* group-creation.component.css */
+* {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #F4F7FB;
+  color: #2C3E50;
+  line-height: 1.6;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alineación en la parte superior */
+  gap: 2rem;
+  padding: 3rem;
+  background-color: #F4F7FB;
+}
+
+.form-wrapper {
+  width: 100%;
+  max-width: 28rem;
+  background-color: #ffffff;
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  border: 1px solid #E1E8F0;
+  transition: all 0.3s ease;
+}
+
+.form-wrapper:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-title h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #34495E;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.form-title h2 i {
+  color: #1ABC9C;
+}
+
+.form-title p {
+  color: #7F8C8D;
+  font-size: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #34495E;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-group label i {
+  color: #1ABC9C;
+}
+
+.form-input,
+.form-select {
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid #BDC3C7;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  color: #2C3E50;
+  transition: all 0.3s ease;
+  appearance: none;
+}
+
+.form-input:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #1ABC9C;
+  box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.15);
+}
+
+.form-input::placeholder {
+  color: #BDC3C7;
+}
+
+.form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.5em 1.5em;
+}
+
+.form-submit {
+  width: 100%;
+  padding: 1rem;
+  background-color: #FF6B35;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.form-submit:hover {
+  background-color: #F39C12;
+  transform: translateY(-2px);
+}
+
+.form-submit:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.25);
+}
+
+/* Estilo para el nuevo texto llamativo */
+.text-container {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem;
+  background: linear-gradient(to right, #FF6B35, #FF914D); /* Colores más cálidos para resaltar */
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.text-container h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #ffffff; /* Blanco para el texto */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.text-container p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #ffffff; /* Blanco para el texto */
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #FF6B35; /* Color principal más visible */
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #FF914D; /* Un tono más claro al pasar el mouse */
+  transform: translateY(-3px);
+}
+
+.cta-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.25);
+}
+
+/* Agregar una breve descripción debajo del título */
+.text-container .description {
+  font-size: 1.1rem;
+  color: #ffffff; /* Blanco para el texto */
+  font-weight: 300;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Animación para el ícono de grupo */
+.text-container .group-icon {
+  font-size: 3rem;
+  color: #ffffff; /* Blanco para el ícono */
+  animation: bounce 1.5s infinite;
+  margin-bottom: 2rem;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Ajustes adicionales para asegurar buen contraste */
+body {
+  background-color: #FFFFFF; /* Fondo blanco para la página */
+  color: #333333; /* Color de texto oscuro para una mejor legibilidad */
+}
+
+.form-wrapper {
+  background-color: #ffffff; /* Fondo blanco en formularios también */
+  border: 1px solid #E1E8F0; /* Borde gris suave para separarlos */
+}
+
+.form-title h2 {
+  color: #34495E; /* Títulos con un color más oscuro */
+}
+
+.form-title p {
+  color: #7F8C8D; /* Párrafos en gris oscuro para suavizar el contraste */
+}
+
+.text-container .cta-button {
+  background-color: #FF6B35;
+  color: white;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.text-container .cta-button:hover {
+  background-color: #F39C12;
+  transform: translateY(-3px);
+}
+
+
+

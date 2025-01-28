@@ -1,0 +1,261 @@
+/* General container */
+.misgrupos-container {
+  padding: 50px;
+  background-color: #f8f9fa;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #2d3748;
+  box-sizing: border-box;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: linear-gradient(to right bottom, #f1f5f9, #f8fafc);
+}
+
+/* Page title */
+.page-title {
+  font-size: 40px;
+  font-weight: 800;
+  color: #1a202c;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(45deg, #4a5568, #2d3748);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Error message */
+.error-message {
+  color: #e53e3e;
+  font-size: 20px;
+  margin-bottom: 35px;
+  font-weight: 600;
+  text-align: center;
+  background-color: #fff5f5;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 5px solid #e53e3e;
+}
+
+/* No groups message */
+.no-groups-message {
+  color: #4a5568;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 40px;
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+/* Group list */
+.groups-list {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+/* Group card */
+.group-card {
+  background: white;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  border: 1px solid #edf2f7;
+  position: relative;
+  overflow: hidden;
+}
+
+.group-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #4299e1, #48bb78);
+}
+
+.group-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.1);
+}
+
+.group-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #f0f4f8;
+  padding-bottom: 25px;
+  margin-bottom: 20px;
+}
+
+.group-card-body {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #4a5568;
+}
+
+.service-type {
+  background-color: #4299e1;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+/* Button Styles */
+
+
+/* Notifications */
+.notifications-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.07);
+  border: 1px solid #edf2f7;
+}
+
+.notification-item {
+  background-color: #f7fafc;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  color: #2d3748;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.notification-item:hover {
+  transform: translateX(5px);
+  background-color: #f1f5f9;
+}
+
+.single-payment-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #4a90e2, #50c878);
+  padding: 35px 40px;
+  border-radius: 20px;
+  color: #ffffff;
+  margin-top: 50px;
+  box-shadow: 0 15px 30px rgba(74, 144, 226, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.single-payment-info::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(-45deg);
+}
+
+.payment-info-text {
+  font-size: 20px;
+  font-weight: 600;
+  z-index: 2;
+  position: relative;
+  max-width: 70%;
+}
+
+.card-element {
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9ecef;
+  transition: all 0.4s ease;
+}
+
+.card-element:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Mejora de Botones en Cards */
+/* Asegurar que los botones en el grupo tengan el tamaño adecuado */
+/* Asegurar que los botones en el grupo tengan el tamaño adecuado */
+.group-card .button,
+.group-card .delete-group-button,
+.group-card .leave-group-button,
+.group-card .pay-button {
+  padding: 10px 30px;  /* Ajustar padding para que no estén demasiado juntos */
+  font-size: 16px;  /* Tamaño de fuente ajustado para 45px de altura */
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1.5px;
+  text-align: center;
+  outline: none;
+  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  min-width: 180px;  /* Ajustar para que no sean demasiado pequeños */
+  height: 45px; /* Altura ajustada a 45px */
+}
+
+/* Estilos para los iconos dentro de los botones */
+.group-card .button svg {
+  margin-right: 8px;  /* Espacio entre el icono y el texto */
+  fill: white;
+}
+
+/* Estilos para botones específicos en el grupo */
+
+/* Botón de eliminar grupo (rojo) */
+.group-card .delete-group-button {
+  background: linear-gradient(to right, #e74c3c, #c0392b);
+  color: white;
+  border-radius: 50px;
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.15);
+  margin-bottom: 15px;
+}
+
+/* Botón de dejar grupo (amarillo) */
+.group-card .leave-group-button {
+  background: linear-gradient(to right, #f39c12, #d35400);
+  color: white;
+  border-radius: 50px;
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.15);
+  margin-bottom: 15px;
+}
+
+/* Botón de pagar (verde) */
+.group-card .pay-button {
+  background: linear-gradient(to right, #2ecc71, #27ae60);
+  color: white;
+  border-radius: 50px;
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.15);
+}
+
+/* Efecto Hover para todos los botones */
+.group-card .button:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.2);
+}
+
+/* Efecto adicional al hacer clic */
+.group-card .button:active {
+  transform: translateY(3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,93 @@
+<div class="misgrupos-container">
+  <h2 class="page-title">Mis Grupos</h2>
+
+  @if (errorMessage) {
+    <div class="error-message">
+      {{ errorMessage }}
+    </div>
+  }
+
+  @if (!errorMessage && grupos.length === 0) {
+    <div class="no-groups-message">
+      No tienes grupos creados ni asociados.
+    </div>
+  }
+
+  @if (!errorMessage && grupos.length > 0) {
+    <div class="groups-list">
+      @for (grupo of grupos; track grupo) {
+        <div>
+          <div class="group-card">
+            <div class="group-card-header">
+              <h3>{{ grupo.name }}</h3>
+              <span class="service-type">{{ grupo.serviceType }}</span>
+            </div>
+            <div class="group-card-body">
+              <p><strong>Usuarios:</strong> {{ grupo.currentUsers }} / {{ grupo.maxUsers }}</p>
+              <p><strong>Costo por usuario:</strong> ${{ grupo.costPerUser }}</p>
+              <p><strong>Política de pago:</strong> {{ grupo.paymentPolicy }}</p>
+              <p><strong>Límite de pago:</strong> {{ grupo.fechaLimite }}</p>
+              
+
+              @if (grupo.isCreatedByUser) {
+                <div class="user-created-group">
+                  <p class="created-by-user-text">Tu creaste este grupo</p>
+                  <button
+                    class="delete-group-button"
+                    (click)="darDeBajaGrupo(grupo.id)"
+                  >
+                    Baja del Grupo
+                  </button>
+                </div>
+              }
+              @else if (grupo.isJoinedByUser) {
+                <div class="centered-button">
+                  <button
+                    class="leave-group-button"
+                    (click)="salirDelGrupo(grupo.id)"
+                  >
+                    Salir del grupo
+                  </button>
+                </div>
+              }
+
+              <div class="centered-button">
+                <button 
+                    class="pay-button" 
+                    (click)="simularPago(grupo.id, grupo.costPerUser)"
+                >
+                    Pagar ahora
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  }
+
+  <br><br>
+
+  @if (notificaciones && notificaciones.length > 0) {
+    <div class="notifications-container">
+      <h3 class="notifications-title">Notificaciones</h3>
+      <ul class="notifications-list">
+        @for (notificacion of notificaciones; track notificacion) {
+          <li class="notification-item">
+            🔔 {{ notificacion.mensaje }}
+          </li>
+        }
+      </ul>
+    </div>
+  }
+
+  <div class="single-payment-info">
+    <span class="payment-info-text">
+      Pago en una sola exhibición
+    </span>
+  </div>
+
+  <div id="card-element" class="card-element">
+  </div>
+</div>
+  

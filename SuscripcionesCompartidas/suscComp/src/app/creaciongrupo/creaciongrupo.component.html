@@ -1,0 +1,96 @@
+<!-- group-creation.component.html -->
+<div class="form-container">
+  <div class="form-wrapper">
+    <div class="form-title">
+      <h2><i class="fas fa-users"></i> Crear un nuevo grupo</h2>
+      <p>Complete los detalles del grupo</p>
+    </div>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="groupName"><i class="fas fa-tag"></i> Nombre del grupo</label>
+        <input
+          type="text"
+          id="groupName"
+          [(ngModel)]="groupData.name"
+          name="name"
+          required
+          class="form-input"
+          placeholder="Nombre del grupo"
+        >
+      </div>
+      <div class="form-group">
+        <label for="serviceType"><i class="fas fa-globe"></i> Tipo de servicio/plataforma</label>
+        <select
+          id="serviceType"
+          [(ngModel)]="groupData.serviceType"
+          name="serviceType"
+          required
+          class="form-select"
+        >
+          <option value="" disabled selected>Selecciona una plataforma</option>
+          <option value="Netflix">Netflix</option>
+          <option value="HBO">HBO</option>
+          <option value="Disney+">Disney+</option>
+          <option value="Spotify">Spotify</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="maxUsers"><i class="fas fa-users-cog"></i> Número máximo de usuarios</label>
+        <input
+          type="number"
+          id="maxUsers"
+          [(ngModel)]="groupData.maxUsers"
+          name="maxUsers"
+          required
+          class="form-input"
+          placeholder="Número máximo"
+          min="2"
+        >
+      </div>
+      <div class="form-group">
+        <label for="costPerUser"><i class="fas fa-dollar-sign"></i> Costo por usuario</label>
+        <input
+          type="number"
+          id="costPerUser"
+          [(ngModel)]="groupData.costPerUser"
+          name="costPerUser"
+          required
+          class="form-input"
+          placeholder="Costo por usuario"
+          min="0"
+          step="0.01"
+        >
+      </div>
+      <div class="form-group">
+        <label for="paymentPolicy"><i class="fas fa-credit-card"></i> Política de pago</label>
+        <select
+          id="paymentPolicy"
+          [(ngModel)]="groupData.paymentPolicy"
+          name="paymentPolicy"
+          required
+          class="form-select"
+        >
+          <option value="monthly">Mensual</option>
+          <option value="annual">Anual</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="form-submit">
+          <i class="fas fa-plus-circle"></i> Crear grupo
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="text-container">
+    <div class="text-container">
+      <h1>¡Únete a Joinify y Comparte tus Suscripciones!</h1>
+      <p class="description">¿Estás cansado de pagar demasiado por servicios de entretenimiento como Spotify, Disney+, y más? Con <strong>Joinify</strong>, puedes crear tu propio grupo y compartir tus suscripciones con amigos o familiares.
+        Divide los costos de manera fácil, disfruta de tus plataformas favoritas sin gastar de más, y haz que tu experiencia de entretenimiento sea mucho más asequible y divertida.</p>
+      <div class="group-icon">
+        <!-- Aquí puedes poner un ícono o una imagen animada -->
+        <img src="assets/imagenes/logotipo2.png" alt="Logo Joinify" height="160px" ><!-- Usa un ícono de FontAwesome u otro -->
+      </div>
+      <a href="#" class="cta-button">Descubre más</a>
+    </div>
+     
+</div>

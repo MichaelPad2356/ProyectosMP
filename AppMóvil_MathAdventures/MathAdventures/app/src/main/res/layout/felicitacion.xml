@@ -1,0 +1,118 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@drawable/background_gradient">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/d"/>
+
+    <!-- Mensaje de Felicitación -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¡FELICIDADES!"
+        android:textSize="34sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"
+        android:layout_marginTop="40dp"
+        android:shadowColor="#000000"
+        android:shadowRadius="8"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:gravity="center" />
+
+    <!-- Barra de Progreso -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100% Completado"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="sans-serif-medium"
+        android:shadowColor="#000000"
+        android:shadowRadius="5"
+        android:shadowDx="2"
+        android:shadowDy="2" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progress="100"
+        android:progressTint="#0027FF"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@android:color/white"
+        android:indeterminate="false"
+        android:elevation="5dp" />
+
+    <!-- Estadísticas del Desempeño -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Niveles Completados: 9"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-light"
+        android:shadowColor="#000000"
+        android:shadowRadius="3"
+        android:shadowDx="2"
+        android:shadowDy="2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aciertos: 42"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-light"
+        android:shadowColor="#000000"
+        android:shadowRadius="3"
+        android:shadowDx="2"
+        android:shadowDy="2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tiempo de Juego: 35:12"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="sans-serif-light"
+        android:shadowColor="#000000"
+        android:shadowRadius="3"
+        android:shadowDx="2"
+        android:shadowDy="2" />
+
+    <!-- Botón de Reiniciar -->
+    <Button
+        android:id="@+id/restartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reiniciar Juego"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#03A9F4"
+        android:layout_gravity="center"
+        android:padding="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="sans-serif-medium"
+        android:elevation="8dp" />
+</LinearLayout>
