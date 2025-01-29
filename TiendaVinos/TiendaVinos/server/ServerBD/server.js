@@ -19,7 +19,7 @@ const storage = multer.diskStorage({
     cb(null, 'uploads/');  // Carpeta donde se guardarán las imágenes
   },
   filename: (req, file, cb) => {
-    cb(null, Date.now() + '-' + file.originalname);  // Asegura que el archivo tiene un nombre único
+    cb(null, Date.now() + '-' + file.originalname); 
   }
 });
 
@@ -39,7 +39,7 @@ const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '',
-  database: 'tiendaenlinea2'  // Asegúrate de poner el nombre correcto de tu base de datos
+  database: 'tiendaenlinea2'  
 });
 
 db.connect((err) => {
@@ -80,7 +80,7 @@ app.post('/api/login', (req, res) => {
         usuario: {
           id: usuarioLogueado.ID_Usuario,
           nombre: usuarioLogueado.Nombre,
-          correo: usuarioLogueado.Correo, // Puedes seguir enviando el correo si lo necesitas
+          correo: usuarioLogueado.Correo, 
         }
       });
     });
@@ -339,7 +339,7 @@ app.get('/api/categorias3', (req, res) => {
 // Endpoint para editar una categoría
 app.put('/api/editarCategoria/:id', (req, res) => {
   const { id } = req.params; // ID de la categoría
-  const { Nombre_Categoria } = req.body; // Nuevo nombre de la categoría
+  const { Nombre_Categoria } = req.body; 
 
   const query = `UPDATE categoria SET Nombre_Categoria = ? WHERE ID_Categoria = ?`;
 
@@ -420,7 +420,7 @@ app.get('/api/estados', (req, res) => {
       return res.status(500).json({ success: false, message: 'Error al obtener los estados.' });
     }
 
-    res.status(200).json(results); // Responder con la lista de estados
+    res.status(200).json(results); 
   });
 });
 
@@ -673,7 +673,6 @@ app.post('/api/carrito', (req, res) => {
   }
 
   // Primero verificamos si el usuario ya tiene un carrito activo
-  // Primero verificamos si el usuario ya tiene un carrito activo
   db.query('SELECT * FROM carrito WHERE ID_Usuario = ?', [usuarioId], (err, results) => {
     if (err) {
       console.error('Error en la consulta:', err);
@@ -695,7 +694,6 @@ app.post('/api/carrito', (req, res) => {
           return res.status(500).json({ success: false, message: 'Error al crear carrito.' });
         }
         carritoId = result.insertId;
-        // Ahora que se creó el carrito, agregamos el producto
         agregarProductoAlCarrito(carritoId);
       });
     }
@@ -721,7 +719,6 @@ app.post('/api/carrito/agregar', (req, res) => {
     return res.status(400).json({ success: false, message: 'Faltan datos (carritoId, productoId, cantidad).' });
   }
 
-  // Verificar si el producto ya está en el carrito
   const queryCheck = 'SELECT * FROM detalle_carrito WHERE ID_Carrito = ? AND ID_Producto = ?';
   db.query(queryCheck, [carritoId, productoId], (err, results) => {
     if (err) {
@@ -730,7 +727,6 @@ app.post('/api/carrito/agregar', (req, res) => {
     }
 
     if (results.length > 0) {
-      // Si el producto ya existe, actualizamos la cantidad
       const queryUpdate = 'UPDATE detalle_carrito SET Cantidad = ? WHERE ID_Carrito = ? AND ID_Producto = ?';
       db.query(queryUpdate, [cantidad, carritoId, productoId], (err, updateResults) => {
         if (err) {
@@ -917,7 +913,6 @@ app.get('/api/productos-mas-vendidos', (req, res) => {
       });
     }
     
-    // Devolver resultados con un formato compatible
     res.status(200).json({ 
       success: true,
       productos: results
@@ -943,7 +938,6 @@ app.get('/api/categorias-mas-vendidas', (req, res) => {
       return res.status(500).json({ success: false, message: 'Error al obtener las categorías más vendidas.' });
     }
 
-    // Enviar respuesta con los resultados
     res.status(200).json({ success: true, categorias: results });
   });
 });
@@ -983,7 +977,6 @@ app.get('/api/ventas/rollup', (req, res) => {
       });
     }
     
-    // Devolver resultados con un formato compatible
     res.status(200).json({ 
       success: true,
       ventasRollup: results
