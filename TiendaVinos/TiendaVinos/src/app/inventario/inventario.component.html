@@ -1,0 +1,237 @@
+<h2 class="inventory-title text-center mb-4">Inventario de Productos</h2>
+
+<!-- Botón para agregar un nuevo producto -->
+<div class="d-flex justify-content-end mb-4">
+  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agregarProductoModal">
+    <i class="fa fa-plus-circle"></i> Agregar Producto
+  </button>
+</div>
+
+@if (productos.length > 0) {
+  <div>
+    <div class="row">
+      @for (producto of productos; track producto) {
+        <div class="col-md-4 mb-4">
+          <div class="wine-card">
+            <div class="position-relative">
+              <img [src]="'http://localhost:3000/uploads/' + producto.URL_Imagen" alt="{{producto.Nombre}}" class="wine-image">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{producto.Nombre}}</h5>
+              <p class="card-text">{{producto.Descripcion}}</p>
+              <p class="card-text">Precio: ${{producto.Precio}}</p>
+              <p class="card-text">Stock disponible: {{producto.Stock}}</p>
+
+              <!-- Botones para Editar y Eliminar -->
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-success btn-sm" (click)="openEditModal(producto)">
+                  <i class="fa fa-edit"></i> Editar
+                </button>
+
+                <button class="btn btn-danger btn-sm" (click)="eliminarProducto(producto.ID_Producto)">
+                  <i class="fa fa-trash"></i> Eliminar
+                </button>
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+}
+@if (productos.length === 0) {
+  <p>No hay productos disponibles.</p>
+}
+
+<!-- Modal para agregar un producto -->
+<div class="modal fade" id="agregarProductoModal" tabindex="-1" aria-labelledby="agregarProductoModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="agregarProductoModalLabel">Agregar Nuevo Producto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form (ngSubmit)="agregarProducto()">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" [(ngModel)]="nuevoProducto.Nombre" name="Nombre" required>
+          </div>
+          <div class="mb-3">
+            <label for="descripcion" class="form-label">Descripción</label>
+            <textarea class="form-control" id="descripcion" [(ngModel)]="nuevoProducto.Descripcion" name="Descripcion" required></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="precio" class="form-label">Precio</label>
+            <input type="number" class="form-control" id="precio" [(ngModel)]="nuevoProducto.Precio" name="Precio" required>
+          </div>
+          <div class="mb-3">
+            <label for="stock" class="form-label">Stock</label>
+            <input type="number" class="form-control" id="stock" [(ngModel)]="nuevoProducto.Stock" name="Stock" required>
+          </div>
+          <div class="mb-3">
+            <label for="categoria" class="form-label">Categoría</label>
+            <select class="form-select" id="categoria" [(ngModel)]="nuevoProducto.ID_Categoria" name="ID_Categoria" required>
+              @for (categoria of categorias; track categoria) {
+                <option [value]="categoria.ID_Categoria">{{categoria.ID_Categoria}}</option>
+              }
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="imagen" class="form-label">Imagen</label>
+            <input type="file" class="form-control" id="imagen" name="imagen" (change)="onFileSelected($event)" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Agregar Producto</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal para editar producto -->
+<div id="editProductModal" class="modal">
+  <div class="modal-content">
+    <h2>Editar Producto</h2>
+    <form (ngSubmit)="editarProducto()">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" [(ngModel)]="productoEditado.Nombre" name="nombre" required>
+
+      <label for="descripcion">Descripción:</label>
+      <input type="text" id="descripcion" [(ngModel)]="productoEditado.Descripcion" name="descripcion" required>
+
+      <label for="precio">Precio:</label>
+      <input type="number" id="precio" [(ngModel)]="productoEditado.Precio" name="precio" required>
+
+      <label for="stock">Stock:</label>
+      <input type="number" id="stock" [(ngModel)]="productoEditado.Stock" name="stock" required>
+
+      <label for="categoria">Categoría:</label>
+      <select id="categoria" [(ngModel)]="productoEditado.ID_Categoria" name="categoria" required>
+        @for (categoria of categorias; track categoria) {
+          <option [value]="categoria.ID_Categoria">{{ categoria.ID_Categoria }}</option>
+        }
+      </select>
+
+      <label for="imagen">Imagen:</label>
+      <input type="file" id="imagen" (change)="onFileSelected($event)">
+
+      <button type="submit">Guardar cambios</button>
+      <button type="button" (click)="cerrarModal()">Cancelar</button>
+    </form>
+  </div>
+</div>
+
+
+<!-- Productos 
+@for (producto of productos; track producto) {
+  <div>
+    <div>
+      <p>{{ producto.Nombre }}</p>
+      <p>{{ producto.Descripcion }}</p>
+      <button (click)="openEditModal(producto)">Editar</button>
+      <button (click)="eliminarProducto(producto.ID_Producto)">Eliminar</button>
+    </div>
+  </div>
+}
+
+-->
+
+<!-- Vista de stock por categoría -->
+<h3 class="mt-5 text-center">Reporte de Stock por Categoría</h3>
+
+@if (stockCategoria.length > 0) {
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Categoría</th>
+          <th>Total Productos</th>
+          <th>Stock Total</th>
+          <th>Valor Total de Stock</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (categoria of stockCategoria; track categoria) {
+          <tr>
+            <td>{{categoria.Nombre_Categoria}}</td>
+            <td>{{categoria.Total_Productos}}</td>
+            <td>{{categoria.Stock_Total}}</td>
+            <td>${{categoria.Valor_Total_Stock | number: '1.2-2'}}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+} @else {
+  <p>No se pudo obtener el reporte de stock por categoría.</p>
+}
+
+
+<h2 class="mt-5 mb-4 text-center text-danger">Productos Más Vendidos (1-15 de diciembre)</h2>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered text-center align-middle">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">Imagen</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Descripción</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Cantidad Vendida</th>
+        <th scope="col">Categoría</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (producto of productosMasVendidos; track producto) {
+        <tr>
+          <!-- Imagen del producto -->
+          <td class="img">
+            <img [src]="'../../assets/images/' + producto.URL_Imagen" alt="{{producto.Nombre}}" class="img">
+          </td>
+
+          <!-- Nombre del producto -->
+          <td class="fw-bold">{{ producto.Nombre }}</td>
+
+          <!-- Descripción del producto -->
+          <td class="text-start">{{ producto.Descripcion }}</td>
+
+          <!-- Precio del producto -->
+          <td class="text-success fw-bold">${{ producto.Precio | number: '1.2-2' }}</td>
+
+          <!-- Cantidad Vendida (corrección aquí) -->
+          <td>{{ producto.Total_Vendido }}</td>
+
+          <!-- Categoría del producto -->
+          <td>{{ producto.Nombre_Categoria }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
+
+<h3 class="mt-5 mb-4 text-center text-primary">Categorías con Ventas Mayores a $5000</h3>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered text-center">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">ID Categoría</th>
+        <th scope="col">Total Ventas</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (categoria of categoriasMasVendidas; track categoria) {
+        <tr>
+          <td>{{ categoria.ID_Categoria }}</td>
+          <td class="text-success fw-bold">${{ categoria.Total_Ventas | number: '1.2-2' }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
+
+<!-- Botón para abrir la ventana modal de Pedidos -->

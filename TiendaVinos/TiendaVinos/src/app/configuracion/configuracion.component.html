@@ -1,0 +1,776 @@
+<div class="container">
+  <h1>Configuración</h1>
+
+  <!-- Sección de Usuario -->
+  <div class="section">
+    <h2>Usuarios</h2>
+    <button class="btn btn-primary" (click)="openAddUserModal()">Agregar Usuario</button>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Correo</th>
+          <th>Tipo</th>
+          <th>Municipio</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (usuario of usuarios; track usuario) {
+          <tr>
+            <td>{{ usuario.ID_Usuario }}</td>
+            <td>{{ usuario.Nombre }}</td>
+            <td>{{ usuario.Apellido }}</td>
+            <td>{{ usuario.Correo }}</td>
+            <td>{{ usuario.Tipo }}</td>
+            <td>{{ usuario.ID_Municipio }}</td>
+            <td>
+              <button
+                  style="
+                      background-color: #28a745;
+                      color: white; 
+                      padding: 8px 16px; 
+                      border: none; 
+                      border-radius: 6px; 
+                      cursor: pointer; 
+                      transition: background-color 0.3s ease, transform 0.2s ease;
+                      font-weight: 600;
+                      display: inline-flex;
+                      align-items: center;
+                      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                  "
+                (click)="openEditUserModal(usuario)"
+                >
+                <i style="margin-right: 8px; font-size: 16px;" class="fas fa-edit"></i>
+                Editar
+              </button>
+              <button
+                  style="
+                      background-color: #960000; 
+                      color: white; 
+                      padding: 8px 16px; 
+                      border: none; 
+                      border-radius: 6px; 
+                      cursor: pointer; 
+                      transition: background-color 0.3s ease, transform 0.2s ease;
+                      font-weight: 600;
+                      display: inline-flex;
+                      align-items: center;
+                      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                  "
+                (click)="deleteUser(usuario.ID_Usuario)"
+                >
+                <i style="margin-right: 8px; font-size: 16px;" class="fas fa-trash-alt"></i>
+                Eliminar
+              </button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Modal para agregar usuario -->
+  <div id="addUserModal" class="modal">
+    <div class="modal-content">
+      <h3>Agregar Usuario</h3>
+      <form (ngSubmit)="agregarUsuario()">
+        <div>
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" [(ngModel)]="usuarioNuevo.Nombre" name="nombre" required />
+        </div>
+        <div>
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" [(ngModel)]="usuarioNuevo.Apellido" name="apellido" required />
+        </div>
+        <div>
+          <label for="correo">Correo</label>
+          <input type="email" id="correo" [(ngModel)]="usuarioNuevo.Correo" name="correo" required />
+        </div>
+        <div>
+          <label for="contraseña">Contraseña</label>
+          <input type="password" id="contraseña" [(ngModel)]="usuarioNuevo.Contra" name="contraseña" required />
+        </div>
+        <div>
+          <label for="tipo">Tipo</label>
+          <input type="text" id="tipo" [(ngModel)]="usuarioNuevo.Tipo" name="tipo" required />
+        </div>
+        <div>
+          <label for="municipio">Municipio</label>
+          <input type="number" id="municipio" [(ngModel)]="usuarioNuevo.ID_Municipio" name="municipio" required />
+        </div>
+        <button type="submit" class="btn btn-success">Agregar</button>
+        <button type="button" class="btn btn-secondary" (click)="closeModal()">Cancelar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal para EDITAR usuario -->
+  <!-- Modal para editar usuario -->
+  <div id="editUserModal" class="modal">
+    <div class="modal-content">
+      <h3>Editar Usuario</h3>
+      <form (ngSubmit)="actualizarUsuario()">
+        <div>
+          <label for="edit-nombre">Nombre</label>
+          <input type="text" id="edit-nombre" [(ngModel)]="usuarioEditado.Nombre" name="edit-nombre" required />
+        </div>
+        <div>
+          <label for="edit-apellido">Apellido</label>
+          <input type="text" id="edit-apellido" [(ngModel)]="usuarioEditado.Apellido" name="edit-apellido" required />
+        </div>
+        <div>
+          <label for="edit-correo">Correo</label>
+          <input type="email" id="edit-correo" [(ngModel)]="usuarioEditado.Correo" name="edit-correo" required />
+        </div>
+        <div>
+          <label for="edit-contraseña">Contraseña</label>
+          <input type="password" id="edit-contraseña" [(ngModel)]="usuarioEditado.Contra" name="edit-contraseña" required />
+        </div>
+        <div>
+          <label for="edit-tipo">Tipo</label>
+          <input type="text" id="edit-tipo" [(ngModel)]="usuarioEditado.Tipo" name="edit-tipo" required />
+        </div>
+        <div>
+          <label for="edit-municipio">Municipio</label>
+          <input type="number" id="edit-municipio" [(ngModel)]="usuarioEditado.ID_Municipio" name="edit-municipio" required />
+        </div>
+        <button type="submit" class="btn btn-success">Guardar Cambios</button>
+        <button type="button" class="btn btn-secondary" (click)="closeModal2()">Cancelar</button>
+      </form>
+    </div>
+  </div>
+
+  <!--********************************************************************************************************************************************* -->
+
+
+  <!-- Sección de Categoría -->
+  <div class="section">
+    <h2>Categorías</h2>
+    <button class="btn btn-primary" (click)="openAddCategoryModal()">Agregar Categoría</button>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (categoria of categorias; track categoria) {
+          <tr>
+            <td>{{ categoria.ID_Categoria }}</td>
+            <td>{{ categoria.Nombre_Categoria }}</td>
+            <td>
+              <button
+                  style="
+                      background-color: #28a745;
+                      color: white; 
+                      padding: 8px 16px; 
+                      border: none; 
+                      border-radius: 6px; 
+                      cursor: pointer; 
+                      transition: background-color 0.3s ease, transform 0.2s ease;
+                      font-weight: 600;
+                      display: inline-flex;
+                      align-items: center;
+                      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                  " (click)="openEditCategoryModal(categoria)"> <i style="margin-right: 8px; font-size: 16px;" class="fas fa-edit"></i> Editar</button>
+                <button
+              style="
+                  background-color: #960000; 
+                  color: white; 
+                  padding: 8px 16px; 
+                  border: none; 
+                  border-radius: 6px; 
+                  cursor: pointer; 
+                  transition: background-color 0.3s ease, transform 0.2s ease;
+                  font-weight: 600;
+                  display: inline-flex;
+                  align-items: center;
+                  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+              " (click)="deleteCategory(categoria.ID_Categoria)"> <i style="margin-right: 8px; font-size: 16px;" class="fas fa-trash-alt"></i> Eliminar</button>
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+
+
+      <!-- Modal para Agregar Categoría -->
+      <dialog id="addCategoryModal">
+        <h3>Agregar Categoría</h3>
+        <form>
+          <div class="form-group">
+            <label for="nombreCategoria">Nombre de la Categoría:</label>
+            <input id="nombreCategoria" type="text" class="form-control" [(ngModel)]="nuevaCategoria.Nombre_Categoria" name="nombreCategoria" required>
+          </div>
+          <div class="modal-actions">
+            <button type="button" class="btn btn-success" (click)="agregarCategoria()">Guardar</button>
+            <button type="button" class="btn btn-secondary" (click)="closeAddCategoryModal()">Cancelar</button>
+          </div>
+        </form>
+      </dialog>
+
+
+
+      <!-- Modal para Editar Categoría -->
+      <dialog id="editCategoryModal" >
+        <h3>Editar Categoría</h3>
+        <form (submit)="editarCategoria(); $event.preventDefault()">
+          <div class="form-group">
+            <label for="editNombreCategoria">Nombre de la Categoría</label>
+            <input
+              id="editNombreCategoria"
+              type="text"
+              [(ngModel)]="categoriaEditada.Nombre_Categoria"
+              name="editNombreCategoria"
+              class="form-control"
+              required
+              />
+            </div>
+            <div class="modal-buttons">
+              <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+              <button type="button" class="btn btn-secondary" (click)="closeEditCategoryModal()">Cancelar</button>
+            </div>
+          </form>
+        </dialog>
+
+
+        <!--********************************************************************************************************************************************* -->
+
+
+
+        <!--Sección de Estado -->
+        <div class="section">
+          <h2>Estados</h2>
+          <button class="btn btn-primary" (click)="openAddStateModal()">Agregar Estado</button>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (estado of estados; track estado) {
+                <tr>
+                  <td>{{ estado.ID_EstadoDirc }}</td>
+                  <td>{{ estado.Nombre_EstadoDirc }}</td>
+                  <td>
+                    <button
+                  style="
+                      background-color: #28a745;
+                      color: white; 
+                      padding: 8px 16px; 
+                      border: none; 
+                      border-radius: 6px; 
+                      cursor: pointer; 
+                      transition: background-color 0.3s ease, transform 0.2s ease;
+                      font-weight: 600;
+                      display: inline-flex;
+                      align-items: center;
+                      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                  " (click)="openEditStateModal(estado)"> <i style="margin-right: 8px; font-size: 16px;" class="fas fa-edit"></i> Editar</button>
+                      <button
+              style="
+                  background-color: #960000; 
+                  color: white; 
+                  padding: 8px 16px; 
+                  border: none; 
+                  border-radius: 6px; 
+                  cursor: pointer; 
+                  transition: background-color 0.3s ease, transform 0.2s ease;
+                  font-weight: 600;
+                  display: inline-flex;
+                  align-items: center;
+                  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+              " (click)="deleteState(estado.ID_EstadoDirc)"> <i style="margin-right: 8px; font-size: 16px;" class="fas fa-trash-alt"></i> Eliminar</button>
+                      </td>
+                    </tr>
+                  }
+                </tbody>
+              </table>
+            </div>
+
+
+
+
+
+            <!-- Modal para Agregar Estado -->
+            <dialog id="addStateModal">
+              <h3>Agregar Nuevo Estado</h3>
+              <form (submit)="agregarEstado(); $event.preventDefault()">
+                <div class="form-group">
+                  <label for="estado">Nombre del Estado</label>
+                  <input
+                    id="estado"
+                    type="text"
+                    [(ngModel)]="nuevoEstado"
+                    name="estado"
+                    class="form-control"
+                    required
+                    />
+                  </div>
+                  <div class="modal-buttons">
+                    <button type="submit" class="btn btn-primary">Agregar</button>
+                    <button type="button" class="btn btn-secondary" (click)="closeAddStateModal()">Cancelar</button>
+                  </div>
+                </form>
+              </dialog>
+
+
+
+              <!-- Modal para Editar Estado -->
+              <dialog id="editStateModal">
+                <h3>Editar Estado</h3>
+                <form (submit)="editarEstado(); $event.preventDefault()">
+                  <div class="form-group">
+                    <label for="editNombreEstado">Nombre del Estado</label>
+                    <input
+                      id="editNombreEstado"
+                      type="text"
+                      [(ngModel)]="estadoEditado.Nombre_EstadoDirc"
+                      name="editNombreEstado"
+                      class="form-control"
+                      required
+                      />
+                    </div>
+                    <div class="modal-buttons">
+                      <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                      <button type="button" class="btn btn-secondary" (click)="closeEditStateModal()">Cancelar</button>
+                    </div>
+                  </form>
+                </dialog>
+
+
+                <!--********************************************************************************************************************************************* -->
+
+                <!-- Sección de Municipio -->
+                <div class="section">
+                  <h2>Municipios</h2>
+                  <button class="btn btn-primary" (click)="openAddMunicipalityModal()">Agregar Municipio</button>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @for (municipio of municipios; track municipio) {
+                        <tr>
+                          <td>{{ municipio.ID_Municipio }}</td>
+                          <td>{{ municipio.Nombre_Municipio }}</td>
+                          <td>{{ municipio.Estado }}</td>
+                          <td>
+                            <button
+                  style="
+                      background-color: #28a745;
+                      color: white; 
+                      padding: 8px 16px; 
+                      border: none; 
+                      border-radius: 6px; 
+                      cursor: pointer; 
+                      transition: background-color 0.3s ease, transform 0.2s ease;
+                      font-weight: 600;
+                      display: inline-flex;
+                      align-items: center;
+                      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                  " (click)="openEditMunicipalityModal(municipio)"> <i style="margin-right: 8px; font-size: 16px;" class="fas fa-edit"></i> Editar</button>
+                              <button
+              style="
+                  background-color: #960000; 
+                  color: white; 
+                  padding: 8px 16px; 
+                  border: none; 
+                  border-radius: 6px; 
+                  cursor: pointer; 
+                  transition: background-color 0.3s ease, transform 0.2s ease;
+                  font-weight: 600;
+                  display: inline-flex;
+                  align-items: center;
+                  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+              " (click)="deleteMunicipality(municipio.ID_Municipio)"> <i style="margin-right: 8px; font-size: 16px;" class="fas fa-trash-alt"></i> Eliminar</button> 
+                              </td>
+                            </tr>
+                          }
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+
+
+                  <!-- Modal para Agregar Municipio -->
+                  <dialog id="addMunicipalityModal">
+                    <h3>Agregar Municipio</h3>
+                    <form (submit)="agregarMunicipio(); $event.preventDefault()">
+                      <div class="form-group">
+                        <label for="nombreMunicipio">Nombre del Municipio</label>
+                        <input
+                          id="nombreMunicipio"
+                          type="text"
+                          [(ngModel)]="nuevoMunicipio.Nombre_Municipio"
+                          name="nombreMunicipio"
+                          class="form-control"
+                          required
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="estadoMunicipio">Estado</label>
+                          <select
+                            id="estadoMunicipio"
+                            [(ngModel)]="nuevoMunicipio.ID_EstadoDirc"
+                            name="estadoMunicipio"
+                            class="form-control"
+                            required
+                            >
+                            <option value="">Seleccionar Estado</option>
+                            @for (estado of estados; track estado) {
+                              <option [value]="estado.ID_EstadoDirc">
+                                {{ estado.Nombre_EstadoDirc }}
+                              </option>
+                            }
+                          </select>
+                        </div>
+                        <div class="modal-buttons">
+                          <button type="submit" class="btn btn-primary">Guardar</button>
+                          <button type="button" class="btn btn-secondary" (click)="closeAddMunicipalityModal()">Cancelar</button>
+                        </div>
+                      </form>
+                    </dialog>
+
+
+
+                    <!-- Modal para Editar Municipio -->
+                    <dialog id="editMunicipalityModal">
+                      <h3>Editar Municipio</h3>
+                      <form (submit)="editarMunicipality(); $event.preventDefault()">
+                        <div class="form-group">
+                          <label for="editNombreMunicipio">Nombre del Municipio</label>
+                          <input
+                            id="editNombreMunicipio"
+                            type="text"
+                            [(ngModel)]="municipioEditado.Nombre_Municipio"
+                            name="editNombreMunicipio"
+                            class="form-control"
+                            required
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label for="editEstadoDirc">Estado</label>
+                            <select
+                              id="editEstadoDirc"
+                              [(ngModel)]="municipioEditado.ID_EstadoDirc"
+                              name="editEstadoDirc"
+                              class="form-control"
+                              required
+                              >
+                              <!-- Aquí irían los estados, puedes cargar los datos dinámicamente -->
+                              @for (estado of estados; track estado) {
+                                <option [value]="estado.ID_EstadoDirc">
+                                  {{ estado.Nombre_EstadoDirc }}
+                                </option>
+                              }
+                            </select>
+                          </div>
+                          <div class="modal-buttons">
+                            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                            <button type="button" class="btn btn-secondary" (click)="closeEditMunicipalityModal()">Cancelar</button>
+                          </div>
+                        </form>
+                      </dialog>
+
+
+                      <!--**********************************************************************************************************************************************************************-->
+                      <!--CONSULTAS-->
+                      <div class="configuracion" style="background-color: #1c1c1c; padding: 20px; border-radius: 10px;">
+                        <h2 style="color: #d9534f; font-size: 2.5em; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); padding-bottom: 10px; border-bottom: 3px solid #d9534f; display: inline-block; margin-bottom: 20px;">Pedidos con detalles de productos y categorías</h2>
+                        @if (pedidosDetalles.length > 0) {
+                          <table style="width: 100%; border-collapse: collapse; margin-top: 15px; background-color: #2c2c2c;">
+                            <thead>
+                              <tr style="background-color: rgba(217, 83, 79, 0.1);">
+                                <th style="padding: 12px; text-align: left; color: #d9534f; border-bottom: 1px solid #4c4c4c; font-weight: bold;">ID Pedido</th>
+                                <th style="padding: 12px; text-align: left; color: #d9534f; border-bottom: 1px solid #4c4c4c; font-weight: bold;">Fecha Pedido</th>
+                                <th style="padding: 12px; text-align: left; color: #d9534f; border-bottom: 1px solid #4c4c4c; font-weight: bold;">Nombre Producto</th>
+                                <th style="padding: 12px; text-align: left; color: #d9534f; border-bottom: 1px solid #4c4c4c; font-weight: bold;">Precio</th>
+                                <th style="padding: 12px; text-align: left; color: #d9534f; border-bottom: 1px solid #4c4c4c; font-weight: bold;">Cantidad</th>
+                                <th style="padding: 12px; text-align: left; color: #d9534f; border-bottom: 1px solid #4c4c4c; font-weight: bold;">Categoría</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              @for (pedido of pedidosDetalles; track pedido) {
+                                <tr style="background-color: #3c3c3c; transition: background-color 0.3s ease;">
+                                  <td style="padding: 12px; color: #e0e0e0; border-bottom: 1px solid #4c4c4c;">{{ pedido.ID_Pedido }}</td>
+                                  <td style="padding: 12px; color: #e0e0e0; border-bottom: 1px solid #4c4c4c;">{{ pedido.Fecha_Pedido }}</td>
+                                  <td style="padding: 12px; color: #e0e0e0; border-bottom: 1px solid #4c4c4c;">{{ pedido.Nombre_Producto }}</td>
+                                  <td style="padding: 12px; color: #e0e0e0; border-bottom: 1px solid #4c4c4c;">{{ pedido.Precio }}</td>
+                                  <td style="padding: 12px; color: #e0e0e0; border-bottom: 1px solid #4c4c4c;">{{ pedido.Cantidad }}</td>
+                                  <td style="padding: 12px; color: #e0e0e0; border-bottom: 1px solid #4c4c4c;">{{ pedido.Nombre_Categoria }}</td>
+                                </tr>
+                              }
+                            </tbody>
+                          </table>
+                        }
+
+                        <h2 style="color: #d9534f; font-size: 2.5em; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); padding-bottom: 10px; border-bottom: 3px solid #d9534f; display: inline-block; margin-top: 30px; margin-bottom: 20px;">Pagos con detalles de usuario y estado de envío</h2>
+                        @if (pagosDetalles.length > 0) {
+                          <table style="width: 100%; border-collapse: collapse; margin-top: 15px; background-color: #2c2c2c;">
+                            <thead>
+                              <tr style="background-color: rgba(217, 83, 79, 0.1);">
+                                <th style="padding: 12px; text-align: left; color: #d9534f; border-bottom: 1px solid #4c4c4c; font-weight: bold;">ID Pago</th>
+                                <th style="padding: 12px; text-align: left; color: #d9534f; border-bottom: 1px solid #4c4c4c; font-weight: bold;">Fecha Pago</th>
+                                <th style="padding: 12px; text-align: left; color: #d9534f; border-bottom: 1px solid #4c4c4c; font-weight: bold;">Monto</th>
+                                <th style="padding: 12px; text-align: left; color: #d9534f; border-bottom: 1px solid #4c4c4c; font-weight: bold;">Metodo de Pago</th>
+                                <th style="padding: 12px; text-align: left; color: #d9534f; border-bottom: 1px solid #4c4c4c; font-weight: bold;">Nombre Usuario</th>
+                                <th style="padding: 12px; text-align: left; color: #d9534f; border-bottom: 1px solid #4c4c4c; font-weight: bold;">Apellido Usuario</th>
+                                <th style="padding: 12px; text-align: left; color: #d9534f; border-bottom: 1px solid #4c4c4c; font-weight: bold;">Estado Envío</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              @for (pago of pagosDetalles; track pago) {
+                                <tr style="background-color: #3c3c3c; transition: background-color 0.3s ease;">
+                                  <td style="padding: 12px; color: #e0e0e0; border-bottom: 1px solid #4c4c4c;">{{ pago.ID_Pago }}</td>
+                                  <td style="padding: 12px; color: #e0e0e0; border-bottom: 1px solid #4c4c4c;">{{ pago.Fecha_Pago }}</td>
+                                  <td style="padding: 12px; color: #e0e0e0; border-bottom: 1px solid #4c4c4c;">{{ pago.Monto }}</td>
+                                  <td style="padding: 12px; color: #e0e0e0; border-bottom: 1px solid #4c4c4c;">{{ pago.Metodo_Pago }}</td>
+                                  <td style="padding: 12px; color: #e0e0e0; border-bottom: 1px solid #4c4c4c;">{{ pago.Nombre_Usuario }}</td>
+                                  <td style="padding: 12px; color: #e0e0e0; border-bottom: 1px solid #4c4c4c;">{{ pago.Apellido_Usuario }}</td>
+                                  <td style="padding: 12px; color: #e0e0e0; border-bottom: 1px solid #4c4c4c;">{{ pago.Estado_Envio || 'N/A' }}</td>
+                                </tr>
+                              }
+                            </tbody>
+                          </table>
+                        }
+                      </div>
+
+
+
+
+
+
+
+                      <!--******************************************************************************************************************************-->
+                      <div class="configuracion">
+                        <h2>Informe de Ventas por Categoría</h2>
+
+                        <!-- Formulario para ingresar las fechas -->
+                        <form (ngSubmit)="consultarVentas()" #fechaForm="ngForm">
+                          <label for="fechaInicio">Fecha de Inicio:</label>
+                          <input type="date" id="fechaInicio" name="fechaInicio" [(ngModel)]="fechaInicio" required>
+
+                          <label for="fechaFin">Fecha de Fin:</label>
+                          <input type="date" id="fechaFin" name="fechaFin" [(ngModel)]="fechaFin" required>
+
+                          <button type="submit">Consultar</button>
+                        </form>
+
+                        <!-- Tabla para mostrar los resultados -->
+                        <div id="resultados">
+                          @if (resultados.length > 0) {
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th>Categoría</th>
+                                  <th>Total Ventas</th>
+                                  <th>Promedio ventas</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                @for (item of resultados; track item) {
+                                  <tr>
+                                    <td>{{ item.Nombre_Categoria }}</td>
+                                    <td>{{ item.TotalVentas }}</td>
+                                    <td >{{ item.PromedioVentasPorPedido }}</td>
+                                  </tr>
+                                }
+                              </tbody>
+                            </table>
+                          }
+                          @if (resultados.length === 0) {
+                            <p>No se encontraron resultados para el rango de fechas indicado.</p>
+                          }
+                        </div>
+                      </div>
+
+
+
+                      <div class="configuracion-container">
+                        <h2>Configuración de Productos por Categoría</h2>
+
+                        <!-- Dropdown para seleccionar una categoría -->
+                        <div class="form-group">
+                          <label for="categoriaSelect">Seleccionar Categoría:</label>
+                          <select
+                            id="categoriaSelect"
+                            class="form-control"
+                            [(ngModel)]="idCategoria"
+                            >
+                            @for (categoria of categorias2; track categoria) {
+                              <option [value]="categoria.id">
+                                {{ categoria.nombre }}
+                              </option>
+                            }
+                          </select>
+                        </div>
+
+                        <!-- Botón para obtener la cantidad de productos -->
+                        <button
+                          class="btn btn-primary"
+                          (click)="obtenerCantidadProductos()"
+                          [disabled]="!idCategoria"
+                          >
+                          Ver Cantidad de Productos
+                        </button>
+
+                        <!-- Tabla para mostrar resultados -->
+                        @if (cantidadPorCategoria.length > 0) {
+                          <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th>ID Categoría</th>
+                                <th>Cantidad de Productos</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              @for (resultado of cantidadPorCategoria; track resultado) {
+                                <tr style="text-align: center;">
+                                  <td style="text-align: center;" >{{ resultado.categoriaId }}</td>
+                                  <td style="text-align: center;" >{{ resultado.cantidad }}</td>
+                                </tr>
+                              }
+                            </tbody>
+                          </table>
+                        }
+                      </div>
+
+
+
+                      <!-- Ventana modal para mostrar los pedidos -->
+                      <div class="text-center mb-4">
+                        <button class="btn btn-primary" style="background-color: #28a745;" (click)="abrirModal()">Ver Pedidos</button>
+                      </div>
+
+                      <!-- Ventana modal para mostrar los pedidos -->
+                      <div class="modal" tabindex="-1" [class.show]="mostrarModal" [style.display]="mostrarModal ? 'block' : 'none'">
+                        <div class="modal-dialog modal-lg">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title">Pedidos Completos</h5>
+                              <button type="button" class="btn-close" (click)="cerrarModal()"></button>
+                            </div>
+                            <div class="modal-body">
+                              @if (pedidos.length > 0) {
+                                <div>
+                                  <table class="table table-bordered table-striped">
+                                    <thead>
+                                      <tr>
+                                        <th>Nombre Usuario</th>
+                                        <th>Correo</th>
+                                        <th>Producto</th>
+                                        <th>Descripción</th>
+                                        <th>Precio</th>
+                                        <th>Cantidad</th>
+                                        <th>Monto Total</th>
+                                        <th>Fecha Pedido</th>
+                                        <th>Estado Pedido</th>
+                                        <th>Método de Pago</th>
+                                        <th>Estado Envío</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      @for (pedido of pedidos; track pedido) {
+                                        <tr>
+                                          <td>{{ pedido.Nombre_Usuario }}</td>
+                                          <td>{{ pedido.Correo_Usuario }}</td>
+                                          <td>{{ pedido.Producto_Nombre }}</td>
+                                          <td>{{ pedido.Producto_Descripcion }}</td>
+                                          <td>${{ pedido.Producto_Precio }}</td>
+                                          <td>{{ pedido.Cantidad }}</td>
+                                          <td>${{ pedido.Pago_Monto }}</td>
+                                          <td>{{ pedido.Fecha_Pedido }}</td>
+                                          <td>{{ pedido.Estado_Pedido }}</td>
+                                          <td>{{ pedido.Metodo_Pago }}</td>
+                                          <td>{{ pedido.Estado_Envio }}</td>
+                                        </tr>
+                                      }
+                                    </tbody>
+                                  </table>
+                                </div>
+                              } @else {
+                                <p>No hay pedidos disponibles.</p>
+                              }
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" (click)="cerrarModal()">Cerrar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+
+                      <br><br>
+                      <h2>Consulta de Totales de Ventas por Categoría y Fecha con Totales Agregados</h2>
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Categoría</th>
+                            <th>Fecha</th>
+                            <th>Total Ventas</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          @for (venta of ventasRollup; track venta) {
+                            <tr>
+                              <td>{{ venta.Nombre_Categoria }}</td>
+                              <td>{{ venta.Fecha_Pedido }}</td>
+                              <td>{{ venta.Total_Ventas | currency }}</td>
+                            </tr>
+                          }
+                        </tbody>
+                      </table>
+
+                      <br><br>
+
+                      <div class="usuarios-top">
+                        <h2>Top 5 Usuarios por Compras</h2>
+                        <table>
+                          <thead>
+                            <tr>
+                              <th>ID Usuario</th>
+                              <th>Nombre</th>
+                              <th>Total Compras</th>
+                              <th>Total Ventas</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let usuario of usuariosTop">
+                              <td>{{ usuario.ID_Usuario }}</td>
+                              <td>{{ usuario.Nombre_Usuario }}</td>
+                              <td>{{ usuario.Total_Compras }}</td>
+                              <td>{{ usuario.Total_Ventas | currency }}</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                  
+                        <div *ngIf="totalGeneral" class="total-general">
+                          <h3>Total General</h3>
+                          <p>Total Compras: {{ totalGeneral.Total_Compras }}</p>
+                          <p>Total Ventas: {{ totalGeneral.Total_Ventas | currency }}</p>
+                        </div>
+                      </div>
+
+                      <br><br>
+                      <h2>Estado de los Envíos</h2>
+                      <br><br>
+                      <!-- configuracion.component.html -->
+                      <button (click)="actualizarEnvio()">Actualizar Estado de Envío</button>
