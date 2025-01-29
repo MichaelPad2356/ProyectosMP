@@ -1,0 +1,96 @@
+<div class="body" [ngStyle]="{'background-color':background, 'color':color}">
+  
+  @if (user$) {
+    <br>
+    <div class="cont mt-4" [ngStyle]="{'background-color':background, 'color':color}">
+      <h3 class="mb-4">Citas</h3>
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation" [ngStyle]="{'background-color':background, 'color':color}">
+          <button class="nav-link active" id="previas-tab" data-bs-toggle="tab" data-bs-target="#previas" type="button" role="tab" aria-controls="previas" aria-selected="true" [ngStyle]="{'background-color':background, 'color':color}">Previas</button>
+        </li>
+        <li class="nav-item" role="presentation" [ngStyle]="{'background-color':background, 'color':color}">
+          <button class="nav-link" id="proximas-tab" data-bs-toggle="tab" data-bs-target="#proximas" type="button" role="tab" aria-controls="proximas" aria-selected="false" [ngStyle]="{'background-color':background, 'color':color}">Proximas</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="previas" role="tabpanel" aria-labelledby="previas-tab">
+          <table class="table mt-4 bg-white">
+            <thead>
+              <tr [ngStyle]="{'background-color':background, 'color':color}">
+                <th *ngFor="let column of displayedColumns" [ngStyle]="{'background-color':background, 'color':color}">{{ column }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let reserva of previas" [ngStyle]="{'background-color':background, 'color':color}">
+                <td [ngStyle]="{'background-color':background, 'color':color}">{{ reserva.fecha | date:'dd/MM/yyyy' }}</td>
+                <td [ngStyle]="{'background-color':background, 'color':color}">{{ reserva.hora }}</td>
+                <td [ngStyle]="{'background-color':background, 'color':color}">{{ reserva.dias }}</td>
+                <td [ngStyle]="{'background-color':background, 'color':color}">{{ reserva.nombre }}</td>
+                <td [ngStyle]="{'background-color':background, 'color':color}">{{ reserva.telefono }}</td>
+                <td [ngStyle]="{'background-color':background, 'color':color}">{{ reserva.email }}</td>
+                <td [ngStyle]="{'background-color':background, 'color':color}">{{ reserva.direccion }}</td>
+                <td [ngStyle]="{'background-color':background, 'color':color}">{{ reserva.precioTotal }}</td>
+                <td [ngStyle]="{'background-color':background, 'color':color}" >
+                  <button class="btn btn-danger btn-sm" (click)="qr(reserva)"><i class="fa-solid fa-qrcode fa-lg" style="color: #ffffff;"></i></button>
+                </td>
+                <td [ngStyle]="{'background-color':background, 'color':color}" >
+                  <button class="btn btn-danger btn-sm" disabled (click)="eliminar(reserva)"><i class="fa-solid fa-trash fa-lg" ></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tab-pane fade" id="proximas" role="tabpanel" aria-labelledby="proximas-tab">
+          <table class="table mt-4 bg-white">
+            <thead>
+              <tr>
+                <th *ngFor="let column of displayedColumns" [ngStyle]="{'background-color':background, 'color':color}">{{ column }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let reserva of proximas" [ngStyle]="{'background-color':background, 'color':color}">
+                <td [ngStyle]="{'background-color':background, 'color':color}">{{ reserva.fecha | date:'dd/MM/yyyy' }}</td>
+                <td [ngStyle]="{'background-color':background, 'color':color}">{{ reserva.hora }}</td>
+                <td [ngStyle]="{'background-color':background, 'color':color}">{{ reserva.dias }}</td>
+                <td [ngStyle]="{'background-color':background, 'color':color}">{{ reserva.nombre }}</td>
+                <td [ngStyle]="{'background-color':background, 'color':color}">{{ reserva.telefono }}</td>
+                <td [ngStyle]="{'background-color':background, 'color':color}">{{ reserva.email }}</td>
+                <td [ngStyle]="{'background-color':background, 'color':color}">{{ reserva.direccion }}</td>
+                <td [ngStyle]="{'background-color':background, 'color':color}">{{ reserva.precioTotal }}</td>
+                <td [ngStyle]="{'background-color':background, 'color':color}" >
+                  <button class="btn btn-danger btn-sm" (click)="qr(reserva)"><i class="fa-solid fa-qrcode fa-lg" style="color: #ffffff;"></i></button>
+                </td>
+                <td [ngStyle]="{'background-color':background, 'color':color}">
+                  <button class="btn btn-danger btn-sm" (click)="eliminar(reserva)"><i class="fa-solid fa-trash fa-lg"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="modal fade" id="qrModal" tabindex="-1" aria-labelledby="qrModalLabel" aria-hidden="true" style="color: rgb(11, 11, 11);">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="qrModalLabel">QR Code</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <p>Datos de la reserva:</p>
+            <qrcode [qrdata]="selectedData" [width]="300"></qrcode>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  }@else {
+
+  }
+  
+</div>
+
+
+  

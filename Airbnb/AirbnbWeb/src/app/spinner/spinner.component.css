@@ -1,0 +1,40 @@
+.spinner-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.4); 
+    z-index: 1050; 
+  }
+  
+  .spinner {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    background: #FFF;
+    box-shadow: -24px 0 #FFF, 24px 0 #FFF;
+    box-sizing: border-box;
+    animation: shadowPulse 0.8s linear infinite;
+    z-index: 1000;
+  }
+  
+  @keyframes shadowPulse {
+    33% {
+      background: #FFF;
+      box-shadow: -24px 0 #FF5A5F, 24px 0 #FFF;
+    }
+    66% {
+      background: #FF5A5F;
+      box-shadow: -24px 0 #FFF, 24px 0 #FFF;
+    }
+    100% {
+      background: #FFF;
+      box-shadow: -24px 0 #FFF, 24px 0 #FF5A5F;
+    }
+  }

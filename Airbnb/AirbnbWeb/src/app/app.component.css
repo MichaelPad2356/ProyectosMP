@@ -1,0 +1,383 @@
+.links{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.popup{
+    cursor: pointer; 
+}
+
+.signup{
+    border-radius: 5%;
+}
+
+.links a{
+    text-decoration: none;
+}
+
+.space{
+    height: 85px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+.navBar{
+    margin-bottom: 2%;
+    position: fixed;
+    width: 100%;
+    top: 0; 
+    z-index: 1000; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+} 
+
+.bold-text {
+    font-weight: bold;
+}
+
+.search{
+    border: 1px solid #ccc;
+    box-shadow:  0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    width: 85%;
+    height: 40px;
+    margin-top: 5px;
+    padding-top: 11px;
+    display: flex;
+    align-items: center;
+}
+
+.btnS{
+    background-color: #FF5A5F;
+    border-radius: 50%;
+    width: 30px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6px;
+    margin-left: 3px;
+    border: none;
+}
+
+.iconS{
+    font-size: 17px;
+}
+
+.input-text.sch{
+    border: none;
+    outline: none;
+    box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.1); 
+    height: 20px;
+    margin-top: 12px;
+    width: 90%;
+    font-size: 15px;
+}
+
+.input-text:focus{
+    border: none;
+    outline: none;
+}
+
+.input-text::placeholder{
+    color: #828282;
+}
+
+.bI{
+    display: flex;
+    align-items: center;
+}
+
+.space{
+    height: 105px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+.menuIcon{
+    border: 0px;
+    width: 30px;
+    height: 40px;
+    padding-left: 10px;
+}
+.menuIconButton{
+    background-color:inherit;
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+}
+.dropdown1{
+    margin-left: 9px;
+    margin-top: 3px;
+}
+
+
+
+
+.menuIcon {
+    width: 30px; /* Ancho del contenedor del icono */
+    height: 40px; /* Alto del contenedor del icono */
+    padding-left: 10px; /* Espacio izquierdo */
+    display: flex;
+    align-items: center;
+    cursor: pointer; /* Cursor apuntador para indicar que es clickeable */
+}
+
+.hamburgerLines {
+    width: 20px; /* Ancho del icono hamburguesa */
+    height: 20px; /* Alto del icono hamburguesa */
+    position: relative;
+    top: 5px;
+}
+
+.line {
+    width: 80%;
+    height: 1px; /* Altura de cada línea */
+    background-color: #000; /* Color de las líneas del icono */
+    position: absolute;
+    transition: transform 0.3s ease; /* Transición suave al cambiar de estado */
+}
+
+.line:nth-child(1) {
+    top: 0px;
+}
+
+.line:nth-child(2) {
+    top: 5px; /* Espacio entre las líneas */
+}
+
+.line:nth-child(3) {
+    top: 10px; /* Doble espacio entre las líneas */
+}
+
+.custom-active .line:nth-child(1) {
+    transform: translateY(5px) rotate(45deg); /* Rotación y desplazamiento para la primera línea */
+}
+
+.custom-active .line:nth-child(2) {
+    opacity: 0; /* Oculta la segunda línea */
+}
+
+.custom-active .line:nth-child(3) {
+    transform: translateY(-5px) rotate(-45deg); /* Rotación y desplazamiento para la tercera línea */
+}
+
+.userAvatar {
+    width: 32px; /* Tamaño de la imagen circular del usuario */
+    height: 32px; /* Tamaño de la imagen circular del usuario */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    margin-left: 8px; /* Espacio entre el icono hamburguesa y la imagen */
+}
+
+.avatar-container {
+    position: relative;
+    display: inline-block;
+}
+
+.online-indicator {
+    position: absolute;
+    top: -5px; /* Ajusta la posición vertical  */
+    right: -5px; /* Ajusta la posición horizontal */
+    width: 12px;
+    height: 12px;
+    background-color: green; /* Color del indicador "en línea" */
+    border-radius: 50%;
+    border: 2px solid white; /* Borde blanco para mejor visibilidad */
+}
+
+/* Mostrar el indicador solo cuando el usuario está en línea */
+.navBar .online .online-indicator {
+    display: block;
+}
+
+/* Estilos del boton de Accesibilidad Web*/
+.navbar {
+    background-color: #FF385C; /* Color rojo característico de Airbnb */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 7px;
+  }
+  
+  .logo-img {
+    max-height: 60px; /* tamaño del texto */
+  }
+  
+  .nav-link {
+    color: #ffffff; /* Color de texto en blanco para los enlaces */
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Estilos del dropdown de Accesibilidad Web */
+  .dropdown {
+    padding-top: 11%;
+    margin-right: 10px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-menu-right{
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-item2 {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+  }
+  
+  .dropdown-item2:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* Espacio entre las imagenes*/
+    text-align: center;
+}
+
+.image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.dropdown1 .dropdown-menu {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%; /* Asegura que el menú desplegable del primer dropdown aparezca debajo */
+}
+
+
+.avatar-dropdown-menu {
+    right: 15; /* Alinea el menú desplegable con el borde derecho del contenedor */
+    left: auto; /* Asegúrate de que el menú no esté alineado a la izquierda */
+}
+
+.no-select {
+    user-select: none;         /* Previene la selección de texto */
+    cursor: default;           /* Cambia el cursor a uno no clickeable */
+    pointer-events: none;      /* Deshabilita cualquier evento del puntero, incluyendo clics */
+}
+.no-select2 {
+    user-select: none;         /* Previene la selección de texto */
+    cursor: pointer;           /* Cambia el cursor a uno no clickeable */
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navBar {
+    margin-bottom: 2%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-toggler-new {
+    display: none;
+    cursor: pointer; /* Añadir cursor: pointer */
+    border: 0px;
+    border-radius: 20%;
+}
+
+@media (max-width: 768px) {
+    .navBar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar-toggler-new {
+        display: block;
+        margin-left: auto;
+    }
+
+    .collapse {
+        width: 100%;
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .links a {
+        margin-left: 0;
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+.new-menu-icon {
+    cursor: pointer; /* Asegurarse de que el cursor es pointer */
+    display: flex;
+    align-items: center;
+}
+
+.new-hamburger-lines {
+    width: 20px; /* Ancho del icono hamburguesa */
+    height: 20px; /* Alto del icono hamburguesa */
+    position: relative;
+    top: 5px;
+}
+
+.new-line {
+    width: 100%;
+    height: 2px; /* Altura de cada línea */
+    background-color: #000; /* Color de las líneas del icono */
+    position: absolute;
+    transition: transform 0.3s ease; /* Transición suave al cambiar de estado */
+}
+
+.new-line:nth-child(1) {
+    top: 0px;
+}
+
+.new-line:nth-child(2) {
+    top: 5px; /* Espacio entre las líneas */
+}
+
+.new-line:nth-child(3) {
+    top: 10px; /* Doble espacio entre las líneas */
+}
+
+.new-custom-active .new-line:nth-child(1),
+.new-custom-active .new-line:nth-child(2),
+.new-custom-active .new-line:nth-child(3) {
+    transform: none; /* Elimina el efecto de transformación */
+    opacity: 1; /* Asegúrate de que todas las líneas son visibles */
+}

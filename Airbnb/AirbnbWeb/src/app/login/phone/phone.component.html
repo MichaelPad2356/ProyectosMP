@@ -1,0 +1,34 @@
+
+<div class="sign-up-container">
+    <div class="top">
+        <div class="first123" (click)="closeDialog()" > <i class="fa-solid fa-xmark" style="color: #5a5959; font-size: small;"></i></div>
+        <div class="second123">Inicia Sesion</div>
+        <div> </div>
+    </div>
+ 
+    <form [formGroup]="loginForm" (ngSubmit)="submit()" >
+        <div class="bottom">
+            <h5 class="title123">¡Bienvenido de Nuevo!</h5>
+
+            <div class="input-container">
+                <input placeholder="Telefono" formControlName="phone" type="phone" id="phone"  name="phone" class="round-input">
+            </div>
+            <p *ngIf="phone?.touched && phone?.errors?.['required']">Telefono Requerido</p>
+            
+            <button class="but twenty" type="submit">Iniciar Sesion</button>
+            
+            @if(!solved){
+                <div class="captcha" id="recaptcha-container"></div>
+            }
+            @if(solved){
+                <div class="input-container lower">
+                    <input placeholder="Codigo" formControlName="otp" type="text" id="oto"  name="otp" class="round-input">
+                </div>
+                <p *ngIf="otp?.touched && otp?.errors?.['required']">Ingresa el codigo que te enviamos</p>
+                <button class="but" (click)="submit2()">Go</button>
+                <a (click)="redirectBack()"><span id="maybe">¿No has recibido nuestro codigo? ¡Probablemente no estas registrado!</span></a>
+            }
+            <span >¿Nuevo a nuestra plataforma? <a class="pointer" (click)="redirectBack()">¡Registrate!</a></span>
+        </div>
+    </form>
+</div>

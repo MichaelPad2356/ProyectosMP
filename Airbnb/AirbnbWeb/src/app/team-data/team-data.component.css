@@ -1,0 +1,60 @@
+.body{
+    padding-left: 10%;
+    padding-right: 10%;
+    font-family: "Roboto", sans-serif;
+}
+
+#titulo{
+    text-align:center;
+    font-size: xx-large;
+    font-weight: bold;
+    
+}
+.card{
+  font-size: small;
+  background-color: 	#F0EFE9;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 50px;
+  max-width: 800px;
+  height: 300px;
+  padding: 30px;
+  border-radius: 20px;
+  
+}
+.card h4{
+    font-size: medium;
+    font-weight: bold;
+}
+.minicard{
+    background-color:#FFFFFF;
+    grid-column: 1;
+    height: 170px;
+    width: 250px;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+}
+
+.minicard img{
+    margin-top: -30px;
+    margin-left: 35px;
+    border-radius: 50%;
+}
+.minicard p{
+    font-size: medium;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+.info{
+    grid-column: 2;
+}
+.container{
+    margin: 0 auto;
+    display: grid;
+    justify-items: center; 
+    align-items: center; 
+
+}

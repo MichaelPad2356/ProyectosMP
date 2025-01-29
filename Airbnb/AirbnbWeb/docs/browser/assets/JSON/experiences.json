@@ -1,0 +1,145 @@
+{
+    "expereincesAirbnb":[
+        {
+            "name" : "Descubre las pirámides de Toetihuacan",
+            "img" : "../../assets/imgs/exp/1.webp",
+            "pricePerson" : "$640 MXN",
+            "hours" : 2,
+            "score" : 4.98
+        },
+        {
+            "name" : "Explora las aguas de Tolantongo",
+            "img" : "../../assets/imgs/exp/2.webp",
+            "pricePerson" : "$350 MXN",
+            "hours" : 3,
+            "score" : 4.75
+        },
+        {
+            "name" : "Visita a la playa y snorkel",
+            "img" : "../../assets/imgs/exp/3.webp",
+            "pricePerson" : "$800 MXN",
+            "hours" : 5,
+            "score" : 4.9
+        },
+        {
+            "name" : "Recorrido por museos históricos",
+            "img" : "../../assets/imgs/exp/4.webp",
+            "pricePerson" : "$500 MXN",
+            "hours" : 4,
+            "score" : 4.6
+        },
+        {
+            "name" : "Paseo en lancha por el río",
+            "img" : "../../assets/imgs/exp/5.webp",
+            "pricePerson" : "$450 MXN",
+            "hours" : 2,
+            "score" : 4.8
+        },
+        {
+            "name" : "Caminata en la montaña",
+            "img" : "../../assets/imgs/exp/6.webp",
+            "pricePerson" : "$250 MXN",
+            "hours" : 3,
+            "score" : 4.5
+        },
+        {
+            "name" : "Degustación de vinos en viñedos",
+            "img" : "../../assets/imgs/exp/7.webp",
+            "pricePerson" : "$700 MXN",
+            "hours" : 2,
+            "score" : 4.7
+        },
+        {
+            "name" : "Espectáculo de danza folklórica",
+            "img" : "../../assets/imgs/exp/8.webp",
+            "pricePerson" : "$400 MXN",
+            "hours" : 1,
+            "score" : 4.9
+        },
+        {
+            "name" : "Visita a un parque temático",
+            "img" : "../../assets/imgs/exp/9.webp",
+            "pricePerson" : "$600 MXN",
+            "hours" : 6,
+            "score" : 4.8
+        },
+        {
+            "name" : "Clase de cocina tradicional",
+            "img" : "../../assets/imgs/exp/10.webp",
+            "pricePerson" : "$550 MXN",
+            "hours" : 3,
+            "score" : 4.6
+        },
+        {
+            "name" : "Recorrido NYC",
+            "img" : "../../assets/imgs/exp/11.webp",
+            "pricePerson" : "$3000 MXN",
+            "hours" : 2,
+            "score" : 4.7
+        },
+        {
+            "name" : "Paseo en globo aerostático",
+            "img" : "../../assets/imgs/exp/12.webp",
+            "pricePerson" : "$1200 MXN",
+            "hours" : 4,
+            "score" : 4.9
+        },
+        {
+            "name" : "Tour en kayak por el río",
+            "img" : "../../assets/imgs/exp/13.webp",
+            "pricePerson" : "$400 MXN",
+            "hours" : 3,
+            "score" : 4.5
+        },
+        {
+            "name" : "Visita a un zoológico",
+            "img" : "../../assets/imgs/exp/15.jpg",
+            "pricePerson" : "$350 MXN",
+            "hours" : 2,
+            "score" : 4.8
+        },
+        {
+            "name" : "Caminata nocturna por la ciudad",
+            "img" : "../../assets/imgs/exp/14.jpg",
+            "pricePerson" : "$250 MXN",
+            "hours" : 2,
+            "score" : 4.7
+        },
+        {
+            "name" : "Clase de surf en la playa",
+            "img" : "../../assets/imgs/exp/16.jpg",
+            "pricePerson" : "$500 MXN",
+            "hours" : 2,
+            "score" : 4.9
+        },
+        {
+            "name" : "Recorrido en bicicleta de montaña",
+            "img" : "../../assets/imgs/exp/17.jpg",
+            "pricePerson" : "$400 MXN",
+            "hours" : 3,
+            "score" : 4.5
+        },
+        {
+            "name" : "Tour para adultos Tailandia +21, All Inclusive",
+            "img" : "../../assets/imgs/exp/19.webp",
+            "pricePerson" : "$200 MXN",
+            "hours" : 0.5,
+            "score" : 1.69
+        },
+        {
+            "name" : "Acceso a playa privada con todo incluido",
+            "img" : "../../assets/imgs/exp/18.webp",
+            "pricePerson" : "$3000 MXN",
+            "hours" : 3,
+            "score" : 4.5
+        },{
+            "name" : "Salto en paracaídas",
+            "img" : "../../assets/imgs/exp/20.jpg",
+            "pricePerson" : "$8000 MXN",
+            "hours" : 3,
+            "score" : 4.5
+        }
+
+        
+    ]
+}

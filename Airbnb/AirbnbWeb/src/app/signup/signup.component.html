@@ -1,0 +1,74 @@
+<div class="sign-up-container" [ngStyle]="{'background-color':background, 'color':color}" >
+    <div class="top" [ngStyle]="{'background-color': outstanding}">
+      <div class="first123" (click)="closeDialog()" > <i [ngStyle]="{'color':color}" class="fa-solid fa-xmark" style="color: #5a5959; font-size: small;"></i></div>
+      <div class="second123">Registrate</div>
+      <div> </div>
+    </div>
+    <div class="bottom">
+      <h5 class="title123">¡Te Damos la Bienvenida a Airbnb!</h5>
+      <form [formGroup]="signUpForm" (ngSubmit)="submit()" >
+          <div class="input-container">
+            <input [ngStyle]="{'background-color': background, 'color': color}"  placeholder="Nombre" matInput formControlName="name" type="text" id="name"  name="name" class="round-input">
+          </div>
+
+          <p *ngIf="name?.touched && name?.errors?.['required']">Name is required</p>
+          
+        
+        
+          <div class="input-container">
+            <input placeholder="Correo"  [ngStyle]="{'background-color': background, 'color': color}" formControlName="email" type="email" id="email"  name="email" class="round-input">
+          </div>
+          <p *ngIf="email?.touched && email?.errors?.['required']">Email is required</p>
+          <p *ngIf="email?.errors?.['email']">Email is invalid</p>
+
+          <div class="input-container">
+            <input [ngStyle]="{'background-color': background, 'color': color}" placeholder="Telefono" formControlName="phone" type="phone" id="phone"  name="phone" class="round-input">
+          </div>
+          <p *ngIf="phone?.touched && phone?.errors?.['required']">Phone number is required</p>
+            
+
+          <div class="input-container theOne">
+            <input [ngStyle]="{'background-color': background, 'color': color}" class="round-input" placeholder="Contraseña" formControlName="password" type="password" id="password"  name="password"></div>
+            <p *ngIf="password?.touched && password?.errors?.['required']">Password is required</p>
+            <p *ngIf="password?.errors?.['minlength']">Password is too short!</p>
+          <div class="input-container">
+            <input [ngStyle]="{'background-color': background, 'color': color}" class="round-input" placeholder="Confirma Contraseña" formControlName="confirmPassword" type="password" id="confirmPassword"  name="confirmPassword">
+          </div>
+            <p *ngIf="confirmPassword?.touched && confirmPassword?.errors?.['required']">Confirm password is required</p>
+          
+          <div *ngIf="signUpForm.errors?.['passwordsDontMatch']">
+              Passwords Dont Match
+          </div>
+
+        @if(!solved){
+          <small style="font-size: smaller; font-weight:400; margin: 2% 2% ">Te vamos a mandas un mensajde de texto SMS, sujeto a tarifas estándar para mensajes y datos.</small>
+          <button type="submit">Continuar</button>
+          <div class="captcha" id="recaptcha-container"></div>
+          <div>
+            <div class="top extra one1" >
+              <div><i class="fa-brands fa-square-facebook" style="color: #0000ff;"></i></div>
+              <div>Continuar con Facebook</div>
+              <div></div>
+            </div>
+            <div class="top extra two2">
+              <div><i class="fa-brands fa-google" style="color: #ff0000;"></i></div>
+              <div>Continuar con Google</div>
+              <div></div>
+            </div>
+            <div class="top extra last">
+              <div><i class="fa-brands fa-apple" style="color: #000000;"[ngStyle]="{'color':color}"></i></div>
+              <div>Continuar con Apple</div>
+              <div></div>
+            </div>
+          </div>
+        }@else{
+          <label class="end1" for="otp">Code sent to your phone:</label>
+            <input [ngStyle]="{'background-color': background, 'color': color}" formControlName="otp" type="text" id="oto"  name="otp">
+              <p *ngIf="otp?.touched && otp?.errors?.['required']">Enter the code sent to your phone</p>
+          <button class="end2" (click)="submit2()">Finalizar</button>
+        }
+      </form>
+    </div>
+    
+</div>
+  

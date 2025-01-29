@@ -1,0 +1,31 @@
+<div class="contenedor" [ngStyle]="{'background-color': background}">
+    <div class="contenido">
+        <div class="reportes" [ngStyle]="{'color':color}">
+            <div class="reporte-1">
+                <h2>Duración promedio de las citas:</h2>
+                <p>{{ averageDuration | number:'1.2-2' }} días</p>
+            </div>
+            <hr>
+            <div class="reporte-2">
+                <h2>Informe de ingreso mensual</h2>
+                <p>Ultimo mes: {{ monthlyRevenue | currency }}</p>
+            </div>
+            <hr>
+            <div class="reporte-3">
+                <h2>Informe de clientes frecuentes</h2>
+                <ul>
+                    <li *ngFor="let client of frequentClients">
+                      Cliente email: {{ client.email }} - Reservas: {{ client.count }}
+                    </li>
+                </ul>
+            </div>
+            <div class="boton-centro">
+                <button (click)="updateData()" class="btn btn-secondary">Actualizar datos</button>
+            </div>
+        </div>
+        <div class="graficos" [ngStyle]="{'color':color}">
+            <h2>Citas por dia de la semana</h2>
+            <canvas id="appointmentsChart"></canvas>
+        </div>
+    </div>
+</div>

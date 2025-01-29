@@ -1,0 +1,141 @@
+.body{
+    padding-left: 10%;
+    padding-right: 10%;
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+    margin-top: -3%;
+}
+.cont {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}  
+.texto{
+    font-weight: bold;
+}
+h3{
+    font-size: 34px;
+    margin-left: 1.4%;
+}
+.lable{ 
+    color: black;
+    font-weight: bolder;
+    font-size: 18px;
+}
+th{
+    font-size: 1.3rem;
+}
+td{
+    font-size: 1rem;
+}
+th, td{
+    background-color: white;
+    border-color: #c5c5c5;
+    height: 80px;
+}
+.btnEliminar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.table-striped > tbody > tr:nth-of-type(odd),
+.table-striped > tbody > tr:nth-of-type(even) {
+  --bs-table-accent-bg: white;
+  background-color: white;
+  color: black;
+}
+
+.table thead th {
+  background-color: white;
+  color: black;
+}
+
+.table {
+  background-color: white;
+  border-color: #dee2e6;
+  border-top: white;
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 414px)
+  and (-webkit-min-device-pixel-ratio: 3),
+only screen 
+  and (min-device-width: 412px) 
+  and (max-device-width: 412px)
+  and (-webkit-min-device-pixel-ratio: 3.5) {
+    .body {
+        padding: 0 5%;
+    }
+
+    .cont {
+        width: 100%;
+        padding: 0;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        margin-left: 0;
+    }
+
+    .table {
+        font-size: 0.8rem;
+    }
+
+    th, td {
+        padding: 8px; /* Reduce padding to better fit content */
+        height: 60px; /* Reduce height for better space management */
+    }
+
+    .btn-sm {
+        padding: 10px; /* Reduce button padding */
+        font-size: 0.7rem; /* Reduce font size */
+    }
+
+    .nav-link {
+        padding: 8px; /* Reduce padding for tab links */
+        font-size: 0.8rem; /* Reduce font size */
+    }
+
+    .modal-dialog {
+        width: 90%; /* Hacer que el modal use un porcentaje del ancho de pantalla */
+        margin: 10px auto; /* Reducir el margen para centrarlo adecuadamente */
+    }
+
+    .modal-content {
+        padding: 15px; /* Aumentar el padding para un mejor manejo de los contenidos internos */
+    }
+
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding: 10px; /* Ajustar el padding de todas las secciones del modal */
+    }
+
+    .modal-title {
+        font-size: 1.4rem; /* Aumentar el tamaño del título para mejor visibilidad */
+    }
+
+    .btn-close {
+        width: 34px; /* Aumentar el tamaño del botón de cierre para facilitar la interacción */
+        height: 34px;
+        background-size: 16px 16px; /* Ajustar el tamaño de la imagen del icono de cierre */
+    }
+    
+    /* Ajustar tamaño de los botones dentro del modal para mejorar la interacción */
+    .modal-footer .btn {
+        padding: 8px 14px;
+        font-size: 0.9rem;
+    }
+
+    .btn-sm {
+        padding: 8px 12px; /* Aumenta el padding para hacer los botones más grandes */
+        font-size: 0.9rem; /* Aumenta el tamaño del texto para mejor visibilidad */
+        border-radius: 5px; /* Ajusta los bordes para un diseño más suave */
+    }
+
+    .fa-lg { /* Iconos dentro de los botones */
+        font-size: 1.5rem; /* Aumenta el tamaño de los iconos */
+    }
+}
+

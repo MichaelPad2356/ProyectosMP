@@ -1,0 +1,358 @@
+{
+    "AirbnbPlaces":[
+        {
+            "name" : "Himachal Pradesh, India",
+            "img1" : "../assets/imgs/one/one.webp",
+            "img2" : "../../assets/imgs/one/one1.webp",
+            "img3" : "../../assets/imgs/one/one2.webp",
+            "img4" : "../../assets/imgs/one/one3.webp",
+            "img5" : "../../assets/imgs/one/one4.webp",
+            "priceNight" : "$407 MXN",
+            "offer" :    ["Wifi","Televisión", "Estacionamiento gratuito", "Apto para fumadores", "Aire Acondicionado", "Cámaras de seguridad", "Personal disponible", "Agua caliente"],
+            "description" : "Nuestro albergue en Shangarhái se encuentra bajo las verdes cordilleras boscosas del Gran Parque Nacional del Himalaya. Este albergue para mochileros en Himachal Pradesh, inmerso en una belleza escénica y un aire tranquilo y meditativo, ofrece vistas sublimes de las montañas cubiertas de nieve con un entorno adecuado para artistas, nómadas digitales y creadores.",
+            "quickDescription" : "2 huéspedes - 1 habitación - 1 cama - 1 baño privado",
+            "descriptionTitle" : "Habitación privada en hostal en India",
+            "maxGuests" : 2 ,
+            "googleMapsEmbeded" : "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1735832.4973275687!2d77.30175465!3d31.81688095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390453c367f901f7%3A0x7cfe04c5564b7725!2sHimachal%20Pradesh%2C%20India!5e0!3m2!1sen!2smx!4v1713585703283!5m2!1sen!2smx' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>",
+            "rating" : 4.5
+        },
+        {
+            "name": "Barcelona, España",
+            "img1": "../../assets/imgs/tres/tres.webp",
+            "img2": "../../assets/imgs/tres/tres1.webp",
+            "img3": "../../assets/imgs/tres/tres2.webp",
+            "img4": "../../assets/imgs/tres/tres3.webp",
+            "img5": "../../assets/imgs/tres/tres4.webp",
+            "priceNight": "$2,400 MXN",
+            "offer": ["Wifi", "Desayuno continental", "Piscina al aire libre", "Vistas a la ciudad", "Alquiler de bicicletas", "Recepción 24 horas", "Servicio de transporte al aeropuerto", "Se admiten mascotas"],
+            "description": "Sumérgete en la energía vibrante de Barcelona desde nuestro moderno hotel ubicado en el corazón de la ciudad. Con las obras maestras arquitectónicas de Gaudí, hermosas playas y deliciosas tapas cerca, nuestro hotel ofrece la combinación perfecta de comodidad y estilo.",
+            "quickDescription": "2 huéspedes - 1 habitación - 1 cama - 1 baño privado",
+            "descriptionTitle": "Hotel moderno en Barcelona",
+            "maxGuests": 2,
+            "googleMapsEmbeded": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95780.6243159463!2d2.1401890999999997!3d41.392667949999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49816718e30e5%3A0x44b0fb3d4f47660a!2sBarcelona%2C%20Spain!5e0!3m2!1sen!2smx!4v1713585785204!5m2!1sen!2smx' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>",
+            "rating": 4.7
+        },
+        
+        {
+            "name": "Ciudad de México, México",
+            "img1": "../../assets/imgs/cuatro/cuatro.webp",
+            "img2": "../../assets/imgs/cuatro/cuatro1.webp",
+            "img3": "../../assets/imgs/cuatro/cuatro2.webp",
+            "img4": "../../assets/imgs/cuatro/cuatro3.webp",
+            "img5": "../../assets/imgs/cuatro/cuatro4.webp",
+            "priceNight": "$1,500 MXN",
+            "offer": ["Wifi", "Desayuno incluido", "Gimnasio", "Vistas panorámicas", "Servicio de habitaciones", "Recepción 24 horas", "Estacionamiento disponible", "Se admiten mascotas"],
+            "description": "Descubre la riqueza cultural y la vibrante vida nocturna de la Ciudad de México desde nuestro hotel boutique situado en el corazón de la metrópoli. Con una mezcla ecléctica de arte, gastronomía y historia a tu alcance, nuestro hotel ofrece una experiencia auténtica en la capital mexicana.",
+            "quickDescription": "2 huéspedes - 1 habitación - 1 cama - 1 baño privado",
+            "descriptionTitle": "Hotel boutique en la Ciudad de México",
+            "maxGuests": 2,
+            "googleMapsEmbeded" : "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240864.08481701676!2d-99.14361265000001!3d19.3907336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0026db097507%3A0x54061076265ee841!2sMexico%20City%2C%20CDMX!5e0!3m2!1sen!2smx!4v1713575905585!5m2!1sen!2smx' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>",
+            "rating": 4.6
+        },
+        
+        {
+            "name": "Buenos Aires, Argentina",
+            "img1": "../../assets/imgs/cinco/cinco.webp",
+            "img2": "../../assets/imgs/cinco/cinco1.webp",
+            "img3": "../../assets/imgs/cinco/cinco2.webp",
+            "img4": "../../assets/imgs/cinco/cinco3.webp",
+            "img5": "../../assets/imgs/cinco/cinco4.webp",
+            "priceNight": "$500 MXN",
+            "offer": ["Wifi", "Desayuno buffet", "Piscina cubierta", "Terraza panorámica", "Servicio de lavandería", "Recepción 24 horas", "Estacionamiento disponible", "Se admiten mascotas"],
+            "description": "Sumérgete en la pasión y el encanto de Buenos Aires desde nuestro hotel boutique situado en el corazón del barrio de Palermo. Con tango, arte callejero y deliciosa gastronomía a tu alcance, nuestro hotel ofrece una experiencia única en la capital argentina.",
+            "quickDescription": "2 huéspedes - 1 habitación - 1 cama - 1 baño privado",
+            "descriptionTitle": "Hotel boutique en Buenos Aires",
+            "maxGuests": 2,
+            "googleMapsEmbeded": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105073.23949906453!2d-58.43329845000001!3d-34.615823750000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20Argentina!5e0!3m2!1sen!2smx!4v1713585802436!5m2!1sen!2smx' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>            ",
+            "rating": 4.8
+        },
+        
+        {
+            "name": "Río de Janeiro, Brasil",
+            "img1": "../../assets/imgs/seis/seis.webp",
+            "img2": "../../assets/imgs/seis/seis1.webp",
+            "img3": "../../assets/imgs/seis/seis2.webp",
+            "img4": "../../assets/imgs/seis/seis3.webp",
+            "img5": "../../assets/imgs/seis/seis4.webp",
+            "priceNight": "$2,000 MXN",
+            "offer": ["Wifi", "Desayuno incluido", "Piscina en la azotea", "Vistas panorámicas", "Servicio de habitaciones", "Recepción 24 horas", "Estacionamiento disponible", "Se admiten mascotas"],
+            "description": "Descubre la belleza natural y la vida vibrante de Río de Janeiro desde nuestro hotel ubicado en la famosa playa de Copacabana. Con vistas espectaculares, música samba y deliciosas caipirinhas cerca, nuestro hotel ofrece una experiencia inolvidable en la Ciudad Maravillosa.",
+            "quickDescription": "2 huéspedes - 1 habitación - 1 cama - 1 baño privado",
+            "descriptionTitle": "Hotel en la playa de Copacabana",
+            "maxGuests": 2,
+            "googleMapsEmbeded": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1893155.4360437233!2d-42.923630700000004!3d-22.0660686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x981894cae28ac3%3A0x349c31ac10583d0!2sState%20of%20Rio%20de%20Janeiro%2C%20Brazil!5e0!3m2!1sen!2smx!4v1713585852935!5m2!1sen!2smx' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>            ",
+            "rating": 4.7
+        },
+        
+        {
+            "name": "Cusco, Perú",
+            "img1": "../../assets/imgs/siete/siete.webp",
+            "img2": "../../assets/imgs/siete/siete1.webp",
+            "img3": "../../assets/imgs/siete/siete2.webp",
+            "img4": "../../assets/imgs/siete/siete3.webp",
+            "img5": "../../assets/imgs/siete/siete4.webp",
+            "priceNight": "$100 MXN",
+            "offer": ["Wifi", "Desayuno continental", "Terraza con vista a la ciudad", "Cocina compartida", "Servicio de lavandería", "Recepción 24 horas", "Estacionamiento disponible", "Se admiten mascotas"],
+            "description": "Explora la antigua capital del Imperio Inca desde nuestro acogedor albergue ubicado en el centro histórico de Cusco. Con impresionantes ruinas, coloridas ferias y cocina andina cerca, nuestro albergue es el punto de partida perfecto para descubrir la magia de Perú.",
+            "quickDescription": "2 huéspedes - 1 habitación - 1 cama - 1 baño compartido",
+            "descriptionTitle": "Albergue en el centro histórico de Cusco",
+            "maxGuests": 2,
+            "googleMapsEmbeded": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124130.90540933864!2d-71.93924905!3d-13.5300193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916dd5d826598431%3A0x2aa996cc2318315d!2sCusco%2C%20Peru!5e0!3m2!1sen!2smx!4v1713585874934!5m2!1sen!2smx' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>            ",
+            "rating": 4.5
+        },
+         {
+            "name": "Tokio, Japón",
+            "img1": "../../assets/imgs/ocho/ocho.webp",
+            "img2": "../../assets/imgs/ocho/ocho1.webp",
+            "img3": "../../assets/imgs/ocho/ocho2.webp",
+            "img4": "../../assets/imgs/ocho/ocho3.webp",
+            "img5": "../../assets/imgs/ocho/ocho4.webp",
+            "priceNight": "$5,000 MXN",
+            "offer": ["Wifi", "Desayuno japonés", "Baño termal", "Vistas a la ciudad", "Recepción 24 horas", "Servicio de lavandería", "Estacionamiento disponible", "Se admiten mascotas"],
+            "description": "Descubre la mezcla única de tradición y modernidad de Tokio desde nuestro ryokan ubicado en el bullicioso distrito de Shinjuku. Con sushi fresco, templos antiguos y luces de neón cerca, nuestro ryokan ofrece una experiencia auténtica en la capital japonesa.",
+            "quickDescription": "2 huéspedes - 1 habitación - 2 camas - 1 baño privado",
+            "descriptionTitle": "Ryokan en Shinjuku, Tokio",
+            "maxGuests": 2,
+            "googleMapsEmbeded": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1662873.2451231668!2d139.7698121!3d35.50924045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x605d1b87f02e57e7%3A0x2e01618b22571b89!2sTokyo%2C%20Japan!5e0!3m2!1sen!2smx!4v1713585897402!5m2!1sen!2smx' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>            ",
+            "rating": 4.6
+        },
+        
+        
+         {
+            "name": "Venecia, Italia",
+            "img1": "../../assets/imgs/diez/diez.webp",
+            "img2": "../../assets/imgs/diez/diez1.webp",
+            "img3": "../../assets/imgs/diez/diez2.webp",
+            "img4": "../../assets/imgs/diez/diez3.webp",
+            "img5": "../../assets/imgs/diez/diez4.webp",
+            "priceNight": "$7,000 MXN",
+            "offer": ["Wifi", "Desayuno continental", "Paseo en góndola", "Vistas al canal", "Recepción 24 horas", "Servicio de habitaciones", "Estacionamiento disponible", "Se admiten mascotas"],
+            "description": "Sumérgete en la romance y la belleza de Venecia desde nuestro encantador hotel ubicado junto al Gran Canal. Con paseos en góndola, arquitectura veneciana y deliciosa cocina italiana cerca, nuestro hotel ofrece una experiencia única en la Ciudad de los Canales.",
+            "quickDescription": "2 huéspedes - 1 habitación - 1 cama - 1 baño privado",
+            "descriptionTitle": "Hotel junto al Gran Canal de Venecia",
+            "maxGuests": 2,
+            "googleMapsEmbeded": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d179279.22182971527!2d12.38733285!3d45.404543249999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477eb1daf1d63d89%3A0x7ba3c6f0bd92102f!2sVenice%2C%20Metropolitan%20City%20of%20Venice%2C%20Italy!5e0!3m2!1sen!2smx!4v1713585919989!5m2!1sen!2smx' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>            ",
+            "rating": 4.8
+        },
+        
+        {
+            "name": "Machu Picchu, Perú",
+            "img1": "../../assets/imgs/nueve/nueve.webp",
+            "img2": "../../assets/imgs/nueve/nueve1.webp",
+            "img3": "../../assets/imgs/nueve/nueve2.webp",
+            "img4": "../../assets/imgs/nueve/nueve3.webp",
+            "img5": "../../assets/imgs/nueve/nueve4.webp",
+            "priceNight": "$350 MXN",
+            "offer": ["Wifi", "Desayuno buffet", "Excursiones guiadas", "Vistas a las montañas", "Recepción 24 horas", "Servicio de transporte al aeropuerto", "Estacionamiento disponible", "Se admiten mascotas"],
+            "description": "Descubre la misteriosa ciudadela de Machu Picchu desde nuestro hotel ubicado en las faldas de los Andes. Con senderos antiguos, vistas impresionantes y la energía mística de los Incas cerca, nuestro hotel ofrece una experiencia inolvidable en uno de los destinos más emblemáticos del mundo.",
+            "quickDescription": "2 huéspedes - 1 habitación - 1 cama - 1 baño privado",
+            "descriptionTitle": "Hotel cerca de Machu Picchu",
+            "maxGuests": 2,
+            "googleMapsEmbeded": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3884.9873293157243!2d-72.5452621!3d-13.1631988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916d9a5f89555555%3A0x3a10370ea4a01a27!2sHistoric%20Sanctuary%20of%20Machu%20Picchu!5e0!3m2!1sen!2smx!4v1713585944679!5m2!1sen!2smx' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>            ",
+            "rating": 4.9
+        },
+        
+        {
+            "name": "Bangkok, Tailandia",
+            "img1": "../../assets/imgs/once/once.webp",
+            "img2": "../../assets/imgs/once/once1.webp",
+            "img3": "../../assets/imgs/once/once2.webp",
+            "img4": "../../assets/imgs/once/once3.webp",
+            "img5": "../../assets/imgs/once/once4.webp",
+            "priceNight": "$750 MXN",
+            "offer": ["Wifi", "Desayuno buffet", "Piscina en la azotea", "Vistas panorámicas", "Masajes tailandeses", "Recepción 24 horas", "Servicio de lavandería", "Estacionamiento disponible"],
+            "description": "Explora la bulliciosa metrópolis de Bangkok desde nuestro hotel ubicado en el animado distrito de Sukhumvit. Con templos dorados, mercados flotantes y la deliciosa cocina callejera de Tailandia cerca, nuestro hotel ofrece una experiencia vibrante y llena de sabor.",
+            "quickDescription": "2 huéspedes - 1 habitación - 1 cama - 1 baño privado",
+            "descriptionTitle": "Hotel en el distrito de Sukhumvit, Bangkok",
+            "maxGuests": 2,
+            "googleMapsEmbeded": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d496114.99735159066!2d100.63311079999998!3d13.724599549999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d6032280d61f3%3A0x10100b25de24820!2sBangkok%2C%20Thailand!5e0!3m2!1sen!2smx!4v1713585972005!5m2!1sen!2smx' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>            ",
+            "rating": 4.7
+        },
+        
+        {
+            "name": "Ámsterdam, Países Bajos",
+            "img1": "../../assets/imgs/two/two.jpg",
+            "img2": "../../assets/imgs/two/two1.webp",
+            "img3": "../../assets/imgs/two/two2.webp",
+            "img4": "../../assets/imgs/two/two3.webp",
+            "img5": "../../assets/imgs/two/two4.webp",
+            "priceNight": "$7,000 MXN",
+            "offer": ["Wifi", "Desayuno incluido", "Alquiler de bicicletas", "Vistas al canal", "Bar en la azotea", "Recepción 24 horas", "Servicio de lavandería", "Estacionamiento disponible"],
+            "description": "Descubre la belleza pintoresca y la cultura liberal de Ámsterdam desde nuestro hotel boutique ubicado en el histórico barrio de Jordaan. Con canales serenos, museos de clase mundial y la famosa vida nocturna de la ciudad cerca, nuestro hotel ofrece una experiencia auténtica en la capital de los Países Bajos.",
+            "quickDescription": "2 huéspedes - 1 habitación - 1 cama - 1 baño privado",
+            "descriptionTitle": "Hotel boutique en el barrio de Jordaan, Ámsterdam",
+            "maxGuests": 2,
+            "googleMapsEmbeded": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d155959.60018826099!2d4.9039604!3d52.354665649999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c63fb5949a7755%3A0x6600fd4cb7c0af8d!2sAmsterdam%2C%20Netherlands!5e0!3m2!1sen!2smx!4v1713585989130!5m2!1sen!2smx' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>            ",
+            "rating": 4.8
+        },
+        {
+            "name": "Cancún, México",
+            "img1": "../../assets/imgs/doce/doce.webp",
+            "img2": "../../assets/imgs/doce/doce1.jpg",
+            "img3": "../../assets/imgs/doce/doce2.jpg",
+            "img4": "../../assets/imgs/doce/doce3.jpg",
+            "img5": "../../assets/imgs/doce/doce4.jpg",
+            "priceNight": "$2,000 MXN",
+            "offer": ["Wifi", "Desayuno incluido", "Acceso a la playa", "Piscina", "Spa", "Restaurante en el lugar", "Servicio de habitaciones", "Estacionamiento gratuito"],
+            "description": "Disfruta del paraíso caribeño desde nuestro resort en Cancún, ubicado en una de las playas más hermosas del mundo. Con aguas cristalinas, arena blanca y actividades emocionantes, nuestro resort ofrece una experiencia inolvidable para relajarse y divertirse.",
+            "quickDescription": "2 huéspedes - 1 habitación - 1 cama - 1 baño privado",
+            "descriptionTitle": "Resort frente a la playa en Cancún",
+            "maxGuests": 2,
+            "googleMapsEmbeded": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119096.90952604143!2d-86.85640384999999!3d21.12139825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2b05aef653db%3A0xce32b73c625fcd8a!2sCanc%C3%BAn%2C%20Quintana%20Roo!5e0!3m2!1sen!2smx!4v1713586012517!5m2!1sen!2smx' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>            ",
+            "rating": 4.9
+        },
+        
+         {
+            "name": "Las Vegas, Estados Unidos",
+            "img1": "../../assets/imgs/trece/trece.webp",
+            "img2": "../../assets/imgs/trece/trece1.webp",
+            "img3": "../../assets/imgs/trece/trece2.webp",
+            "img4": "../../assets/imgs/trece/trece3.webp",
+            "img5": "../../assets/imgs/trece/trece4.webp",
+            "priceNight": "$3,000 MXN",
+            "offer": ["Wifi", "Acceso a la piscina", "Casino", "Shows en vivo", "Spa", "Restaurantes de clase mundial", "Estacionamiento gratuito", "Recepción 24 horas"],
+            "description": "Experimenta la emoción y el glamour de Las Vegas desde nuestro Trump Hotel y casino en el famoso Strip. Con luces brillantes, entretenimiento sin fin y oportunidades de juego, nuestro hotel ofrece una experiencia única en la capital del entretenimiento del mundo.",
+            "quickDescription": "2 huéspedes - 1 habitación - 1 cama - 1 baño privado",
+            "descriptionTitle": "Hotel y casino en Las Vegas",
+            "maxGuests": 2,
+            "googleMapsEmbeded": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206253.23587250273!2d-115.17499999999998!3d36.125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80beb782a4f57dd1%3A0x3accd5e6d5b379a3!2sLas%20Vegas%2C%20NV%2C%20USA!5e0!3m2!1sen!2smx!4v1713586031758!5m2!1sen!2smx' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>            ",
+            "rating": 4.7
+        },
+        
+         {
+            "name": "Kioto, Japón",
+            "img1": "../../assets/imgs/catorce/catorce.webp",
+            "img2": "../../assets/imgs/catorce/catorce1.webp",
+            "img3": "../../assets/imgs/catorce/catorce2.webp",
+            "img4": "../../assets/imgs/catorce/catorce3.webp",
+            "img5": "../../assets/imgs/catorce/catorce4.webp",
+            "priceNight": "$2,500 MXN",
+            "offer": ["Wifi, Desayuno tradicional japonés, Jardín japonés, Baño termal, Servicio de lavandería, Recepción 24 horas, Estacionamiento disponible, Alquiler de bicicletas"],
+            "description": "Sumérgete en la cultura y la historia de Japón desde nuestro ryokan tradicional en Kioto, la antigua capital del país. Con templos antiguos, jardines serenos y la ceremonia del té, nuestro ryokan ofrece una experiencia auténtica y relajante en el corazón de Kioto.",
+            "quickDescription": "2 huéspedes - 1 habitación - 2 camas - 1 baño privado",
+            "descriptionTitle": "Ryokan tradicional en Kioto",
+            "maxGuests": 2,
+            "googleMapsEmbeded": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d417835.64227443415!2d135.7188694!3d35.09819619999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001a8d6cd3cc3f1%3A0xc0961d366bbb1d3d!2sKyoto%2C%20Japan!5e0!3m2!1sen!2smx!4v1713586050280!5m2!1sen!2smx' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>            ",
+            "rating": 4.8
+        },
+        
+         {
+            "name": "Sydney, Australia",
+            "img1": "../../assets/imgs/quince/quince.webp",
+            "img2": "../../assets/imgs/quince/quince1.webp",
+            "img3": "../../assets/imgs/quince/quince2.jpg",
+            "img4": "../../assets/imgs/quince/quince3.jpg",
+            "img5": "../../assets/imgs/quince/quince4.webp",
+            "priceNight": "$2,800 MXN",
+            "offer": ["Wifi", "Desayuno buffet", "Vistas al puerto", "Gimnasio", "Spa", "Restaurante en el lugar", "Servicio de habitaciones",  "Estacionamiento disponible"],
+            "description": "Descubre la belleza y la vitalidad de Sídney desde nuestro hotel con vista al puerto, ubicado en el corazón de la ciudad. Con la Ópera de Sídney, el Puente del Puerto y playas de renombre mundial cerca, nuestro hotel ofrece una experiencia inolvidable en la ciudad más grande de Australia.",
+            "quickDescription": "2 huéspedes - 1 habitación - 1 cama - 1 baño privado",
+            "descriptionTitle": "Hotel con vista al puerto en Sídney",
+            "maxGuests": 2,
+            "googleMapsEmbeded": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d424141.6978944982!2d150.93197474999997!3d-33.84824395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b129838f39a743f%3A0x3017d681632a850!2sSydney%20NSW%2C%20Australia!5e0!3m2!1sen!2smx!4v1713586074443!5m2!1sen!2smx' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>            ",
+            "rating": 4.7
+        },
+        
+         {
+            "name": "Dubái, Emiratos Árabes Unidos",
+            "img1": "../../assets/imgs/sixteen/sixteen.webp",
+            "img2": "../../assets/imgs/sixteen/sixteen1.webp",
+            "img3": "../../assets/imgs/sixteen/sixteen2.webp",
+            "img4": "../../assets/imgs/sixteen/sixteen3.webp",
+            "img5": "../../assets/imgs/sixteen/sixteen4.webp",
+            "priceNight": "$5,000 MXN",
+            "offer": ["Wifi", "Acceso a la playa privada", "Piscina en la azotea", "Spa", "Restaurantes de alta cocina", "Gimnasio", "Servicio de habitaciones", "Estacionamiento gratuito"],
+            "description": "Sumérgete en el lujo y la extravagancia de Dubái desde nuestro hotel de cinco estrellas en el famoso paseo marítimo. Con rascacielos impresionantes, centros comerciales de clase mundial y playas de arena dorada, nuestro hotel ofrece una experiencia de opulencia incomparable en la Ciudad del Oro.",
+            "quickDescription": "2 huéspedes - 1 habitación - 1 cama - 1 baño privado",
+            "descriptionTitle": "Hotel de lujo en el paseo marítimo de Dubái",
+            "maxGuests": 2,
+            "googleMapsEmbeded": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462561.6574537445!2d55.22748795!3d25.076022449999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2smx!4v1713586092025!5m2!1sen!2smx' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>            ",
+            "rating": 4.9
+        },
+        
+        
+        
+        {
+            "name": "Londres, Reino Unido",
+            "img1": "../../assets/imgs/seventeen/seventeen.webp",
+            "img2": "../../assets/imgs/seventeen/seventeen1.webp",
+            "img3": "../../assets/imgs/seventeen/seventeen2.webp",
+            "img4": "../../assets/imgs/seventeen/seventeen3.webp",
+            "img5": "../../assets/imgs/seventeen/seventeen4.webp",
+            "priceNight": "$3,000 MXN",
+            "offer": ["Wifi", "Desayuno inglés", "Vistas al río Támesis", "Gimnasio", "Spa", "Restaurante de alta cocina", "Servicio de habitaciones", "Estacionamiento disponible"],
+            "description": "Explora la historia y la cultura de Londres desde nuestro hotel de lujo en el distrito de Westminster. Con palacios reales, teatros de clase mundial y tiendas de diseño cerca, nuestro hotel ofrece una experiencia sofisticada en la capital del Reino Unido.",
+            "quickDescription": "2 huéspedes - 1 habitación - 1 cama - 1 baño privado",
+            "descriptionTitle": "Hotel de lujo en Westminster, Londres",
+            "maxGuests": 2,
+            "googleMapsEmbeded": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.182370726!2d-0.10159865000000001!3d51.52864165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2smx!4v1713586106132!5m2!1sen!2smx' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>            ",
+            "rating": 4.7
+        },
+        
+        {
+            "name": "Nueva York, Estados Unidos",
+            "img1": "../../assets/imgs/eighteen/eighteen.webp",
+            "img2": "../../assets/imgs/eighteen/eighteen1.jpg",
+            "img3": "../../assets/imgs/eighteen/eighteen2.jpg",
+            "img4": "../../assets/imgs/eighteen/eighteen3.webp",
+            "img5": "../../assets/imgs/eighteen/eighteen4.webp",
+            "priceNight": "$6,000 MXN",
+            "offer": ["Wifi", "Desayuno continental", "Vistas a Central Park", "Gimnasio", "Spa", "Restaurante de alta cocina", "Servicio de habitaciones", "Estacionamiento disponible"],
+            "description": "Sumérgete en la energía y la diversidad de Nueva York desde nuestro hotel de lujo en el Upper East Side. Con museos de renombre mundial, tiendas de lujo y restaurantes de moda cerca, nuestro hotel ofrece una experiencia sofisticada en la Gran Manzana.",
+            "quickDescription": "2 huéspedes - 1 habitación - 1 cama - 1 baño privado",
+            "descriptionTitle": "Hotel de lujo en el Upper East Side, Nueva York",
+            "maxGuests": 2,
+            "googleMapsEmbeded": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-73.97968099999999!3d40.6974881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2smx!4v1713586158790!5m2!1sen!2smx' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>            ",
+            "rating": 4.8
+        
+        },
+        
+        
+         {
+            "name": "Hong Kong, China",
+            "img1": "../../assets/imgs/nineteen/nineteen.webp",
+            "img2": "../../assets/imgs/nineteen/nineteen1.webp",
+            "img3": "../../assets/imgs/nineteen/nineteen2.webp",
+            "img4": "../../assets/imgs/nineteen/nineteen3.webp",
+            "img5": "../../assets/imgs/nineteen/nineteen4.webp",
+            "priceNight": "$2,200 MXN",
+            "offer": ["Wifi", "Desayuno buffet", "Vistas al puerto", "Gimnasio", "Piscina en la azotea", "Spa", "Servicio de habitaciones", "Estacionamiento disponible"],
+            "description": "Descubre la vibrante vida urbana de Hong Kong desde nuestro hotel en el distrito de Tsim Sha Tsui. Con rascacielos impresionantes, mercados callejeros y una mezcla ecléctica de culturas, nuestro hotel ofrece una experiencia emocionante en la puerta de entrada de Asia.",
+            "quickDescription": "2 huéspedes - 1 habitación - 1 cama - 1 baño privado",
+            "descriptionTitle": "Hotel en el distrito de Tsim Sha Tsui, Hong Kong",
+            "maxGuests": 2,
+            "googleMapsEmbeded": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d472323.06649658026!2d114.1394!3d22.352724249999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403e2eda332980f%3A0xf08ab3badbeac97c!2sHong%20Kong!5e0!3m2!1sen!2smx!4v1713586183274!5m2!1sen!2smx' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>            ",
+            "rating": 4.6
+        },
+        
+        
+        
+        {
+            "name": "Praga, República Checa",
+            "img1": "../../assets/imgs/twenty/twenty.jpg",
+            "img2": "../../assets/imgs/twenty/twenty1.webp",
+            "img3": "../../assets/imgs/twenty/twenty2.webp",
+            "img4": "../../assets/imgs/twenty/twenty3.webp",
+            "img5": "../../assets/imgs/twenty/twenty4.webp",
+            "priceNight": "$500 MXN",
+            "offer": ["Wifi", "Desayuno incluido", "Vistas al río", "Terraza en la azotea", "Bar", "Recepción 24 horas", "Servicio de lavandería"],
+            "description": "Explora la rica historia y la arquitectura impresionante de Praga desde nuestro hotel boutique ubicado en el pintoresco barrio de Mala Strana. Con castillos antiguos, calles empedradas y cervezas checas cerca, nuestro hotel ofrece una experiencia encantadora en la capital de Bohemia.",
+            "quickDescription": "2 huéspedes - 1 habitación - 1 cama - 1 baño privado",
+            "descriptionTitle": "Hotel boutique en Mala Strana, Praga",
+            "maxGuests": 2,
+            "googleMapsEmbeded": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d163930.96841337872!2d14.465623899999999!3d50.05966965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b939c0970798b%3A0x400af0f66164090!2sPrague%2C%20Czechia!5e0!3m2!1sen!2smx!4v1713586212253!5m2!1sen!2smx' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>            ",
+            "rating": 4.7
+        }
+    ]
+}
+
+
+
+
+
+
+
+
+
+
+

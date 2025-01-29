@@ -1,0 +1,37 @@
+
+<div class="sign-up-container" [ngStyle]="{'background-color':background, 'color':color}">
+  <div class="top">
+    <div class="first123" (click)="closeDialog()" > <i class="fa-solid fa-xmark" style="color: #5a5959; font-size: small;"></i></div>
+    <div class="second123">Inicia Sesion</div>
+    <div> </div>
+  </div>
+  <div class="bottom">
+    <h5 class="title123">¡Bienvenido de Nuevo!</h5>
+    <form [formGroup]="loginForm" (ngSubmit)="submit()" >
+      
+      <div class="input-container">
+        <input class="round-input" placeholder="Correo" formControlName="email" type="email" id="email"  name="email">
+      </div>
+      <p *ngIf="email?.touched && email?.errors?.['required']">Correo Requerido</p>
+      <p *ngIf="email?.errors?.['email']">Correo Invalido</p>
+      
+      <div class="input-container">
+        <input class="round-input" placeholder="Contraseña" formControlName="password" type="password" id="password"  name="password">
+      </div>
+      <p *ngIf="password?.touched && password?.errors?.['required']">Contraseña Requerida</p>
+
+      <button class="continue" type="submit">Continuar</button>
+      
+      
+      @if(wrong){
+        <p>¡Correo o contraseña incorrectos!</p>
+      }
+      
+      <button class="phoneBut" (click)="redirect()"><i class="fa-solid fa-phone" style="color: #ffffff;"></i></button>
+
+      <span>¿Nuevo a nuestra plataforma?<a class="pointer" (click)="signUp()">¡Registrate!</a></span>
+    </form>
+  </div>
+</div>
+  
+

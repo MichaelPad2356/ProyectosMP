@@ -1,0 +1,245 @@
+/* You can add global styles to this file, and also import other style files */
+
+@media (min-width: 0px) {
+    .card-columns {
+        column-count: 1;
+    }
+    
+}
+
+@media (min-width: 550px) {
+    .card-columns {
+        column-count: 2;
+    }
+    
+}
+
+@media (min-width: 950px) {
+    .card-columns {
+        column-count: 3;
+    }
+    
+}
+
+@media (min-width: 1227px) {
+    .card-columns {
+        column-count: 4;
+    }
+}
+
+@media (min-width: 1640px) {
+    .card-columns {
+        column-count: 5;
+    }
+}
+
+
+body{
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-size: .875rem;
+    color: #222;
+    background-color: #fff;
+    margin: 0;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* ------------------------------------------------------------------------ */
+/*                          Accesibilidad Web                               */
+/* ------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------ */
+/*                          Tamaño del texto AW                             */
+/* ------------------------------------------------------------------------ */
+  
+  /* Pequeño */
+  .small-text {
+    font-size: 20px !important;
+  }
+  
+  /* Mediano */
+  .medium-text {
+    font-size: 22px !important;
+  }
+  
+  /* Grande */
+  .large-text {
+    font-size: 26px !important;
+  }
+
+  .small-text h4 {
+    font-size: 20px !important;
+  }
+  
+  /* Mediano */
+  .medium-text h4 {
+    font-size: 22px !important;
+  }
+  
+  /* Grande */
+  .large-text h4 {
+    font-size: 26px !important;
+  }
+
+  .small-text .footerLeft {
+    font-size: 20px !important;
+  }
+  
+  /* Mediano */
+  .medium-text .footerLeft {
+    font-size: 22px !important;
+  }
+  
+  /* Grande */
+  .large-text .footerLeft {
+    font-size: 26px !important;
+  }
+
+  .small-text p {
+    font-size: 20px !important;
+  }
+  
+  /* Mediano */
+  .medium-text p {
+    font-size: 22px !important;
+  }
+  
+  /* Grande */
+  .large-text p {
+    font-size: 26px !important;
+  }
+
+/* ------------------------------------------------------------------------ */
+/*                          Alto contraste AW                               */
+/* ------------------------------------------------------------------------ */
+  .high-contrast .body {
+    background-color: black !important;
+    color: yellow !important;
+  }
+
+  .high-contrast .space {
+    background-color: black !important;
+    color: yellow !important;
+    /* border: 1px solid yellow !important; */
+  } 
+
+  .high-contrast .video-container {
+    background-color: black !important;
+    color: yellow !important;
+    /* border: 1px solid yellow !important; */
+  } 
+
+  .high-contrast .txt1 {
+    background-color: black !important;
+    color: yellow !important;
+    /* border: 1px solid yellow !important; */
+  } 
+
+  .high-contrast .search, .high-contrast .line, .high-contrast .menuIconButton, .high-contrast .btnS {
+    background-color: black !important;
+    color: yellow !important;
+    border: 1px solid yellow !important;
+  } 
+  .high-contrast .btn {
+    background-color: rgb(255, 255, 255) !important;
+    color: yellow !important;
+    border: 1px solid yellow !important;
+  } 
+
+
+  .high-contrast nav{
+    background-color: black !important;
+    color: yellow !important;
+    border: 1px solid yellow !important;
+  } 
+
+  .high-contrast .route{
+    background-color: black !important;
+    color: yellow !important;
+    /* border: 1px solid yellow !important; */
+  } 
+
+.high-contrast .dropdown-menu {
+    border: 1px solid yellow !important;
+  }  
+
+.high-contrast .card {
+    background-color: black !important;
+    color: yellow !important;
+    border: 1px solid yellow !important;
+  } 
+
+.high-contrast h4, .high-contrast .card-text, .high-contrast .card-body {
+    background-color: black !important;
+    color: yellow !important;
+    /* border: 1px solid yellow !important; */
+  }  
+
+  .high-contrast img:not(.aWeb) {
+    filter: invert(1);
+    font-weight: bold;
+  }
+  
+  .high-contrast .icons, .high-contrast .footerLeft, .high-contrast .footer-content, .high-contrast .footer-bottom, .high-contrast .footer, .high-contrast #nota {
+    background-color: black !important;
+    color: yellow !important;
+  }
+
+  /* ------------------------------------------------------------------------ */
+  /*                          Invertir colores AW                             */
+  /* ------------------------------------------------------------------------ */
+
+  .invert-colors {
+    filter: invert(1);
+    font-weight: bold;
+  }
+  
+  .high-contrast iframe {
+    filter: invert(1);
+    font-weight: bold;
+  }
+
+/* ------------------------------------------------------------------------ */
+/*                    Tamaño del puntero del mouse AW                       */
+/* ------------------------------------------------------------------------ */
+
+  .large-cursor {
+    cursor: url('assets/imgs/logoAWeb/cursorP.png'), auto !important; 
+  }
+
+
+  .large-cursor .route {
+    cursor: url('assets/imgs/logoAWeb/cursorP.png'), auto !important; 
+  }
+
+  .large-cursor .dropdown-item  {
+    cursor: url('assets/imgs/logoAWeb/cursorP.png'), auto !important; 
+  }
+
+  .large-cursor a {
+    cursor: url('assets/imgs/logoAWeb/cursorP.png'), auto !important; 
+  }
+
+  .large-cursor img {
+    cursor: url('assets/imgs/logoAWeb/cursorP.png'), auto !important; 
+  }
+
+  .large-cursor iframe {
+    cursor: url('assets/imgs/logoAWeb/cursorP.png'), auto !important; 
+  }
+
+  .large-cursor .d-flex {
+    cursor: url('assets/imgs/logoAWeb/cursorP.png'), auto !important; 
+  }
+
+  .large-cursor .dropdown-menu {
+    cursor: url('assets/imgs/logoAWeb/cursorP.png'), auto !important; 
+  }
+
+  .large-cursor .btn{
+    cursor: url('assets/imgs/logoAWeb/cursorP.png'), auto !important; 
+  }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+

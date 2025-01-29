@@ -1,0 +1,26 @@
+
+<div class="body" [ngStyle]="{'background-color':background, 'color':color}">
+    <div class="cards-container" >
+        <div class="card-columns">
+            @for (item of array; track item){
+                <div class="card" [ngStyle]="{'background-color': background}">
+                    <a class="card-link">
+                        <div class="square-container">
+                            <img [src]="item.img" class="card-img-top square-image" alt="...">
+                        </div>
+                        <div class="card-body" [ngStyle]="{'color':color}">
+                            @if(dark){
+                                <p class="card-text"><img class="imgIcon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAR9JREFUSEu1lf11wjAMxE+TFDaBTcokhUlgk7JJ2eR41yfzHCMncpvon3w8Rz/Jd1YMG4dtnB9DAJLfAB5mdsoWlgaQ/ARw9cRHM7tnICMAVX/wpHczO64GIKnEAtSR6iLVge99qb5AUl0sAkjuAPwE2/EAcFrS4gXwRBLyA4CSKnQt99GWC6Jorxcz+31XA2oRM/rNrZGV9y3gDODrv5n9e23dbQLQA8k1IBN3vYncHKiRhkLRQxf9AdJ1VNemJDUW5KpMdA/dHGDEVbKl9HuLOQAzpfua7qleTYPi+7aoUcDFE0TnJdShB2gFnrjEx4o0qsfILfoR9QAabuXjUMBqdpVuXuOh3qa5DjSeF6elg9Rx+CtdHNcDTgqXbg54AuweexkeXj4uAAAAAElFTkSuQmCC" width="12px"/>{{item.score}} · {{item.hours}} horas</p>
+                            }@else{
+                                <p class="card-text"><img class="imgIcon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAQ9JREFUSEu1ldsRAjEIRe9WonainWglaiXaiXainegcZ+NgJFnwwc8+w4FcIIP+bMOf/SsLOEm6StpEA8sA1pIOo+OVpHMEkgEQ/XJ0inMgkxYF4BiAtVAWUYCNvkBCWUQAc0kXZy+K2F0tLABHCDmTxD3Gtdx7+w0Eq6/78s4CvG2YFLHxA8AF3yxgJ2n7qcdqHX1yrAE8/wLyUl2eyLahMgm5oreqKAtpVlSvTBkLgCLWbLoeIFNVlCX6vVkPcIuEPv7T7OpfavCo+9qyALYC8/rF1aEFqAWuq4TxgUZ2jNBYbwdRC8BwK4tbApbZVbJ5jge7Tb0MOAOIaOrkAkTG7lEaGdeJYoqL/JVTu/gOKd82GTFQwxMAAAAASUVORK5CYII=" width="12px"/>{{item.score}} · {{item.hours}} horas</p>
+                            }
+                            <p class="card-text"><b>{{item.name}}</b></p>
+                            <p class="card-title">Desde {{item.pricePerson}} por persona</p>
+                        </div>
+                    </a>
+                </div> 
+            }
+        </div>
+    </div>
+</div>
+

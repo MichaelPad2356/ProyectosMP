@@ -1,0 +1,149 @@
+/* Estilos generales */
+.btnReturn {
+    background-color: transparent;
+    border: none;
+}
+
+.direccion {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.inputRegistro {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 50px;
+    width: 100%;
+    padding-left: 2%;
+}
+
+.b {
+    margin-top: 1%;
+}
+
+.continuar {
+    border: none;
+    background-color: rgb(255, 52, 85);
+    border-radius: 8px;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: white;
+}
+
+.editDate {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+}
+
+.inp {
+    border: none;
+    background-color: transparent;
+    width: 12%;
+}
+
+.inp:disabled {
+    color: black;
+}
+
+.inp::placeholder {
+    color: black;
+}
+
+.inp:focus {
+    outline: none;
+}
+
+.miniDescription {
+    margin-top: 5%;
+    border: 1px solid #ccc;
+    width: 32%;
+    padding: 20px;
+    height: fit-content;
+    border-radius: 5px;
+}
+
+.body {
+    font-family: "Roboto", sans-serif;
+}
+
+.space {
+    height: 45px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Estilos responsive */
+@media only screen and (max-width: 1200px) {
+    .body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .miniDescription {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .direccion, .miniDescription {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .inp {
+        width: 100%;
+    }
+
+    .editDate {
+        font-size: 14px;
+    }
+
+    .direccion h2, .direccion h5 {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .direccion, .miniDescription {
+        width: 90%;
+    }
+
+    .direccion h2 {
+        font-size: 18px;
+    }
+
+    .direccion h5 {
+        font-size: 14px;
+    }
+
+    .btnReturn, .editDate, .continuar {
+        font-size: 14px;
+    }
+
+    .inp {
+        width: 100%;
+    }
+}
+
+/* Estilos para pantallas muy pequeñas */
+@media only screen and (max-width: 320px) {
+    .direccion, .miniDescription {
+        width: 95%;
+    }
+
+    .direccion h2, .direccion h5 {
+        font-size: 16px;
+    }
+
+    .inp {
+        width: 100%;
+    }
+
+    .btnReturn, .editDate, .continuar {
+        font-size: 12px;
+    }
+}

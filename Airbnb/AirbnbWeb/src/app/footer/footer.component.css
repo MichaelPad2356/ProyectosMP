@@ -1,0 +1,87 @@
+.footer {
+    font-family: "Roboto", sans-serif;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight:300;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footerLeft{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.info{
+    padding-bottom: 10px;
+}
+
+.footer-content p,
+.footer-content li {
+    margin: 0;
+    margin-left: 8px;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #DDD;
+    padding-top: 20px;
+    font-size: 0.8rem;
+    color: black;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+li::marker {
+    font-size: 0.5rem;
+    color: black;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    
+}
+
+.icons i {
+    margin-left: 10px;
+    color: black;
+}
+
+.icons i a {
+    padding: 5px; 
+}
+
+.lista{
+    padding: 0;
+    margin: 0;
+    margin-right: 280px;
+}
+.lista li{
+  display: inline-block;
+  margin-right: 10px; 
+}
+.lista li:before {
+    content: "\2022"; 
+    margin-right: 5px; 
+  }
+
+ #nota{
+    text-align: center;
+    font-weight: bold;
+    color: #FF585D;
+    margin-bottom: 20px;
+ }
+
+ .body{
+    width: 100%;
+ }

@@ -1,0 +1,137 @@
+/*.sign-up-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    background-color: white;
+    margin-top: 5%;
+  }*/
+
+  .sign-up-container {
+    /*max-width: 400px;
+    /*margin: auto;
+    padding: 1em;
+    /*border: 1px solid #ccc;*/
+    border-radius: 1em;
+    background-color: white;
+
+    /*margin-top: 5%;
+    margin-bottom: 5%;*/
+  }
+
+  
+  .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 1px solid #dad9d9;
+    padding: 2%
+  }
+
+  .title123{
+    font-weight: 600;
+    margin-bottom: 6%;
+  }
+
+  .first123{
+    cursor: pointer;
+    padding-left: 2%;
+  }
+
+  .second123{
+    padding-right: 5%;
+    font-weight: 600;
+  }
+
+  .input-container {
+    margin-bottom: 0rem;
+  }
+  
+  .round-input {
+    width: 100%;
+    padding: 3% 5%;
+    border-radius: 0.25em;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  .round-input:focus {
+    border-color: #666;
+  }
+
+  .bottom{
+    margin: 4%
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    margin-top: 0.5em;
+  }
+  input {
+    margin-bottom: 1em;
+  }
+  button {
+    background-color: rgb(0, 0, 71);
+    color: white;
+    border: none;
+    padding: 0.5em;
+    border-radius: 0.25em;
+    cursor: pointer;
+  }
+  button:hover {
+    
+  }
+
+  #maybe{
+    color: red;
+    font-size: small;
+    text-decoration: underline red;
+  }
+
+  .pointer{
+    cursor: pointer;
+    
+  }
+
+  .captcha{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 7%;
+    margin-top: 7%;
+  }
+
+  span{
+    margin-bottom: 5%;
+    margin-top: 5%;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .twenty{
+    margin-bottom: 5%;
+  }
+  
+
+  .recaptcha-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+  }
+
+  .but{
+    width: 100%;
+    background-color: rgb(255, 52, 85);
+  }
+  
+  

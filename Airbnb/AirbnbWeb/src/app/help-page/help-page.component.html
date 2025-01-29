@@ -1,0 +1,75 @@
+<div class="body" [ngStyle]="{'background-color':background, 'color':color}">
+    <div class="header" [ngStyle]="{'background-color':background, 'color':color}">
+        <h1 [ngStyle]="{'background-color':background, 'color':color}">¿En qué podemos ayudarte?</h1>
+        
+        <div class="search-container">
+            <input type="text" placeholder="Buscar tutoriales y más">
+            <button class="btn-lg btnS" type="button"><i class="fa fa-search iconS" style="color: white;"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="nav">
+        <nav>
+            <ul>
+                <li><a style="color: black;" [ngStyle]="{'background-color':background, 'color':color}">Huésped</a></li>
+                <li><a>Anfitrión</a></li>
+                <li><a>Organizador de experiencias</a></li>
+                <li><a>Administrador de viajes</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container">
+        <section class="guides">
+            <h2>Guías para comenzar</h2>
+            <div class="guide-cards">
+                <div class="carta">
+                    <img src="../../assets/imgs/help/introduccion.jpg" alt="Guía 1">
+                    <p>Cómo dar los primeros pasos en Airbnb</p>
+                </div>
+                <div class="carta">
+                    <img src="../../assets/imgs/help/acceso.jpg" alt="Guía 2">
+                    <p>Cómo acceder a tu cuenta y administrarla</p>
+                </div>
+                <div class="carta">
+                    <img src="../../assets/imgs/help/reservacion.jpg" alt="Guía 3">
+                    <p>Ayuda con una reservación</p>
+                </div>
+                <div class="carta">
+                    <img src="../../assets/imgs/help/aircover.png" alt="Guía 4">
+                    <p>AirCover para huéspedes</p>
+                </div>
+            </div>
+        </section>
+        <section class="articles">
+            <h2>Artículos destacados</h2>
+            <div class="article-links">
+                <div class="link">
+                    <a [ngStyle]="{'background-color':background, 'color':color}">Cómo cancelar la reservación de un alojamiento</a>
+                    <p>Tus planes cambiaron y ahora tienes que cancelar la reservación. No hay problema.</p>
+                </div>
+                <div class="link">
+                    <a [ngStyle]="{'background-color':background, 'color':color}">Cómo modificar la fecha o la hora de la reservación de una experiencia</a>
+                    <p>Reservaste experiencia, pero ¿ya no te convienen la fecha o la hora? No te preocupes...</p>
+                </div>
+                <div class="link">
+                    <a [ngStyle]="{'background-color':background, 'color':color}">Qué pasa si el anfitrión cancela tu reservación</a>
+                    <p>Aunque es inusual, a veces los anfitriones cancelan las reservaciones. Entendemos que...</p>
+                </div>
+                <div class="link">
+                    <a [ngStyle]="{'background-color':background, 'color':color}">Formas de pago aceptadas</a>
+                    <p>Airbnb acepta varios métodos de pago en función del país en el que se encuentre tu...</p>
+                </div>
+                <div class="link">
+                    <a [ngStyle]="{'background-color':background, 'color':color}">Editar, eliminar o agregar una forma de pago</a>
+                    <p>Si un método de pago existente en tu cuenta es incorrecto p. ej.: una tarjeta de crédito...</p>
+                </div>
+                <div class="link">
+                    <a [ngStyle]="{'background-color':background, 'color':color}"> Cuándo pagarás tus reservaciones</a>
+                    <p>¡Muy bien! Acabas de hacer una reservación con nosotros ¿Cuáles son los siguientes pasos? En cuanto esté confirmada, cargaremos el...</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

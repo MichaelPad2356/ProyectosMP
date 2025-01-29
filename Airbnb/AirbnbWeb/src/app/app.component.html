@@ -1,0 +1,170 @@
+<div class="space" [ngStyle]="{'background-color': background, 'color': color, }"></div>
+<nav [ngStyle]="{'background-color': background, 'color': color, 'box-shadow':shadow}" style="display: flex; justify-content: space-between; align-items: center;" class="navBar navbar navbar-expand-lg">
+    <div style="display: flex; align-items: center;">
+        <img src="../assets/imgs/Ruben/logoAirbnb.png" alt="" width="120px" height="40px" style="margin-left: 20px;">
+    </div>
+
+    <button class="navbar-toggler-new" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarNav" [ngStyle]="{'color': color}" >
+        <div class="links"style="display: flex; justify-content: center; align-items: center; width: 100%;">
+            <a class="route" routerLink="/home" routerLinkActive="active" [ngClass]="{'bold-text': activeLink === 'home'}" 
+            (click)="setActiveLink('home')" style="margin-left: 40px;" [ngStyle]="{'color': color}">Estancias</a>
+            @if(user$ | async; as user) {
+                <a class="route" routerLink="/experiencias" routerLinkActive="active" [ngClass]="{'bold-text': activeLink === 'experiencias'}" 
+                (click)="setActiveLink('experiencias')" style="margin-left: 40px;" [ngStyle]="{'color': color}">Experiencias</a>
+                @if(userData.type == "admin") {
+                    <a routerLink="/admin" routerLinkActive="active" [ngClass]="{'bold-text': activeLink === 'admin'}" 
+                    (click)="setActiveLink('admin')" style="margin-left: 40px;" [ngStyle]="{'color': color}">Admin</a>
+                } @else {
+                    <a class="route" routerLink="/reporte-reservaciones" routerLinkActive="active" [ngClass]="{'bold-text': activeLink === 'reporte'}" 
+                    (click)="setActiveLink('reporte')" style="margin-left: 40px;" [ngStyle]="{'color': color}">Reporte de Citas</a> 
+                }
+            }
+            <a routerLink="/contact" routerLinkActive="active" [ngClass]="{'bold-text': activeLink === 'contact'}" 
+            (click)="setActiveLink('contact')" style="margin-left: 40px;" [ngStyle]="{'color': color}">Contáctanos</a>
+            <a routerLink="/help-page" routerLinkActive="active" [ngClass]="{'bold-text': activeLink === 'help-page'}" 
+            (click)="setActiveLink('help-page')" style="margin-left: 40px;" [ngStyle]="{'color': color}">Ayuda</a>
+            @if(user$ | async; as user) {
+                @if(userData.type == "admin"){
+                    <a class="route" routerLink="/team-data" routerLinkActive="active" [ngClass]="{'bold-text': activeLink === 'team'}" 
+                (click)="setActiveLink('team')" style="margin-left: 40px;" [ngStyle]="{'color': color}">Equipo de Desarrollo</a>
+                }
+            }
+        </div>
+
+
+    <ng-container #normalHome>
+        
+    </ng-container>
+        
+    </div>
+
+    <div class="derecha" style="display: flex; align-items: center;">
+        <div class="bI" style="display: flex; align-items: center;">
+            <div style="margin-right: 10px; padding-top: 1.2%;">
+                <h4 [ngStyle]="{'color':color}" style="font-size: 15px;">El hogar perfecto para cada viajero</h4>
+            </div>
+            <div style="display: flex;">
+                <div class="search" style="display: flex;">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control input-text sch txt1" placeholder="Cantidad menor a: " [(ngModel)]="criteria" 
+                        [ngStyle]="{'color':color, 'background-color':background}" style="margin-left: 2px; width: 50%;">
+                        <div class="input-group-append" style="padding-right: 2%;">
+                            <button class="btn-lg btnS" type="button" (click)="filterByPrice()"><i class="fa fa-search iconS"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="dropdown1">
+                        <button type="button" class="menuIconButton" data-toggle="dropdown" aria-expanded="false" (click)="toggleMenu()">
+                            <div class="menuIcon">
+                                <div class="hamburgerLines" [ngClass]="{ 'custom-active': menuOpen }">
+                                    <div class="line" [ngStyle]="{'background':color}"></div>
+                                    <div class="line" [ngStyle]="{'background':color}"></div>
+                                    <div class="line" [ngStyle]="{'background':color}"></div>
+                                </div>
+                            </div>
+                            <div class="avatar-container">
+                                @if( user$ | async; as user ) {
+                                    <img class="userAvatar" src="/assets/imgs/A-usuarios/ip8.jpg" alt="Avatar de usuario" 
+                                    style="box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.1);">
+                                    <div class="online-indicator"></div>
+                                } @else {
+                                    <img class="userAvatar" src="/assets/imgs/A-usuarios/NP.jpeg" alt="Avatar de usuario" 
+                                    style="box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.1);">
+                                }
+                            </div>
+                        </button>
+                        <div class="dropdown-menu avatar-dropdown-menu">
+                            @if( user$ | async; as user ) {
+                                <a class="dropdown-item no-select" href="#">Hola {{userData.name}}</a>
+                                <hr class="dropdown-divider">
+                                <a class="dropdown-item" routerLink="/home"
+                                [ngClass]="{'bold-text': activeLink === 'login'}" (click)="logout()">Cerrar sesión</a>
+                            } @else {
+                                <a class="popup dropdown-item" [ngClass]="{'bold-text': activeLink === 'signup'}" 
+                                (click)="setActiveLink('signup')" (click)="openSignup()">Registrate</a>
+                                <hr class="dropdown-divider">
+                                <a class="popup dropdown-item" [ngClass]="{'bold-text': activeLink === 'login'}" 
+                                (click)="setActiveLink('login')" (click)="openLogin()">Inicia sesión</a>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <app-boton-darkmode (clicEnBoton)="manejarClicEnBoton()"></app-boton-darkmode>
+                </div>
+
+                <!-- Accesibilidad Web -->
+                <div>
+                    <div class="dropdown">
+                        <button class="btn d-flex align-items-center p-0" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false" 
+                        style="width: 40px; height: 40px; background-color: #FF585D; color: #FFFFFF; border-radius: 50%;">
+                            <img src="../assets/imgs/logoAWeb/AWeb.png" alt="Accesibilidad Web" style="width: 100%; height: 100%; object-fit: cover;">
+                        </button>
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                            <div class="image-grid">
+                                <a class="dropdown-item dropdown-item2" (click)="toggleHighContrast()" style="text-align: center;">
+                                    <h6>High-Contrast</h6>
+                                    <i class="fa-solid fa-circle-half-stroke fa-lg"></i>
+                                </a>
+                                <a class="dropdown-item dropdown-item2" (click)="toggleInvertColors()" style="text-align: center;">
+                                    <h6>Invert-Colors</h6>
+                                    <img class="aWeb" src="../assets/imgs/logoAWeb/invert.png" style="width: 20px; height: 20px" alt="">
+                                </a>
+                                <a class="dropdown-item dropdown-item2" (click)="toggleTextSize()" style="text-align: center;">
+                                    <h6>Bigger-Text</h6>
+                                    <img class="aWeb" src="../assets/imgs/logoAWeb/font.png" style="width: 20px; height: 20px" alt="">
+                                </a>
+                                <a class="dropdown-item dropdown-item2" (click)="toggleLargeCursor()" style="text-align: center;">
+                                    <h6>Cursor</h6>
+                                    <img class="aWeb" src="../assets/imgs/logoAWeb/cursor.png" style="width: 20px; height: 20px" alt="">
+                                </a>
+                            </div>
+
+                            <h6 style="text-align: center;">Screen-Reader</h6>
+                            <div class="d-flex justify-content-center">
+                                <a class="dropdown-item dropdown-item2 p-2" (click)="startReading()" style="text-align: center;">
+                                    <img class="aWeb" src="../assets/imgs/logoAWeb/screenReader.png" style="width: 20px; height: 20px" alt="Screen Reader">
+                                </a>
+                                <a class="dropdown-item dropdown-item2 p-2" (click)="pauseReading()" style="text-align: center;">
+                                    <img class="aWeb" src="../assets/imgs/logoAWeb/pause1.png" style="width: 20px; height: 20px" alt="Pause">
+                                </a>
+                                <a class="dropdown-item dropdown-item2 p-2" (click)="resumeReading()" style="text-align: center;">
+                                    <img class="aWeb" src="../assets/imgs/logoAWeb/reanudar1.png" style="width: 20px; height: 20px" alt="Resume">
+                                </a>
+                                <a class="dropdown-item dropdown-item2 p-2" (click)="stopReading()" style="text-align: center;">
+                                    <img class="aWeb" src="../assets/imgs/logoAWeb/stop.png" style="width: 20px; height: 20px" alt="Stop">
+                                </a>
+                            </div>
+                            <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+                                @if(isReading) {
+                                    <span style="color: green; font-weight: bold;">
+                                        Reading...
+                                    </span>
+                                } @else {
+                                    @if(isPause) {
+                                        <span style="color: red; font-weight: bold;">
+                                            Pause...
+                                        </span>
+                                    } @else {
+                                        <span style="color: red; font-weight: bold;">
+                                            Inactive...
+                                        </span>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  </div>
+</nav>
+<app-spinner></app-spinner>
+<router-outlet></router-outlet>
+<app-footer></app-footer>

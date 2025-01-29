@@ -1,0 +1,55 @@
+.body{
+
+    width:100%;
+}
+
+.card{
+    border: 0px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 25px;
+}
+.card-link{
+    cursor: pointer;
+}
+.cards-container{
+    width: 91%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card-body{
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    color: #222;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+.square-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.square-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+.card-text{
+    margin: 0px;
+}
+.card-title{
+    margin-top: 5px;
+}
+.imgIcon{
+    padding-bottom: 2px;
+    margin-right: 4px;
+}

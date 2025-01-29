@@ -1,0 +1,21 @@
+<div class="price">{{priceNightString | price}} noche </div>
+<div class="buttonAndSub">
+    <button [ngStyle]="{'background-color':color}" [routerLink]="['/checkout-form', id]" routerLinkActive="active">Reservar</button>
+    <small>Aún no se cobrará nada</small>
+</div>
+<div class="morePrices">
+    
+    <div >
+        <div class="specialtd pp">{{priceNightString | price}} x 5 noches</div>
+        <div class="specialtd">Tarifa por servicio de Airbnb</div>
+    </div>
+    <div>
+        <div class="specialTD pp">{{fiveNightsString | price}} </div>
+        <div class="specialTD"> {{tarifaAirbnbString | price}}</div>
+    </div>
+    
+</div>
+<div class="total">
+    <div>Total antes de impuestos</div>
+    <div>{{totalBeforeTaxString | price}}</div>
+</div>

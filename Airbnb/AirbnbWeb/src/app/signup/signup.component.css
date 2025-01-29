@@ -1,0 +1,128 @@
+.sign-up-container {
+    /*max-width: 400px;
+    /*margin: auto;
+    padding: 1em;
+    /*border: 1px solid #ccc;*/
+    border-radius: 1em;
+    background-color: white;
+
+    /*margin-top: 5%;
+    margin-bottom: 5%;*/
+  }
+
+  .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 1px solid #dad9d9;
+    padding: 2%
+  }
+
+  
+
+  .first123{
+    cursor: pointer;
+    padding-left: 2%;
+  }
+
+  .second123{
+    padding-right: 5%;
+    font-weight: 600;
+  }
+
+  .title123{
+    font-weight: 600;
+    margin-bottom: 6%;
+  }
+
+  .bottom{
+    margin: 4%
+  }
+
+  .theOne{
+    margin-top: 4%;
+  }
+
+  p{
+    font-size: 0.9em;
+    color: #6e6e6e;
+    margin-top: 0.5em;
+  }
+
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    margin-top: 0.5em;
+  }
+
+  .input-container {
+    margin-bottom: 0rem;
+  }
+  
+  .round-input {
+    width: 100%;
+    padding: 3% 5%;
+    border-radius: 0.25em;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  .round-input:focus {
+    border-color: #666;
+  }
+  
+ 
+  button {
+    background-color: rgb(255, 52, 85);
+    color: white;
+    border: none;
+    padding: 0.5em;
+    border-radius: 0.25em;
+    cursor: pointer;
+    margin-top: 2%;
+    margin-bottom: 4%;
+  }
+  button:hover {
+    background-color: black;
+    
+  }
+
+  .extra{
+    border: 1px solid black;
+    padding: 1%;
+    border-radius: 0.25em;
+    margin-bottom: 2%;
+    padding-left: 5%;
+    cursor: pointer;
+   
+  }
+
+  
+
+  .captcha{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 7%
+  }
+
+  .last{
+    margin-bottom: 4%;
+  }
+
+  .end1{
+    margin-top: 4%;
+
+  }
+
+  .end2{
+    margin-bottom: 4%;
+  }
+  

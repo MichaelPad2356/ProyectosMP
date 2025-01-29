@@ -1,0 +1,66 @@
+<div class="body" [ngStyle]="{'background-color':background, 'color':color}">    
+    <div class="title">
+        {{place.name}}
+    </div>
+    <div class="pics">
+        <div class="first">
+            <img class="half" [src]="place.img1" alt="">
+        </div>
+        <div class="right">
+            <div class="quarter one">
+                <img class="fourO" [src]="place.img2" alt="">
+                <img class="fourT" [src]="place.img3" alt="">
+            </div>
+            <div class="quarter two">
+                <img class="fourO" [src]="place.img4" alt="">
+                <img class="fourT" [src]="place.img5" alt="">
+            </div>
+        </div>
+    </div>
+    
+    <div class="info">
+        <div class="texts">
+            <div class="subtitle">
+                {{place.descriptionTitle | titlecase }}
+            </div>
+            <div class="quickDes">
+                {{place.quickDescription}}
+            </div>
+            <div class="desc">
+                {{place.description}}
+            </div>
+        </div>
+        <app-price-box class="payment" [priceNight]="priceNightNumber" [id]="id" >
+        </app-price-box>
+        
+    </div>
+    <div class="offer">
+        <div class="offerTitle">Lo que ofrece este lugar</div>
+        <div>
+            <ul class="list">
+                <div class="left">
+                    @for(offer of place.offer; track offer; let i = $index){
+                        @if(i <4){   
+                            <li><i class="fa-brands fa-airbnb"></i>{{offer}}</li>
+                        }
+                    }
+                </div>
+                <div class="rightOffer">
+                    @for(offer of place.offer; track offer; let i = $index){
+                        @if(i>=4){
+                             
+                            <li><i class="fa-brands fa-airbnb"></i>{{offer}}</li>
+                            
+                        }
+                    }
+                </div>
+            </ul>
+            
+        </div>
+        <div></div>
+    </div>
+    <div class="location">
+        <div class="locTitle">Dónde vas a estar</div>
+        <div class="map" [innerHTML]="getSafeHtml(place.googleMapsEmbeded)"></div> 
+    </div>
+</div>
