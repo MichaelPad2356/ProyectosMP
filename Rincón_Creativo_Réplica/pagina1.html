@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rincon Creativo</title>
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> <!-- Animate.css -->
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">  <!--Favicon-->
+
+    <script
+      src="https://kit.fontawesome.com/a99fa1f648.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+
+    <div id="part1">
+        <nav>
+        </nav>
+        <nav>
+            <a href="#" id="title">rincón creativo</a>             
+            <a href="index.html" class="menu" id="inicio" style="color:#000000; font-weight: bold;">INICIO</a>
+            <a href="pagina1.html" class="menu" style="color: rgb(205, 205, 18);" >ENCONTRAR</a>  <!-- AQUI TE LLEVA EN LA PAGINA 1 -->
+            <a href="pagina2.html" class="menu">BUSCAR TRABAJO</a> <!-- AQUI TE LLEVA EN LA PAGINA 2 -->
+            <a href="#ancla" class="menu">DUDAS</a>
+            <a href="https://www.facebook.com/?locale=es_LA" class="fa fa-facebook" target="_blank"></a>
+            <a href="https://twitter.com/?lang=es" class="fa fa-twitter" target="_blank"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+        </nav>
+    </div>
+
+    <section style="background-color: yellow;">
+        <header class="animate__animated animate__shakeX" title="encabezado" id="enc"><i class="fa-solid fa-plus" style="color: #000000;"></i>TRABAJOS MAS BUSCADOS POR DUEÑOS DE EMPRESAS</header>
+    </section>
+
+    <section id="articulo">
+        <article>En nuestro constante viaje hacia la excelencia y la innovación, hemos descubierto en "Rincón Creativo" una valiosa aliada en nuestra búsqueda de talento excepcional. Comprendemos que el talento es el corazón de nuestra empresa y la clave para mantenernos a la vanguardia en nuestra industria. En "Rincón Creativo," encontramos un espacio donde la creatividad y la innovación florecen, donde los profesionales altamente capacitados se reúnen y aportan ideas frescas y perspectivas únicas. Valoramos profundamente la diversidad de talentos que esta plataforma ofrece, permitiéndonos trascender fronteras geográficas y culturales.</article>
+        <br>
+        <article>Para nosotros, "Rincón Creativo" es un recurso invaluable en nuestro compromiso constante de impulsar la innovación y la creatividad en nuestra empresa. Es el lugar donde nuestra visión empresarial se encuentra con la imaginación ilimitada, y donde forjamos nuestro futuro con la ayuda de los talentos más brillantes de todo el mundo. Próximamente, exploraremos los tipos de trabajos más solicitados en esta plataforma en nuestra página web, ofreciendo más detalles sobre las oportunidades que impulsan nuestra innovación y éxito continuo.</article>
+    </section>
+
+
+    <br>
+    <section id="DivP6">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img id="ASI" src="images/Analista de Sistemas Informaticos.jpeg"  style="width:100%" height="500">
+              <div class="text">ANALISTA DE SISTEMAS INFORMATICOS</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 5</div>
+              <img id="IR" src="images/Ingeniero en Robotica.png" style="width:100%"  height="500">
+              <div class="text">INGENIERO EN ROBOTICA</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 5</div>
+              <img id="EN" src="images/Especialista en Ciberseguridad.jpg"  style="width:100%"  height="500">
+              <div class="text">ESCPECIALISTA EN CIBERSEGURIDAD</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img id="DBD" src="images/Desarrollador Big Data.jpg"  style="width:100%"  height="500">
+                <div class="text">DESARROLLADOR BIG DATA</div>
+            </div>
+            
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img id="EIA" src="images/Especialista en IA.jpeg"  style="width:100%"  height="500">
+                <div class="text">ESPECIALISTA EN IA</div>
+            </div>
+
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span> 
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+    
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+        </script>
+    </section>
+
+    <br><br><br><br>
+
+    <section>
+        <table id="a1">
+            <tr>
+                <th colspan="5" style="background-color: #333; color: white;">TRABAJOS MÁS BUSCADOS EN RINCÓN CREATIVO POR LAS EMPRESAS</th>
+            </tr>
+            <tr>
+                <td id="b1">Analista de Sistemas Informáticos</td>
+                <td id="b1">Ingeniero en Robótica</td>
+                <td id="b1">Especialista en Ciberseguridad</td>
+                <td id="b1">Desarrollador Big Data</td>
+                <td id="b1">Especialista en IA</td>
+            </tr>
+            <tr>
+                <td id="c1">Las empresas buscan a un Analista de Sistemas Informáticos para aprovechar su experiencia en la gestión de tecnología, resolución de problemas y mejora de procesos relacionados con sistemas informáticos, lo que les permite mantener la eficiencia operativa, adaptarse a las demandas tecnológicas cambiantes y tomar decisiones informadas para el crecimiento y la competitividad en el mundo empresarial.</td>
+                <td id="c1">Las empresas buscan a Ingenieros en Robótica debido a su capacidad para diseñar, desarrollar y mantener sistemas robóticos avanzados, lo que les permite automatizar procesos, mejorar la eficiencia de la producción, reducir costos laborales y mantenerse a la vanguardia en la innovación tecnológica, lo que es esencial para la competitividad y la excelencia en sectores como la manufactura, la salud, la logística y la exploración espacial, entre otros.</td>
+                <td id="c1">Las empresas buscan a un Especialista en Ciberseguridad para proteger sus sistemas y datos de amenazas cibernéticas, como ataques de hackers y malware, garantizando la confidencialidad, integridad y disponibilidad de la información crítica, cumpliendo con regulaciones de privacidad y seguridad, evitando pérdidas financieras y reputacionales, y asegurando la continuidad de las operaciones en un entorno digital cada vez más riesgoso y complejo.</td>
+                <td id="c1">Las empresas buscan desarrolladores de Big Data porque necesitan expertos que puedan diseñar, implementar y administrar infraestructuras de datos escalables, así como aplicar análisis avanzados para obtener información valiosa de sus datos. Estos profesionales son cruciales para la toma de decisiones estratégicas y la optimización de procesos, lo que les permite mantenerse competitivas en un entorno empresarial cada vez más impulsado por los datos.</td>
+                <td id="c1">Las empresas buscan especialistas en inteligencia artificial (IA) para aprovechar las capacidades avanzadas de la IA en la automatización de tareas, la toma de decisiones basada en datos y la mejora de la eficiencia operativa. Estos profesionales son esenciales para desarrollar soluciones de vanguardia que pueden impulsar la innovación, la personalización de productos y servicios, y la competitividad en el mercado actual, donde la IA desempeña un papel fundamental en la transformación digital y el análisis de datos.</td>
+            </tr>
+        </table>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div>
+        <i class="fa-solid fa-rotate-left fa-beat"></i>
+        <a href="index.html" class="menu">REGRESAR AL INICIO</a>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div id="ancla" style="background-color: rgb(46, 45, 45); color: white;">
+        <header  id="hd1"><i class="fa-solid fa-plus" style="vertical-align: middle; margin-right: 10px;"></i>DUDAS</header>
+        <h2>Datos Personales</h2>
+        <table id="aa2">
+            <tr id="dcba">
+                <td style="margin-left: 40px;"><label for="nombre">Nombre</label>  </td>
+                <td style="margin-left: 10px;"><input type="text" id="nombre"> </td>
+                <td style="margin-left: 30%;"><label for="email"></label>Email</td>
+                <td style="margin-left: 10px;"><input type="email" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td><br></td>
+                <td><br></td>
+
+            </tr>
+        </table>
+        
+        <table id="aa2">
+            <tr style="text-align: center;">
+                <th colspan="2">Edad</th>
+                <th colspan="6">Sexo</th>
+                <th colspan="4">Fecha de Nacimiento</th>
+            </tr>
+            
+            <tr style="text-align: center;">
+                <td colspan="2"><input type="number" name="edad" id="edad"></td>
+
+                <td colspan="2"><input type="radio" id="hombre" name="genero" value="hombre">
+                    <label for="hombre">Hombre</label></td>
+                <td colspan="2"><input type="radio" id="mujer" name="genero" value="mujer">
+                    <label for="mujer">Mujer</label></td>
+                <td colspan="2"><input type="radio" id="otros" name="genero" value="otros">
+                    <label for="otros">Otros</label></td>
+
+                <td colspan="2"><input type="date" id="fecha"></td>
+            </tr>
+            <tr>
+                <td><br></td>
+                <td><br></td>
+
+            </tr>
+        </table>
+        <table id="aa2">
+            <tr id="abcd">
+                <td><label for="Provincia">Seleccione la Provincia de la que es:</label></td>
+                <td>
+                    <input type="text" id="Provincia" name=""Provincia" list="numeros">
+                    <datalist id="numeros">
+                        <option value="Álava">
+                        <option value="Albacete">
+                        <option value="Alicante">
+                        <option value="Almería">
+                        <option value="Asturias">
+                        <option value="Ávila">
+                        <option value="Badajoz">
+                        <option value="Barcelona">
+                        <option value="Burgos">
+                        <option value="Cáceres">
+                        <option value="Cádiz">
+                        <option value="Cantabria">
+                        <option value="Castellón">
+                        <option value="Ciudad Real">
+                        <option value="Córdoba">
+                        <option value="Cuenca">
+                        <option value="Gerona">
+                        <option value="Granada">
+                        <option value="Guadalajara">
+                        <option value="Guipúzcoa">
+                        <option value="Huelva">
+                        <option value="Huesca">
+                        <option value="Islas Balears">
+                        <option value="Jaén">
+                        <option value="La Coruña">
+                        <option value="La Rioja">
+                        <option value="Las Palmas">
+                        <option value="León">
+                        <option value="Lérida">
+                        <option value="Lugo">
+                        <option value="Madrid">
+                        <option value="Málaga">
+                        <option value="Murcia">
+                        <option value="Navarra">
+                        <option value="Orense">
+                        <option value="Palencia">
+                        <option value="Pontevedra">
+                        <option value="Salamanca">
+                        <option value="Santa Cruz de Tenerife">
+                        <option value="Segovia">
+                        <option value="Sevilla">
+                        <option value="Soria">
+                        <option value="Tarragona">
+                        <option value="Teruel">
+                        <option value="Toledo">
+                        <option value="Valencia">
+                        <option value="Valladolid">
+                        <option value="Vizcaya">
+                        <option value="Zamora">
+                        <option value="Zaragoza">   
+                    </datalist>  
+                </td>
+            </tr>
+            <tr>
+                <td><br></td>
+                <td><br></td>
+            </tr>
+        </table>
+       
+        <table id="aa2">
+            <tr id="abcd">
+                <td><label for="foto">Foto del DNI para comprobacion de identidad</label></td>
+                <td><input type="file" id="foto"></td>
+            </tr>
+        </table>
+
+
+        <table id="aa2">
+            <tr>
+                <td><br><br></td>
+            </tr>
+            <tr id="abcd">
+                <td>
+                    <label for="At">Observaciones</label> <br>
+                    <textarea id="At" name="message" rows="8" cols="40">
+                    </textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><br><br></td>
+            </tr>
+        </table>
+        <table id="aa2">
+            <tr id="abcd">
+                <button style="background-color: black; color: white; border-radius: 50px; font-size: 20px;">ENVIAR</button>
+            </tr>
+        </table>
+        
+        <br><br><br>
+    </div>
+
+
+    <footer id="ft">
+        <p>®2023 Rincon Creativo Orgullasamente hecho en Wix.com</p>
+        <p style="margin-left: 10px;">info@mismo.com | Av. Los Rosales 122.28021.Madrid</p>
+        <a href="https://www.facebook.com/?locale=es_LA" class="fa fa-facebook" target="_blank"></a>
+        <a href="https://twitter.com/?lang=es" class="fa fa-twitter" target="_blank"></a>
+        <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+    <footer>
+</body>
+</html>

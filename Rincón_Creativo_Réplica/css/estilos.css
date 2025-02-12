@@ -1,0 +1,607 @@
+
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+
+
+a:visited {   /* Pseudo-class selectors 1*/
+  color: rgb(0, 0, 0); 
+}
+
+
+/* Boton facebook */
+.fa {
+    padding: 20px;
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    background:white;
+    color:black;
+  }
+  /* Boton de Twitter */
+  .fa-twitter {
+    background:white;
+    color:black;
+  }
+ /* Boton de Instagram */
+ .fa-instagram {
+    background:white;
+    color:black;
+  }
+
+
+#title{
+    font-weight: bold;
+    margin-right: 250px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+#title:active{
+    color: black;
+}
+
+.menu{
+    font-size: 15px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+
+
+#part2{
+    background-image: url(../images/fondo1.jpg);
+    background-size: 1500px 450px;
+    width: 100%;
+    margin: 0px;
+}
+
+#part2 h2{
+    font-size: 50px;
+}
+
+#plus{
+    font-size: 50px;
+}
+
+#part2 h2, #part2 h4, #botones, #part1, #part4{
+    margin-left: 300px;
+}
+
+btnA{
+    margin-left: 300px;
+}
+
+.btnn{
+    background: none;
+    color: white;
+    border-color: white;
+}
+
+#part2 h2, #part2 h4{
+ color: white;
+}
+
+#txtMod{
+    font-family: 'Lobster', cursive; /*Google Fonts*/
+    font-size: 20px;
+}
+
+#part3 {
+    background-color: #FFD500;
+    text-align: center;
+    color: black;
+    display: flex; /* Utiliza flexbox para centrar y alinear elementos */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+  }
+  
+  .icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px; /* Ajusta el espacio entre cada icono y su texto */
+  }
+  
+  .icon-container i {
+    font-size: 40px;
+    width: 100px; /* Ajusta el tamaño del círculo según tus preferencias */
+    height: 100px; /* Ajusta el tamaño del círculo según tus preferencias */
+    line-height: 100px;
+    background-color: white;
+    border-radius: 50%; /* Esto crea la forma de un círculo */
+    margin-bottom: 10px; /* Ajusta el espacio entre el ícono y el texto */
+  }
+
+
+/*Tabla de personas*/
+#per{
+  width: 140px;
+  height: 200px; 
+}
+
+#T2{
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+#Tab2, #TD33{
+  width: 20%; /* Establece el ancho de la tabla al 100% del contenedor div */
+  max-width: 800px;
+  text-align: justify;
+}  
+
+#TD44{
+  text-align: center;
+}  
+
+
+#TD1{
+  font-size: 40px;
+}
+
+#TD2{
+  padding-left: 8%;
+}
+
+.contact-heading2 {
+    color: white;
+    margin-top: -5px; /* Ajusta la posición vertical del h2 según tus preferencias */
+    display: inline-flex; /* Permite alinear verticalmente el ícono con el texto */
+    align-items: center; /* Centra verticalmente el ícono y el texto */
+    font-size: 40px;
+  }
+
+  #ft{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  #B1{
+    background-color: #FFD500;
+    width: 20%;
+  }
+
+  #P1{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  #P2{
+    display: flex;
+    margin-top: 50%;
+  }
+
+  #TDP{
+    margin-left: 100%;
+  }
+
+  div#PartePenult{
+    margin-top: 80px;
+    max-width: 100%;
+  }
+
+  #TD33{ /*Padding de la tabla de personas*/
+    padding: 20px;
+  }
+  
+
+
+
+
+
+  /*AQUI INICIA EL CSS PARA LA PAGINA 2*/
+
+.animate__animated {
+    display: inline-block;
+    margin: 0 0.5rem;
+  
+    animation: bounce; 
+    animation-duration: 10s; 
+}  
+
+
+[title~="encabezado"]{    /* Attribute Selectors CSS [attribute~="value"] Selector  debe contener palabra especifica en title*/
+  color: black;
+  font-weight: bold;
+  background: yellow;
+  font-size: 2em;
+  width: 100%;
+  padding: 20px 0;
+  margin: 0;
+  display: block; /* Asegura que el elemento sea un bloque */
+  
+}
+
+
+/*CARRUSEL CSS*/
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  background-color: white;
+  color: #000000;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  font-weight: bolder;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+/*FIN CARRUSEL*/
+
+
+
+
+/*TABLA*/
+section > table{    /*Child Selector-Combinator */
+  border: 2px solid black;
+}
+ 
+#a1 {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#a1 th, #a1 td {
+  border: 1px solid #e6e6e6;
+  padding: 15px;
+  text-align: left;
+}
+
+#a1 th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+#a1 tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#a1 td {
+  font-size: 16px;
+}
+
+#a1 td#b1 {
+  font-weight: bold;
+}
+
+#a1 tr:first-child {
+  background-color: #333;
+  color: white;
+}
+
+/* Estilo para :first-letter */
+#a1 td#b1::first-letter {
+  font-weight: bold;
+  font-size: 20px;
+  color: #000270;
+}
+
+/* Estilo para :first-line */
+#a1 td#c1::first-line {
+  font-weight: bold;
+}
+
+
+
+/*FORMULARIO*/
+#ancla {
+  text-align: center; /* Centra el contenido horizontalmente en el div */
+}
+
+#aa2 {
+  margin: 0 auto; /* Centra la tabla horizontalmente en el div */
+  width: 80%; /* Ajusta el ancho de la tabla según tus necesidades */
+  border-collapse: collapse;
+  border: none;
+}
+
+header#hd1{
+  text-align: left;
+  font-size: 40px;
+}
+
+
+table#aa2{
+  background-color: white;
+  color: black;
+}
+
+table#aa2 input{
+  background-color: lightgray;
+}
+
+
+tr#abcd{
+  margin-left: 40px;
+  display: flex;
+  font-weight: bold;
+}
+
+tr#dcba{
+  display: flex;
+  font-weight: bold;
+}
+
+section#articulo{
+  text-align: justify;
+  font-size: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+/*PAGINA 2*/
+
+[title*="ead2"]{
+  color: black;
+  font-weight: bold;
+  background: yellow;
+  font-size: 2em;
+  width: 100%;
+  padding: 20px 0;
+  margin: 0;
+  display: block; /* Asegura que el elemento sea un bloque */
+}
+
+#imagenes{
+  margin-top: 10%;
+}
+
+
+video#vid{
+  height: 40%;
+  width: 40%;
+}
+
+
+div#vdd{
+  text-align: center;
+}
+
+aside{
+  width: 20%;
+  padding: 15px;
+  float: right;
+  font-style: italic;
+  background-color: lightgray;
+}
+
+audio#aud{
+  background-color: lightgray;
+  width: 280px;
+}
+
+div#hh2 ~ p{          /*Sibling Selector-Combinator */
+  text-align: justify;
+  font-size: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+} 
+
+.container {
+  max-width: 400px; /* Reducimos el ancho máximo del contenedor */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form {
+  /* Cambiamos el display a block para que los elementos estén uno debajo del otro */
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 20px; /* Agregamos margen inferior para separar los grupos de campos */
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group input[type="date"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group textarea {
+  height: 100px; /* Reducimos la altura del campo de texto */
+  resize: vertical; /* Permitimos la redimensión vertical del campo de texto */
+}
+
+.checkbox-group label {
+  margin-right: 10px;
+}
+
+.submit-button {
+  text-align: center; /* Centramos el botón de envío */
+}
+
+div#imagenes{
+  display: flex;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+}
+
+img#emp1:hover {
+  filter: grayscale(80%);
+}
+
+
+img#emp2:hover {
+  filter: blur(5px);
+}
+
+img#emp3:hover {
+  filter: opacity(.5);
+}
+
+
+
+
+/* TERCERA APLICACION */
+/* The browser window */
+#Rank{
+  font-family: Arial;
+  margin: 0 auto; /* Center website */
+  max-width: 800px; /* Max width */
+  padding: 20px;
+}
+
+.heading {
+  font-size: 25px;
+  margin-right: 25px;
+}
+
+.fa {
+  font-size: 25px;
+}
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+}
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 70%;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
+.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}

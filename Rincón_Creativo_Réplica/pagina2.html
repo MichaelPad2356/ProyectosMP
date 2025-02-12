@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos de trabajo</title>
+
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">  <!--Favicon-->
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script
+      src="https://kit.fontawesome.com/a99fa1f648.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+    <div id="part1">
+        <nav>
+            <a href="#" id="title">rincón creativo</a>             
+            <a href="index.html" class="menu" id="inicio" style="color: #000000;">INICIO</a>
+            <a href="pagina1.html" class="menu" >ENCONTRAR</a>  <!-- AQUI TE LLEVA EN LA PAGINA 1 -->
+            <a href="pagina2.html" class="menu" style="color: #ffd500;">BUSCAR TRABAJO</a> <!-- AQUI TE LLEVA EN LA PAGINA 2 -->
+            <a href="https://www.facebook.com/?locale=es_LA" class="fa fa-facebook" target="_blank"></a>
+            <a href="https://twitter.com/?lang=es" class="fa fa-twitter" target="_blank"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+        </nav>
+    </div>
+
+    
+    <div id="hh2">
+        <header title="head2"><i class="fa-solid fa-plus" style="color: #000000;"></i>Busqueda de trabajos</header>
+    </div>
+
+    <p>
+        En un mundo en constante evolución, encontrar oportunidades laborales puede ser un desafío, pero con "Rincón Creativo," la búsqueda de empleo se vuelve más fácil que nunca. Nuestra plataforma es el lugar donde la innovación y el talento se unen, brindándote acceso a una amplia gama de oportunidades laborales emocionantes en diversas industrias.
+    </p>
+
+    <p>
+        En "Rincón Creativo," conectamos a profesionales creativos y altamente capacitados con empleadores que valoran la creatividad y la visión única. Ofrecemos una experiencia de búsqueda de trabajo simplificada y eficiente, donde puedes explorar puestos en empresas líderes y emergentes que buscan tu talento y experiencia.
+    </p>
+
+    <p>
+        Nuestro compromiso es ayudarte a avanzar en tu carrera y encontrar el empleo que se ajuste perfectamente a tus habilidades y metas. Descubre cómo "Rincón Creativo" puede abrir nuevas puertas para tu futuro profesional y facilitar la búsqueda de empleo de tus sueños. ¡Regístrate hoy mismo y comienza a explorar las infinitas posibilidades que tenemos para ofrecerte!
+    </p>
+
+
+    
+    <div id="vdd">
+        <video  id="vid" src="media/Cómo consegir el mejor trabajo.mp4" controls></video>
+
+        <aside>
+            <p>
+                ¡Trabajo disponible de inmediato! Estamos buscando profesionales motivados y comprometidos para unirse a nuestro equipo de manera urgente. Si buscas una oportunidad laboral emocionante y desafiante, ¡esperamos conocerte pronto!
+            </p>
+            <audio src="media/audio.mp3" controls id="aud"></audio>
+            <script>
+                cambiarVolumen(0.3);
+              </script>
+        </aside>
+        <script>
+            // Obtén una referencia al elemento de audio
+            var miAudio = document.getElementById('aud');
+          
+            // Ajusta el volumen inicial (por ejemplo, al 50%)
+            miAudio.volume = 0.3;
+          
+            // También puedes crear una función para cambiar el volumen
+            function cambiarVolumen(nuevoVolumen) {
+              miAudio.volume = nuevoVolumen;
+            }
+          </script>
+    </div>
+    
+    <div id="imagenes">
+        <img src="images/empleo1.png" alt="" id="emp1">
+        <img src="images/empleo2.jpg" alt="" id="emp2">
+        <img src="images/empleo3.jpg" alt="" id="emp3">
+    </div>
+
+    <div class="container">
+        <div id="hh2">
+            <header title="head2"><i class="fa-solid fa-plus" style="color: #000000;"></i>Solicitud de Empleo</header>
+        </div>
+        
+        <form class="form">
+            <div class="form-group">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Teléfono de contacto:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+            </div>
+
+            <div class="form-group">
+                <label for="puesto">Puesto solicitado:</label>
+                <input type="text" id="puesto" name="puesto" required>
+            </div>
+
+            <div class="form-group">
+                <label for="experiencia">Experiencia previa:</label>
+                <textarea id="experiencia" name="experiencia" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="educacion">Nivel de educación:</label>
+                <select id="educacion" name="educacion" required>
+                    <option value="secundaria">Secundaria</option>
+                    <option value="preparatoria">Preparatoria</option>
+                    <option value="licenciatura">Licenciatura</option>
+                    <option value="posgrado">Posgrado</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="disponibilidad">Disponibilidad horaria:</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="tiempo_completo" name="disponibilidad" value="tiempo_completo" required>
+                    <label for="tiempo_completo">Tiempo completo</label>
+                    <input type="radio" id="medio_tiempo" name="disponibilidad" value="medio_tiempo">
+                    <label for="medio_tiempo">Medio tiempo</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+            </div>
+
+            <div class="form-group">
+                <label for="acepta_terminos">Acepta los términos y condiciones:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="si_acepto" name="acepta_terminos" value="si" required>
+                    <label for="si_acepto">Sí</label>
+                    <input type="checkbox" id="no_acepto" name="acepta_terminos" value="no" required>
+                    <label for="no_acepto">No</label>
+                </div>
+            </div>
+
+            <div class="form-group submit-button">
+                <input type="submit" value="Enviar Solicitud">
+            </div>
+        </form>
+    </div>
+
+
+
+    <div id="Rank">
+        <span class="heading">User Rating</span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <p>4.1 average based on 254 reviews.</p>
+        <hr style="border:3px solid #f1f1f1">
+
+        <div class="row">
+        <div class="side">
+            <div>5 star</div>
+        </div>
+        <div class="middle">
+            <div class="bar-container">
+            <div class="bar-5"></div>
+            </div>
+        </div>
+        <div class="side right">
+            <div>150</div>
+        </div>
+        <div class="side">
+            <div>4 star</div>
+        </div>
+        <div class="middle">
+            <div class="bar-container">
+            <div class="bar-4"></div>
+            </div>
+        </div>
+        <div class="side right">
+            <div>63</div>
+        </div>
+        <div class="side">
+            <div>3 star</div>
+        </div>
+        <div class="middle">
+            <div class="bar-container">
+            <div class="bar-3"></div>
+            </div>
+        </div>
+        <div class="side right">
+            <div>15</div>
+        </div>
+        <div class="side">
+            <div>2 star</div>
+        </div>
+        <div class="middle">
+            <div class="bar-container">
+            <div class="bar-2"></div>
+            </div>
+        </div>
+        <div class="side right">
+            <div>6</div>
+        </div>
+        <div class="side">
+            <div>1 star</div>
+        </div>
+        <div class="middle">
+            <div class="bar-container">
+            <div class="bar-1"></div>
+            </div>
+        </div>
+        <div class="side right">
+            <div>20</div>
+        </div>
+        </div>
+    </div>
+
+    
+    <div>
+        <i class="fa-solid fa-rotate-left fa-beat"></i>
+        <a href="index.html" class="menu">REGRESAR AL INICIO</a>
+    </div>
+
+
+<br><br><br>
+    <!-- Pie de Pagina -->
+    <footer id="ft">
+        <p>®2023 Rincon Creativo Orgullasamente hecho en Wix.com</p>
+        <p style="margin-left: 10px;">info@mismo.com | Av. Los Rosales 122.28021.Madrid</p>
+        <a href="https://www.facebook.com/?locale=es_LA" class="fa fa-facebook" target="_blank"></a>
+        <a href="https://twitter.com/?lang=es" class="fa fa-twitter" target="_blank"></a>
+        <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+    <footer>
+    
+</body>
+</html>

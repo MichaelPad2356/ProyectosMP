@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rincon Creativo</title>
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">  <!--Favicon-->
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <script
+      src="https://kit.fontawesome.com/a99fa1f648.js"
+      crossorigin="anonymous"
+    ></script>
+            
+</head>
+<body>
+    
+    <div id="part1">
+        <nav>
+            <a href="#" id="title">rincón creativo</a>             
+            <a href="#" class="menu" id="inicio" style="color: #ffd500;">INICIO</a>
+            <a href="pagina1.html" class="menu" >ENCONTRAR</a>  <!-- AQUI TE LLEVA EN LA PAGINA 1 -->
+            <a href="pagina2.html" class="menu">BUSCAR TRABAJO</a> <!-- AQUI TE LLEVA EN LA PAGINA 2 -->
+            <a href="https://www.facebook.com/?locale=es_LA" class="fa fa-facebook" target="_blank"></a>
+            <a href="https://twitter.com/?lang=es" class="fa fa-twitter" target="_blank"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+        </nav>
+    </div>
+    
+    <div id="part2">
+        <br><br>
+        <h2>NUEVOS<i class="fa-solid fa-plus" style="color: #ffd500;" id="plus"></i><br>TALENTOS<br>EMPLEADORES<br>TOP</h2>
+        <h4 id="txtMod">crea futuro con los mejores</h4>
+        <div id="botones">
+            <button class="btnn" id="btnA">ENCONTRAR TALENTOS</button>
+            <button class="btnn" id="btnB">BUSCAR TRABAJO</button> 
+        </div>
+        <br>
+    </div>
+    
+    <div id="part3">
+        <div class="icon-container">
+          <i class="fa-solid fa-pencil"></i>
+          <p>DISEÑADORES<br>
+            GRAFICOS
+        </p>
+        </div>
+        <div class="icon-container">
+          <i class="fa-solid fa-scroll fa-flip-horizontal"></i>
+          <p>REDACTORES</p><br>
+        </div>
+        <div class="icon-container">
+          <i class="fa-regular fa-lightbulb"></i>
+          <p>DIRECTORES<br>
+             CREATIVOS
+            </p>
+        </div>
+        <div class="icon-container">
+          <i class="fa-solid fa-box-archive"></i>
+          <p>CLIENTES<br>
+             DIRECTORES
+        </p>
+        </div>
+      </div>
+
+
+    <div id="T2">
+        <table class="Tab2">
+            <tr>
+                <td id="TD1" colspan="4"> <i class="fa-solid fa-plus" style="color: #000000;"></i> SOBRE NOSOTROS </td>   
+
+            </tr>
+                
+
+            <tr>
+               <td id="TD2" colspan="4"> La gente detras del rincon creativo </td>
+            </tr>
+
+
+            <tr>
+                <td id="TD44" ><img id="per" src="images/Persona1.jpg" alt="No Disponible"> <br>
+                Roxana Rodriguez</td>
+                <td id="TD44"><img id="per" src="images/Persona2.jpg" alt="No Disponible"> <br>
+                Daniel Alvarez</td>
+                <td id="TD44"><img id="per" src="images/Persona3.jpg" alt="No Disponible"> <br>
+                Johan Diaz</td>
+                <td id="TD44"><img id="per" src="images/Persona4.jpg" alt="No Disponible"> <br>
+                Mariana Davila</td>
+            </tr>
+
+
+            <tr>
+                <td colspan="2" id="TD33">
+                    Somos una empresa en crecimiento, comprometida con el diseño y arquitectura de soluciones en forma de servicio, haciendo que tu solo te preocupes por hacer bien lo que sabes hacer.
+                    Los servicios que ofrecemos están basados en entender tus necesidades y ayudarte a que pasen las cosas.   
+                </td>
+
+                <td colspan="2" id="TD33">
+                    Estamos comprometidos con el hacer de las cosas, por esa razón queremos que las cosas 
+                    sean mas sencillas para la gente creativa. Por eso ofrecemos una creciente gama de 
+                    servicios que ayudaran a que puedas hacer bien, eso que sabes hacer bien, siendo un 
+                    aliado para tu negocio.
+                </td>
+                
+            </tr>
+        </table>
+    </div>
+
+
+    <div id="PartePenult" style="background-color: rgb(46, 45, 45); color: white;">
+        <header class="contact-heading2" id="part4"><i class="fa-solid fa-plus" style="vertical-align: middle; margin-right: 10px;"></i>CONTÁCTANOS</header>
+        <h4 id="part4">Tanto online como por telefono</h4>
+        <table id="part4"> <!--INICIO DE LA TABLA-->
+            <tr>
+                <td>    
+                    <i class="fa-regular fa-envelope"></i>info@misitio.com <br> <i class="fa-solid fa-phone"></i>Tel:914-123-456
+                </td>
+                <td style="padding-left: 30px;">
+                        Si eres talentoso y estas buscando <br>un trabajo, contactanos aqui: <br><br>
+                </td>
+            </tr> <!--FIN FILA 1-->
+
+            <tr>
+                <td>
+                    Av. Los Rosales 122
+                    <br>
+                    28021, Madrid
+                </td>
+
+                <td align="center">
+                    <input id="nombre" type="text" placeholder="   Nombre">
+                    <br>
+                    <input id="nombre" type="text" placeholder="   E-mail">
+                    <br>
+                    <input id="nombre" type="text" placeholder="   Telefono">
+                </td>
+
+
+                <td>
+                    <textarea id="miTextArea" name="miTextArea" rows="4" cols="25" onfocus="borrarMarcador()" style="font-family: Arial, Helvetica, sans-serif;">Escribe tu mensaje aqui...</textarea>
+                    <script>
+                        function borrarMarcador() {
+                            var textarea = document.getElementById("miTextArea");
+                                if (textarea.value === "Escribe tu mensaje aqui...") {
+                                    textarea.value = "";
+                                }
+                        }
+                    </script>
+                </td>
+                </tr> <!--FIN DE LA FILA 2-->
+
+                <tr>
+                    <td rowspan="5">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3040.693548881925!2d-3.678079724554872!3d40.34914365975096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4226bea29b54d9%3A0x9f6333f9b58b45c6!2sAv.%20de%20los%20Rosales%2C%20Madrid%2C%20Espa%C3%B1a!5e0!3m2!1ses-419!2smx!4v1694209483693!5m2!1ses-419!2smx" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </td>
+                    <td colspan="2" id="TDP" align="right" style="vertical-align: top;">
+                        <button id="B1">Enviar</button>
+                        <br>
+                        <br>
+                        <hr align="right" style="width: 450px;">
+                    </td>
+                </tr>  <!--FIN DE LA FILA 3-->
+                
+                <tr>
+                    <td style="padding-left: 30px;">                  
+                        Si estas buscando un talento,<br>contactanos aqui: <br><br>
+                    </td>      
+                </tr> <!--FIN DE LA FILA 4-->
+            
+                <tr>
+                    <td align="center">
+                        <input id="nombre" type="text" placeholder="   Nombre">
+                        <br>
+                        <input id="nombre" type="text" placeholder="   E-mail">
+                        <br>
+                        <input id="nombre" type="text" placeholder="   Telefono">
+                    </td>
+    
+    
+                    <td>
+                        <textarea id="miTextArea" name="miTextArea" rows="4" cols="25" onfocus="borrarMarcador()" style="font-family: Arial, Helvetica, sans-serif;">Escribe tu mensaje aqui...</textarea>
+                        <script>
+                                function borrarMarcador() {
+                                    var textarea = document.getElementById("miTextArea");
+                                    if (textarea.value === "Escribe tu mensaje aqui...") {
+                                        textarea.value = "";
+                                    }
+                                 }
+                        </script>
+                    </td>
+                </tr> <!--FIN DE LA FILA 5-->
+
+                <tr>
+                    <td colspan="2" id="TDP" align="right" style="vertical-align: top;">
+                        <button id="B1">Enviar</button>
+                        <br>
+                        <br>
+                    </td>
+                </tr> <!--FIN DE LA FILA 6-->
+        </table>
+        
+    </div>
+    <footer id="ft">
+        <p>®2023 Rincon Creativo Orgullasamente hecho en Wix.com</p>
+        <p style="margin-left: 10px;">info@mismo.com | Av. Los Rosales 122.28021.Madrid</p>
+        <a href="https://www.facebook.com/?locale=es_LA" class="fa fa-facebook" target="_blank"></a>
+        <a href="https://twitter.com/?lang=es" class="fa fa-twitter" target="_blank"></a>
+        <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+    <footer>
+</body>
+</html>
