@@ -1,0 +1,81 @@
+body {
+    background-color: #1c1c1c; /* Fondo negro */
+    color: #ffffff; /* Color de texto blanco */
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+  }
+  
+  h2 {
+    color: #d9534f; /* Color rojo para el título */
+  }
+  
+  .container {
+    margin-top: 20px;
+  }
+  
+  .card {
+    background-color: #2c2c2c; /* Fondo negro para las tarjetas */
+    border: 1px solid #d9534f; /* Borde rojo para las tarjetas */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    position: relative;
+  }
+  
+  .card-body {
+    color: #ffffff; /* Texto blanco en las tarjetas */
+  }
+  
+  .card-title {
+    color: #d9534f; /* Color rojo para los títulos de las tarjetas */
+  }
+  
+  .card-text {
+    font-size: 1em;
+    color: #e0e0e0; /* Color gris claro para el texto de las tarjetas */
+  }
+  
+  .btn {
+    margin-right: 5px;
+  }
+  
+  .btn-primary {
+    background-color: #d9534f;
+    border-color: #d9534f;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+  
+  .badge {
+    font-size: 0.9em;
+    padding: 8px 12px;
+    background-color: #d9534f;
+    color: white;
+    border-radius: 50px; /* Borde redondeado con puntas */
+    border: 2px solid white; /* Borde blanco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .position-absolute {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+

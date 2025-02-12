@@ -1,0 +1,64 @@
+<!-- nosotros.component.html -->
+<div class="about-container">
+  <header class="about-header">
+    <h1>Vinos del Valle</h1>
+    <p class="subtitle">La Quintaesencia de la Tradición Vitivinícola</p>
+  </header>
+
+  <section class="history">
+    <div class="section-title">
+      <h2>Nuestra Historia</h2>
+    </div>
+    <div class="history-content">
+      <p>
+        Fundados en 2010 en los fértiles valles de una región privilegiada, Vinos del Valle emerge como un símbolo de excelencia vitivinícola. Cada viñedo cuenta una historia milenaria, cada cosecha representa un compromiso con la perfección.
+      </p>
+      <p>
+        Nuestro legado se construye con pasión, conocimiento ancestral y una búsqueda incesante de la expresión más pura de nuestro terroir. No solo elaboramos vinos, creamos experiencias líquidas que narran la rica herencia de nuestra tierra.
+      </p>
+    </div>
+  </section>
+
+  <section class="team">
+    <div class="section-title">
+      <h2>Maestros Viticultores</h2>
+    </div>
+    <div class="team-grid">
+      @for (member of teamMembers; track member) {
+        <div class="team-member">
+          <div class="member-image-container">
+            <img [src]="member.image" [alt]="member.name">
+          </div>
+          <div class="member-info">
+            <h3>{{ member.name }}</h3>
+            <p class="role">{{ member.role }}</p>
+            <p class="bio">{{ member.bio }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </section>
+
+  <section class="values">
+    <div class="section-title">
+      <h2>Nuestra Filosofía</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-item">
+        <div class="icon">🍇</div>
+        <h3>Selección Meticulosa</h3>
+        <p>Cada uva es un tesoro. Seleccionamos únicamente los racimos que cumplen con nuestros rigurosos estándares de calidad.</p>
+      </div>
+      <div class="value-item">
+        <div class="icon">🌿</div>
+        <h3>Respeto Ambiental</h3>
+        <p>Nuestra viticultura abraza prácticas sostenibles, preservando la integridad de nuestros viñedos para las generaciones futuras.</p>
+      </div>
+      <div class="value-item">
+        <div class="icon">🏺</div>
+        <h3>Innovación Tradicional</h3>
+        <p>Equilibramos técnicas ancestrales con innovación moderna, creando vinos que son tanto una obra de arte como un tributo a la tradición.</p>
+      </div>
+    </div>
+  </section>
+</div>

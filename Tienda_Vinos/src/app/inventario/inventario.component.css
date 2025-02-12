@@ -1,0 +1,483 @@
+.card {
+  background-color: #2c2c2c; /* Fondo negro para las tarjetas */
+  border: 1px solid #d9534f; /* Borde rojo para las tarjetas */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  position: relative;
+}
+
+.wine-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.wine-card {
+background-color: rgba(20,10,5,0.7);
+border-radius: 15px;
+overflow: hidden;
+transition: transform 0.4s ease, box-shadow 0.4s ease;
+height: 100%;
+}
+
+.card-body {
+  color: #ffffff; /* Texto blanco en las tarjetas */
+}
+
+.card-title {
+  color: #d9534f; /* Color rojo para los títulos de las tarjetas */
+}
+
+.card-text {
+  font-size: 1em;
+  color: #e0e0e0; /* Color gris claro para el texto de las tarjetas */
+}
+
+.btn {
+  margin-right: 5px;
+}
+
+.btn-primary {
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.badge {
+  font-size: 0.9em;
+  padding: 8px 12px;
+  background-color: #d9534f;
+  color: white;
+  border-radius: 50px; /* Borde redondeado con puntas */
+  border: 2px solid white; /* Borde blanco */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.position-absolute {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.inventory-title {
+  color: #d9534f; /* Color rojo */
+  font-size: 2.5em; /* Tamaño de fuente más grande */
+  font-weight: bold; /* Negrita */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+  padding-bottom: 10px;
+  border-bottom: 3px solid #d9534f; /* Línea roja debajo del texto */
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .inventory-title {
+    font-size: 2em; /* Ajuste de tamaño para pantallas pequeñas */
+  }
+}
+
+
+
+/*ESTILOS PARA EL MODAL*/
+.modal-content {
+  background-color: #1c1c1c; /* Fondo más oscuro que el card original */
+  border: 2px solid #d9534f; /* Borde rojo prominente */
+  border-radius: 12px; /* Bordes redondeados suaves */
+  box-shadow: 0 8px 16px rgba(217, 83, 79, 0.2); /* Sombra con tono rojo */
+}
+
+.modal-header {
+  background-color: rgba(217, 83, 79, 0.1); /* Fondo tenue rojo */
+  border-bottom: 1px solid rgba(217, 83, 79, 0.3);
+  padding: 15px;
+}
+
+.modal-title {
+  color: #d9534f; /* Color rojo para el título */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-close {
+  color: #d9534f;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.btn-close:hover {
+  opacity: 1;
+}
+
+.modal-body {
+  background-color: #2c2c2c; /* Fondo oscuro para el cuerpo */
+  padding: 20px;
+}
+
+.form-label {
+  color: #e0e0e0; /* Gris claro para labels */
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.form-control, .form-select {
+  background-color: #3c3c3c; /* Fondo de inputs más claro */
+  border: 1px solid #4c4c4c;
+  color: #ffffff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  background-color: #4c4c4c;
+  border-color: #d9534f;
+  box-shadow: 0 0 0 0.2rem rgba(217, 83, 79, 0.25);
+  color: #ffffff;
+}
+
+.btn-primary {
+  background-color: #d9534f;
+  border-color: #b44136;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #b44136;
+  border-color: #932f28;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.form-select {
+  background-color: #3c3c3c; /* Fondo oscuro para el select */
+  color: #ffffff; /* Color de texto blanco para las opciones */
+  border: 1px solid #4c4c4c;
+}
+
+.form-select option {
+  background-color: #2c2c2c; /* Fondo oscuro para las opciones */
+  color: #ffffff; /* Color de texto blanco para las opciones */
+}
+
+/* Para navegadores basados en Webkit (Chrome, Safari) */
+.form-select::-webkit-selection {
+  background-color: #d9534f; /* Color de selección */
+  color: #ffffff;
+}
+
+/* Para navegadores Firefox */
+.form-select option:checked {
+  background-color: #d9534f !important; /* Color de opción seleccionada */
+  color: #ffffff;
+}
+
+
+
+
+/*Modal de edicion*/
+#editProductModal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+#editProductModal .modal-content {
+  background-color: #2c2c2c; 
+  border: 2px solid #d9534f;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+  margin: 10% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+}
+
+#editProductModal h2 {
+  color: #d9534f;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#editProductModal form {
+  display: flex;
+  flex-direction: column;
+}
+
+#editProductModal label {
+  color: #e0e0e0;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+#editProductModal input, 
+#editProductModal select {
+  background-color: #3c3c3c;
+  border: 1px solid #4c4c4c;
+  color: #ffffff;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#editProductModal input:focus,
+#editProductModal select:focus {
+  background-color: #4c4c4c;
+  border-color: #d9534f;
+  box-shadow: 0 0 0 0.2rem rgba(217, 83, 79, 0.25);
+}
+
+#editProductModal select option {
+  background-color: #2c2c2c;
+  color: #ffffff;
+}
+
+#editProductModal button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#editProductModal button[type="submit"] {
+  background-color: #d9534f;
+  color: white;
+}
+
+#editProductModal button[type="submit"]:hover {
+  background-color: #b44136;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#editProductModal button[type="button"] {
+  background-color: #6c757d;
+  color: white;
+  margin-left: 10px;
+}
+
+#editProductModal button[type="button"]:hover {
+  background-color: #555f66;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  #editProductModal .modal-content {
+    width: 95%;
+    margin: 5% auto;
+    padding: 15px;
+  }
+}
+
+
+
+
+
+
+.card {
+  background-color: #2c2c2c; /* Fondo negro para las tarjetas */
+  border: 1px solid #d9534f; /* Borde rojo para las tarjetas */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  position: relative;
+}
+
+.card-body {
+  color: #ffffff; /* Texto blanco en las tarjetas */
+}
+
+.card-title {
+  color: #d9534f; /* Color rojo para los títulos de las tarjetas */
+}
+
+.card-text {
+  font-size: 1em;
+  color: #e0e0e0; /* Color gris claro para el texto de las tarjetas */
+}
+
+.btn {
+  margin-right: 5px;
+}
+
+.btn-primary {
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.badge {
+  font-size: 0.9em;
+  padding: 8px 12px;
+  background-color: #d9534f;
+  color: white;
+  border-radius: 50px; /* Borde redondeado con puntas */
+  border: 2px solid white; /* Borde blanco */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.position-absolute {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.inventory-title {
+  color: #d9534f; /* Color rojo */
+  font-size: 2.5em; /* Tamaño de fuente más grande */
+  font-weight: bold; /* Negrita */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+  padding-bottom: 10px;
+  border-bottom: 3px solid #d9534f; /* Línea roja debajo del texto */
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .inventory-title {
+    font-size: 2em; /* Ajuste de tamaño para pantallas pequeñas */
+  }
+}
+
+.table-responsive {
+  margin-top: 30px;
+}
+
+.table th, .table td {
+  text-align: center;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+h3 {
+  margin-top: 50px;
+}
+
+
+
+.modal.show {
+  display: flex;
+}
+
+.modal-dialog {
+  max-width: 90%;
+  margin: auto;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.modal-body .table {
+  margin-bottom: 0;
+}
+
+.modal-body .table td {
+  vertical-align: middle;
+  padding: 0.75rem;
+  font-size: 0.9em;
+}
+
+/* Estilos para las tablas de Stock por Categoría y Pedidos */
+.table-striped tbody tr:nth-of-type(odd) {
+background-color: rgba(217, 83, 79, 0.1); /* Ligero fondo rojo para filas impares */
+
+}
+
+.table-bordered {
+border: 1px solid #d9534f; /* Borde rojo para las tablas */
+}
+
+.table-bordered th, 
+.table-bordered td {
+border: 1px solid #d9534f; /* Borde rojo para celdas */
+}
+
+.table thead {
+background-color: #2c2c2c; /* Fondo negro para el encabezado */
+color: #d9534f; /* Texto rojo para el encabezado */
+}
+
+/* Estilos específicos para las tablas de Productos Más Vendidos, Stock y Pedidos */
+.table-dark {
+background-color: #2c2c2c;
+}
+
+.table-dark th {
+color: #d9534f;
+border-bottom: 2px solid #d9534f;
+}
+
+/* Mejora para las imágenes en las tablas */
+.table .img {
+width: 80px; 
+height: 80px; /* Altura fija para uniformidad */
+object-fit: cover; /* Cubre todo el espacio manteniendo la proporción */
+border-radius: 5px;
+box-shadow: 0 2px 4px rgba(217, 83, 79, 0.2); /* Sombra con tono rojo */
+transition: transform 0.3s ease;
+}
+
+.table .img:hover {
+transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Estilos para las filas de las tablas */
+.table tbody tr {
+background-color: #2c2c2c;
+color: #e0e0e0;
+transition: background-color 0.3s ease;
+}
+
+.table tbody tr:hover {
+background-color: rgba(217, 83, 79, 0.2);
+}

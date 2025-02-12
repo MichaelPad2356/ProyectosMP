@@ -1,0 +1,104 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="../assets/images/logo.png" alt="Vinos del Valle" height="40">
+        <span class="ml-2 text-white">Vinos del Valle</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/home']">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/productos']">Productos</a>
+          </li>
+          @if (esAdministrador()) {
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/inventario']">Inventario</a>
+            </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/configuracion']">Configuración</a>
+            </li>
+          }          
+
+          
+
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/nosotros']">Sobre Nosotros</a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-nav ml-auto user-auth-section">
+        @if (usuario) {
+          <div class="user-profile d-flex align-items-center">
+            <div class="user-greeting mr-3">
+              <span class="text-light font-weight-semi-bold">
+                Bienvenido, {{ usuario.nombre }}
+              </span>
+            </div>
+            <!-- Icono del carrito -->
+            <button class="btn-carrito" (click)="toggleCarrito()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+              Carrito ({{ carrito.length }}) <!-- Mostrar cantidad de productos en el carrito -->
+            </button>
+            <button
+              class="btn btn-elegant-outline btn-logout"
+              (click)="logout()"
+              >
+              <i class="fas fa-sign-out-alt mr-2"></i>
+              Cerrar sesión
+            </button>
+          </div>
+        } @else {
+          <button
+            class="btn btn-premium-outline"
+            (click)="mostrarLogin = true"
+            >
+            <i class="fas fa-user-lock mr-2"></i>
+            Acceder
+          </button>
+        }
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Mostrar carrito -->
+@if (carritoVisible) {
+  <div class="cart-details">
+    <h3>Carrito</h3>
+    <ul>
+      @for (producto of carrito; track producto) {
+        <li>
+          {{ producto.Nombre }} - {{ producto.cantidad }} x ${{ producto.Precio }}
+        </li>
+      }
+    </ul>
+    <div class="cart-total">
+      <p>Total: ${{ totalCarrito }}</p>
+    </div>
+  </div>
+}
+
+<!-- Modal de Login -->
+@if (mostrarLogin) {
+  <div class="modal-backdrop">
+    <div class="modal-content">
+      <h5 class="modal-title">Iniciar sesión</h5>
+      <input type="text" [(ngModel)]="usuarioInput" placeholder="Usuario" class="form-control mb-2">
+      <input type="password" [(ngModel)]="contra" placeholder="Contraseña" class="form-control mb-2">
+      <button class="btn btn-primary" (click)="login()">Iniciar sesión</button>
+      <button class="btn btn-secondary" (click)="mostrarLogin = false">Cancelar</button>
+    </div>
+  </div>
+}

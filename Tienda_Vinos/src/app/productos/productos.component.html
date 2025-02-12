@@ -1,0 +1,101 @@
+<section class="wine-collection-section">
+  <div class="container-fluid px-5">
+    <!-- Encabezado de la sección -->
+    <div class="section-header text-center mb-5">
+      <h2 class="collection-title">Nuestra Colección Selecta</h2>
+      <p class="collection-subtitle">Vinos Excepcionales de Origen Certificado</p>
+    </div>
+
+    <!-- Filtros -->
+    <div class="wine-filter-container mb-4">
+      <div class="wine-filters">
+        <button
+          class="filter-btn"
+          [class.active]="filtroActivo === 'all'"
+          (click)="filtrarVinos('all')">
+          Todos
+        </button>
+        <button
+          class="filter-btn"
+          [class.active]="filtroActivo === 1"
+          (click)="filtrarVinos(1)">
+          Tintos
+        </button>
+        <button
+          class="filter-btn"
+          [class.active]="filtroActivo === 2"
+          (click)="filtrarVinos(2)">
+          Blancos
+        </button>
+        <button
+          class="filter-btn"
+          [class.active]="filtroActivo === 3"
+          (click)="filtrarVinos(3)">
+          Rosados
+        </button>
+        <button
+          class="filter-btn"
+          [class.active]="filtroActivo === 4"
+          (click)="filtrarVinos(4)">
+          Espumosos
+        </button>
+      </div>
+    </div>
+
+    <!-- Grid de Productos -->
+    <div class="row wine-grid">
+      @for (producto of productos; track producto) {
+        <div
+          class="col-xl-4 col-lg-6 col-md-6 mb-4 wine-item"
+          [hidden]="!mostrarVino(producto)">
+          <div class="wine-card">
+            <div class="wine-card-inner">
+              <!-- Imagen -->
+              <div class="wine-image-wrapper">
+                <!--<img [src]="'../../assets/images/' + producto.URL_Imagen" alt="{{producto.Nombre}}" class="wine-image" [alt]="producto.Nombre"> -->
+                <img [src]="'http://localhost:3000/uploads/' + producto.URL_Imagen" alt="{{producto.Nombre}}" class="wine-image">
+                <div class="wine-type-badge">Categoría {{ producto.ID_Categoria }}</div>
+              </div>
+              <!-- Detalles -->
+              <div class="wine-details">
+                <div class="wine-header">
+                  <h3 class="wine-name">{{ producto.Nombre }}</h3>
+                  <span class="wine-price">${{ producto.Precio }}</span>
+                </div>
+                <div class="wine-meta">
+                  <div class="meta-item">
+                    <i class="icon-bottle"></i>
+                    <span>{{ producto.Stock }} disponibles</span>
+                  </div>
+                </div>
+                <p class="wine-description">{{ producto.Descripcion }}</p>
+                <p>Descuento: {{ producto.Precio_Con_Descuento }}</p>
+                <!-- Botones -->
+                <div class="wine-actions">
+                  <button class="btn-add-cart" (click)="agregarAlCarrito(producto)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="9" cy="21" r="1"></circle>
+                      <circle cx="20" cy="21" r="1"></circle>
+                      <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    Añadir al Carrito
+                  </button>
+                  <button class="btn-details">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" y1="16" x2="12" y2="12"></line>
+                      <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    Detalles
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+

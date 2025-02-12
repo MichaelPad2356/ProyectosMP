@@ -1,0 +1,230 @@
+:root {
+    --color-wine-dark: #1a0c07;
+    --color-wine-red: #8b0000;
+    --color-wine-soft-red: #bc8f8f;
+    --color-gold: #d4af37;
+    --color-cream: #f5f5f5;
+    --color-text-primary: #2c2c2c;
+    --color-text-secondary: #555;
+}
+
+.wine-collection-section {
+    background: linear-gradient(135deg, var(--color-wine-dark) 0%, #0a0404 100%);
+    padding: 6rem 0;
+    color: var(--color-cream);
+}
+
+.section-header {
+    margin-bottom: 4rem;
+}
+
+.collection-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--color-wine-soft-red);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.collection-subtitle {
+    font-size: 1.5rem;
+    color: var(--color-gold);
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.wine-filter-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.wine-filters {
+    display: flex;
+    gap: 1rem;
+    background-color: rgba(255,255,255,0.05);
+    padding: 0.5rem;
+    border-radius: 50px;
+}
+
+.filter-btn {
+    background-color: transparent;
+    border: none;
+    color: var(--color-cream);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: var(--color-wine-red);
+    color: var(--color-cream);
+}
+
+.wine-card {
+    background-color: rgba(20,10,5,0.7);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    height: 100%;
+}
+
+.wine-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.wine-card-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.wine-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.wine-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.wine-card:hover .wine-image {
+    transform: scale(1.1);
+}
+
+.wine-type-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--color-wine-red);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.wine-details {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: linear-gradient(to bottom, rgba(20,10,5,0.9), rgba(20,10,5,0.95));
+}
+
+.wine-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.wine-name {
+    font-size: 1.6rem;
+    color: var(--color-wine-soft-red);
+    margin: 0;
+}
+
+.wine-price {
+    font-size: 1.5rem;
+    color: var(--color-gold);
+    font-weight: 700;
+}
+
+.wine-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    color: var(--color-cream);
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.meta-item i {
+    margin-right: 0.5rem;
+    opacity: 0.7;
+}
+
+.wine-description {
+    flex-grow: 1;
+    color: rgba(255,255,255,0.8);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.wine-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-add-cart,
+.btn-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-grow: 1;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.btn-add-cart {
+    background-color: var(--color-wine-red);
+    color: var(--color-cream);
+}
+
+.btn-details {
+    background-color: transparent;
+    color: var(--color-cream);
+    border: 2px solid rgba(255,255,255,0.2);
+}
+
+.btn-add-cart:hover {
+    background-color: color-mix(in srgb, var(--color-wine-red) 80%, white);
+}
+
+.btn-details:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+@media (max-width: 1200px) {
+    .wine-image {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .collection-title {
+        font-size: 2.5rem;
+    }
+
+    .wine-filters {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .wine-actions {
+        flex-direction: column;
+    }
+}
