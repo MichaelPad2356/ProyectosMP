@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+}
+
+.container {
+    display: flex;
+    
+}
+
+.sidebar {
+    width: 250px; 
+    height: 110vh;
+    padding: 20px;
+    background-size: cover;
+    margin-right: 50px;
+    background-image: url("../img/imgAdmin/backSidebar.jpg");
+    background-position: center;
+    border-radius: 4px;
+    border: none
+}
+
+.search-form {
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 100%;
+    align-items: center;
+}
+
+select, input {
+    padding: 8px; /* Espaciado interno */
+    margin: 8px 0; /* Espaciado externo */
+    border: 2px solid rgb(255,128,0);
+    border-radius: 4px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+
+.buttons button {
+    font-weight: bold;
+    color: rgb(255,128,0);
+    border: 2px solid rgb(255,128,0);
+    border-radius: 4px;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 rgb(255,128,0);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s, box-shadow 0.4s ease-out;
+}
+
+.buttons button::before,
+.buttons button::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(0);
+    transform-origin: 50% 50%;
+    transition: transform 0.5s, opacity 0.3s;
+    pointer-events: none;
+}
+
+.buttons button::before {
+    top: 0;
+    left: 0;
+}
+
+.buttons button::after {
+    bottom: 0;
+    right: 0;
+}
+
+.buttons button:hover::before,
+.buttons button:hover::after {
+    transform: scale(2);
+    opacity: 0;
+}
+
+.buttons button:hover {
+    color:white;
+    box-shadow: inset 0 100px 0 0 rgb(255,128,0);
+}
+
+
+#btnenviar{
+    font-weight: bold;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    margin-left: 110px;
+}
+
+#btnenviar:hover {
+    background-color: white;
+    color: rgb(0, 0, 0);
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+
+hr{
+    height: 1px;
+    background-color: rgb(255,128,0);
+    width: 84%;
+    margin: 20px auto;
+    border: none;
+    margin-top: 0px;
+    border-radius: 50px;
+    min-width: 500px;
+}
+
+#btnGraficas {
+    background-color: white;
+    color: rgb(255, 128, 0);
+    border: 5px solid rgb(255, 128, 0);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#btnGraficas:hover {
+    background-color: rgb(255, 128, 0);
+    color: white;
+    transform: scale(1.1); /* Hace que el botón sea un 10% más grande en hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Añade una sombra suave en hover */
+}

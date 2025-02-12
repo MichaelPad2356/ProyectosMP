@@ -1,0 +1,353 @@
+body{
+    margin: 0;
+}
+.custom-swal-button {
+    background-color: rgb(255, 128,0); /* Set your desired background color */
+    color: #ffffff; /* Set your desired text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.slogan{
+    font-family:sans-serif;
+     text-align: center;
+     font-weight: bold;
+     margin-top: 20px;
+ }
+ 
+ .slogan h1{
+     font-family: 'Bebas Neue', sans-serif;
+     font-size: 75px;
+ 
+ }
+ 
+ .slBtn{
+     background-color: black;
+     color: white;
+     border-radius: 20px;
+     border-color: black;
+     width: 170px;
+     height: 50px;
+     font-size: 20px;
+     margin-right: 15px;
+     margin-top: 5px;
+
+ }
+
+ .slBtn:hover{
+     background-color: rgb(216, 216, 216);
+     border: 2px;
+     color: black;
+     cursor: pointer;
+ }
+
+
+
+.contenedor{
+    display:grid ;
+    grid-gap: 25px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "imagen1    imagen1    imagen1    imagen2    imagen2"
+                         "imagen1    imagen1    imagen1    imagen2    imagen2"
+                         "imagen1    imagen1    imagen1    imagen2    imagen2"
+                         "imagen1    imagen1    imagen1    imagen2    imagen2"
+                         "imagen3    imagen4    imagen5    imagen6    imagen7"
+                         "imagen3    imagen4    imagen5    imagen6    imagen7"
+                         "imagen3    imagen4    imagen5    imagen6    imagen7"
+}
+
+
+.contenedor{
+    width:90%;
+    max-width: 1000px;
+    margin:auto;
+    font-size: 50px;
+    line-height: 50px;
+    text-align: center;  
+    padding-right: 100px;  
+}
+
+.contenedor > div{
+   display:block;
+   color: #fff;
+}
+
+.contenedor #imagen1{
+    grid-area: imagen1;
+}
+
+.contenedor #imagen2{
+    grid-area: imagen2;
+}
+
+.contenedor #imagen3{
+    grid-area: imagen3;
+}
+
+.contenedor #imagen4{
+    grid-area: imagen4;
+}
+
+.contenedor #imagen5{
+    grid-area: imagen5;
+}
+
+.contenedor #imagen6{
+    grid-area: imagen6;
+}
+
+.contenedor #imagen7{
+    grid-area: imagen7;
+}
+
+.imgAbajo{
+    height: 150px;
+    width: 200px;
+}
+
+#imgDerecha{
+    height: 310px;
+    width: 340px;
+}
+
+#imgIzquierda{
+    width: 650px;
+    height: 310px;
+}
+
+
+#secDiv{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: black;
+    color: white;
+
+}
+
+#secDiv img{
+
+    height: 400px;
+    width: 600px;
+
+}
+
+.tsecDiv{
+    padding-left: 70px;
+}
+
+.tsecDiv h1{
+    font-size: 50px;
+}
+
+.tsecDiv p{
+    font-size: 20px;
+    padding-right: 150px;
+}
+
+.flexContenedor{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+}
+
+.recDiv{
+    background-color: rgb(255, 128,0);
+    padding: 20px;
+    margin: 30px; 
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 4px;
+
+}
+
+.recDiv:hover{
+    cursor: pointer;
+    background-color: rgb(255, 152, 49);
+}
+
+/* RESPONSIVE DESIGGN SECDIV */
+
+@media screen and (max-width: 1200px) {
+    .tsecDiv {
+        text-align: left;
+        padding-left: 70px;
+    }
+
+    .recDiv {
+        margin: 20px;
+        width: 20%; /* Ajustar el ancho para evitar que los elementos sean demasiado pequeños */
+    }
+
+    #secDiv img {
+        height: 400px;
+        width: 500px;
+    }
+
+
+    
+}
+
+
+@media screen and (max-width: 992px) {
+    #secDiv {
+        padding-right: 0; /* Eliminar el padding en el lado derecho */
+    }
+
+    #secDiv img {
+        height: 300px;
+        width: 450px;
+    }
+
+    .tsecDiv h1 {
+        font-size: 35px;
+        padding-left: 20px; /* Ajustar el padding a un valor más pequeño */
+        text-align: left;
+    }
+
+    .tsecDiv p {
+        text-align: left;
+        font-size: 18px;
+        padding-left: 20px; /* Ajustar el padding a un valor más pequeño */
+        max-width: 100%; /* Permitir que el texto ocupe el ancho completo del contenedor */
+    }
+
+    .flexContenedor {
+        font-size: 14px;
+        padding-left: 20px; /* Ajustar el padding a un valor más pequeño */
+    }
+
+    .recDiv {
+        margin: 15px;
+        width: 45%; /* Ajustar para ocupar menos del 100% del ancho disponible */
+    }
+
+    .flexContenedor .recDiv {
+        width: 100%; /* Ajustar para ocupar el 100% del ancho disponible */
+    }
+}
+
+@media screen and (max-width: 830px) {
+    #secDiv img {
+        height: 200px;
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #secDiv img {
+        height: 200px;
+        width: 350px;
+    }
+
+    .tsecDiv h1 {
+        font-size: 30px;
+    }
+
+    .tsecDiv p {
+        font-size: 16px;
+        max-width: 100%; /* Permitir que el texto ocupe el ancho completo del contenedor */
+    }
+
+    .flexContenedor {
+        font-size: 12px;
+        flex-wrap: wrap;
+    }
+
+    .recDiv {
+        margin: 10px;
+        width: 100%; /* Ajustar para ocupar todo el ancho disponible */
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #secDiv img {
+        height: auto;
+    }
+
+    .tsecDiv h1 {
+        font-size: 25px;
+    }
+
+    .tsecDiv p {
+        font-size: 12px;
+        max-width: 100%; /* Permitir que el texto ocupe el ancho completo del contenedor */
+    }
+
+    .flexContenedor {
+        font-size: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .recDiv {
+        margin: 5px;
+        width: 20%; /* Ajustar para ocupar todo el ancho disponible */
+    }
+}
+
+
+
+/* RESPONSIDE DESIGN IMAGENES  */
+
+
+@media screen and (max-width: 1200px) {
+    #imgIzquierda {
+        width: 100%;
+        height: auto;
+    }
+
+    #imgDerecha {
+        width: 75%;
+        height: auto;
+    }
+
+    .imgAbajo {
+        width: 100%;
+        height: auto;
+    }
+
+    .imgAbajo {
+        height:100px;
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #imgIzquierda {
+        width: 100%;
+    }
+
+    .imgAbajo {
+        height:100px;
+        width: 150px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    #imgDerecha {
+        width: 100%;
+    }
+
+    .imgAbajo {
+        height:100px;
+        width: 150px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    .contenedor {
+        grid-template-areas: 
+            "    imagen1    "
+            "    imagen2    "
+            "imagen3 imagen4"
+            "imagen5 imagen6"
+            "    imagen7";
+    }
+}

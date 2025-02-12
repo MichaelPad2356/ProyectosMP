@@ -1,0 +1,277 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+#body{
+    position: relative;
+    height: 100vh;
+}
+nav{
+    background-color: white;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 15px 50px;
+    padding-top: 35px;
+    color: rgb(0, 0, 0);
+    height: 90px;
+    width: 100%;
+    min-width: 200px;
+    border-bottom: 1px solid rgb(204, 201, 201);
+    z-index: 6;
+}
+#hh{
+    width: 100%;
+    height: 90px;
+}
+#logoImg{
+    padding-bottom: 15px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav #nav-links{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.navL{
+    width: 70px;
+    height: 100%;
+}
+.navL{
+    width: 100px;
+    height: 100%;
+}
+.navL a{
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.5s;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+.navL a:hover{
+    color: #a1a1a1;
+    transition: 0.5s;
+}
+.hide{
+    top: 90px;
+}
+
+button{
+    padding: 8px 20px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.custom-button {
+    background-color: white;
+    border: 1px solid black;
+    font-weight: bolder;
+    color: black;
+}
+.custom-button:hover {
+    background-color: #000000; 
+    color: #fff;
+}
+.custom-button:active {
+    background-color:  #000000; 
+    color: #fff; 
+}
+.custom-button:hover .loginA{
+    color: white;
+}
+
+
+.loginA{
+    text-decoration: none;
+    color: black;
+}
+.loginA:hover{
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width:920px){
+    .hamburger{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        cursor: pointer;
+        padding: 10px;
+        margin-right: -10px;
+    }
+    .lines{
+        display: block;
+        background-color: rgb(0, 0, 0);
+        height: 2px;
+        width: 30px;
+    }
+    .lines-rotate{
+        background-color: rgb(232, 231, 231);
+        border-radius: 5px;
+    }
+    nav{
+        position: fixed;
+        padding: 15px 50px;
+        z-index: 6;
+    }
+    ul{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -600px;
+        right: 0;
+        background-color: white;
+        padding: 35px 0;
+        border-radius: 0 0 10px 10px;
+    }
+    .navL a{
+        color: rgba(12,11,11,0.836);
+    }
+    .navL{
+        text-align: center;
+        width: 90vw;
+    }
+    .navL a:hover{
+        font-weight: bold;
+        color: #191e24;
+        border: none;
+        letter-spacing: 3px;
+    }
+    #logoImg{
+        padding-top: 5px;
+        padding-bottom: 0px;
+        margin: 0;
+    }
+}
+#bagShop{
+    padding-top: 0px;
+    transition: filter 0.5s ease;
+}
+#numCarrito{
+    text-decoration: none;
+    color: black;
+}
+#bagShop:hover{
+    filter: brightness(200%);
+}
+
+/*Estilos Registro*/
+.oculto {
+    display: none;
+}
+
+
+/*Estilos del formulario*/
+#modalPassword .modal-content {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+#modalPassword h3 {
+    color: rgb(255, 128, 0);
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 27px;
+}
+
+#modalPassword .modal-body {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modalPassword .modal-body p {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#modalPassword .modal-body input[type="text"],
+#modalPassword .modal-body input[type="email"],
+#modalPassword .modal-body input[type="password"],
+#modalPassword .modal-body select {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(255, 128, 0);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#modalPassword .modal-body input[type="text"]:focus,
+#modalPassword .modal-body input[type="email"]:focus,
+#modalPassword .modal-body input[type="password"]:focus,
+#modalPassword .modal-body select:focus {
+    outline: none;
+    border-color: rgba(255, 128, 0, 0.8);
+    box-shadow: 0 0 5px rgba(255, 128, 0, 0.5);
+}
+
+#modalPassword .modal-body input[type="text"]:hover,
+#modalPassword .modal-body input[type="email"]:hover,
+#modalPassword .modal-body input[type="password"]:hover,
+#modalPassword .modal-body select:hover {
+    border-color: rgba(255, 128, 0, 0.5);
+}
+
+#modalPassword .modal-footer {
+    justify-content: center;
+    margin-top: 30px;
+    border: none;
+    padding-top: 15px;
+}
+
+#modalPassword .modal-footer #submitButton {
+    background-color: rgb(255, 128, 0);
+    border: 1px solid rgb(255, 128, 0);
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s, border-color 0.3s;
+    color: #fff;
+    cursor: pointer;
+}
+
+#modalPassword .modal-footer #submitButton:hover {
+    background-color: rgba(255, 128, 0, 0.8);
+    border-color: rgba(255, 128, 0, 0.8);
+}
+
+/*De esta forma se elimina la línea superior en el modal, Robert lo pidio jajaja*/
+#modalPassword .modal-header {
+    border: none;
+}
+.carrito{
+    padding-left:0px;
+    margin-left: 0;
+    margin-top: 15px;
+    padding-right: 0;
+    margin-right: 0;
+    height: 30px;
+}
+#textLogo{
+    color: rgba(255, 128, 0, 0.8);
+    font-size: 20px;
+}
