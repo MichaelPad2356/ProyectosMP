@@ -1,0 +1,132 @@
+body {
+    background: url('../media/back.gif') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    font-family: "Anta", sans-serif;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Color de texto para mejorar la visibilidad sobre la imagen de fondo */
+}
+
+#overlay {
+    padding: 20px;
+    border-radius: 15px;
+    position: relative; 
+}
+
+#title {
+    color: #ffffff; /* Rojo */
+    font-size: 75px;
+    margin-top: 10px;
+}
+
+#subtitle {
+    color: #faf5f5; /* Tono de rojo más claro */
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+#logo{
+    max-width: 75px;
+}
+
+#startButton {
+    /* boton de inicio */
+    background-color: #ff0000; /* Negro */
+    color: #ffffff; /* Rojo claro */
+    padding: 20px 40px;
+    font-size: 24px;
+    text-decoration: none;
+    border-radius: 12px;
+    animation: brillo 2s infinite;
+}
+
+@keyframes brillo {
+    0% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8); }
+    50% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 40px rgba(255, 255, 255, 0.9); }
+    100% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8); }
+}
+
+#startButton:hover {
+    background-color: #ff0000; /* Negro más oscuro al pasar el ratón */
+}
+
+#creditsButton {
+    font-size: 30px;
+    font-weight: bold;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    margin-top: 275px;
+    text-align: center;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Coloca los elementos al final del contenedor */
+    position: absolute; /* Coloca los botones en posición absoluta dentro del contenedor */
+    top: 20px; /* Ajusta la posición vertical de los botones */
+    right: 20px; /* Ajusta la posición horizontal de los botones */
+}
+
+.button-container button {
+    margin-left: 10px; /* Ajusta el espacio entre los botones */
+    transition: transform 0.2s;
+}
+
+.button-container button:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del botón al 110% cuando el cursor está sobre él */
+}
+
+/* Estilos generales */
+body {
+    background-color: #1a1a1a;
+    font-family: 'Press Start 2P', cursive;
+    color: #ececec;
+  }
+  
+  /* Botones */
+  #b1, #b2 {
+    margin: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Transición para la animación */
+  }
+  
+  #b1:hover, #b2:hover {
+    transform: scale(1.2); /* Escala el botón al 120% al pasar el cursor */
+  }
+  
+  /* Iconos */
+  .fa-volume-high, .fa-volume-xmark {
+    font-size: 2em;
+    color: #ffffff; /* Color de los iconos */
+    animation: pulse 2s infinite; /* Animación de pulso */
+  }
+  
+  /* Animación de pulso */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+ /* Estilos para los botones */
+/* #b1 {
+    display: inline-block;
+    margin-right: 10px; /* Ajusta el espacio entre los botones según sea necesario 
+    background: none;
+    border: none;
+    cursor: pointer;
+} */

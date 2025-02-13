@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla 2</title>
+    <link rel="stylesheet" href="../css/estilosJ2.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="icon" href="../media/logo-Photoroom.png-Photoroom.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="../js/JSjuego2.js"></script>
+    <script src="../js/cronometro.js"></script>
+    <script src="../js/principal.js"></script>
+
+</head>
+<body>
+    <button id="b1" onclick="PlayAudio()"><i class="fa-solid fa-volume-high"></i></i></button>
+    <br><br>
+    <button id="b1" onclick="PauseAudio()"><i class="fa-solid fa-volume-xmark"></i></button>
+
+    <div id="cronometro">00:00:00</div>
+    <!-- <button onclick="detenerCronometro()">Detener</button>
+    <button onclick="reiniciarCronometro()">Reiniciar</button> -->
+
+    
+       <!-- Lienzos para las casas -->
+       <div id="lienzoContainer">
+            <div id="lienzo1" class="lienzo"></div>
+            <div id="lienzo2" class="lienzo"></div>
+            <div id="lienzo3" class="lienzo"></div>
+        </div>
+
+        <!-- Sección para las imágenes de los personajes -->
+        <section id="cajasimagenes">
+            <!-- Aquí se agregarán dinámicamente las imágenes de los personajes -->
+        </section>
+
+        <!-- Mensaje del juego -->
+        <div id="mensajeJuego"></div>
+
+
+        <!-- Puntaje -->
+        <div id="puntaje">Puntaje: 0</div>
+
+
+        <br><br>
+        <button id="hh" class="game-button" onclick="irAPantallaPrincipal()">
+            <span class="button-text">Regresar a la pantalla principal</span>
+            <span class="button-icon">&#127918;</span>
+          </button>
+        <script>
+            // Función para redirigir a la pantalla principal
+            function irAPantallaPrincipal() {
+                window.location.href = "../index.html"; // Reemplaza con la ruta correcta
+            }
+        </script>
+
+        <audio id="musicaFondo" src="../media/MusicaFondo.wav"></audio> 
+        
+</body>
+</html>
+
