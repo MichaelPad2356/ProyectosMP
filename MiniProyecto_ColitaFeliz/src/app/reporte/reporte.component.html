@@ -1,0 +1,87 @@
+<div class="cuerpo">
+  <mat-card >
+    <mat-card-title class="tituloP">Reporte de Citas</mat-card-title>
+  </mat-card>
+  
+
+  <div class="botones-container">
+    <button mat-raised-button color="primary" class="boton-grande" (click)="mostrarCitasAnteriores = true; mostrarCitasPendientes = false">Citas Anteriores</button>
+    <button mat-raised-button color="primary" class="boton-grande" (click)="mostrarCitasAnteriores = false; mostrarCitasPendientes = true">Citas Pendientes</button>
+  </div>
+
+  <div class="tabla-container">
+    @if (mostrarCitasAnteriores) {
+      <div>
+        <mat-card class="titulo-card">
+          <h3 class="titulo">Citas Anteriores</h3>
+        </mat-card>
+        <table class="citas-table tabla-llamativa">
+          <thead>
+            <tr>
+              <th>Imagen</th>
+              <th>Nombre de la mascota</th>
+              <th>Nombre del Cliente</th>
+              <th>Teléfono</th>
+              <th>Fecha y Hora</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (cita of citasAnteriores; track trackByCita($index, cita)) {
+              <tr>
+                <td><img [src]="cita.imagen" alt="Imagen de la mascota" class="imagen-mascotaT"/></td>
+                <td>{{ cita.nombre }}</td>
+                <td>{{ cita.nombreCte }}</td>
+                <td>{{ cita.telCte }}</td>
+                <td>{{ cita.fechaCte | date:'dd/MM/yyyy' }} {{ cita.horaCte }}</td>
+              </tr>
+            }
+            @if (citasAnteriores.length === 0) {
+              <tr>
+                <td colspan="5">No hay citas anteriores para mostrar</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    }
+
+    @if (mostrarCitasPendientes) {
+      <div>
+        <mat-card class="titulo-card">
+          <h3 class="titulo">Citas Pendientes</h3>
+        </mat-card>
+        <table class="citas-table tabla-llamativa">
+          <thead>
+            <tr>
+              <th>Imagen</th>
+              <th>Nombre de la mascota</th>
+              <th>Nombre del Cliente</th>
+              <th>Teléfono</th>
+              <th>Fecha y Hora</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (cita of citasPendientes; track trackByCita($index, cita)) {
+              <tr>
+                <td><img [src]="cita.imagen" alt="Imagen de la mascota" class="imagen-mascotaT" /></td>
+                <td>{{ cita.nombre }}</td>
+                <td>{{ cita.nombreCte }}</td>
+                <td>{{ cita.telCte }}</td>
+                <td>{{ cita.fechaCte | date:'dd/MM/yyyy' }} {{ cita.horaCte }}</td>
+              </tr>
+            }
+            @if (citasPendientes.length === 0) {
+              <tr>
+                <td colspan="5">No hay citas pendientes para mostrar</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    }
+  </div>
+
+
+
+
+</div>

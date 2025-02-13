@@ -1,0 +1,32 @@
+<h2>Mejores Momentos</h2>
+<div class="animal-list">
+  @if (cargando) {
+    <div>Cargando...</div>
+  }
+  @if (!cargando) {
+  
+      <div class="row">
+        @for (perro of datos.slice(0, 20); track trackByFn($index, perro)) {
+          <div class="col">
+            <div class="animal-card">
+              <h3> <span [style.color]="'rgb(0, 0, 114)'" [style.font-weight]="'bold'">Comportamiento:</span> {{ perro.temperament }}</h3>
+              <!-- <p><strong>Peso:</strong> {{ perro.weight.imperial }} libras ({{ perro.weight.metric }} kg)</p>
+              <p><strong>Altura:</strong> {{ perro.height.imperial }} pulgadas ({{ perro.height.metric }} cm)</p>
+              <p><strong>Temperamento:</strong> {{ perro.temperament }}</p>
+              <p><strong>Criado para:</strong> {{ perro.bred_for }}</p>
+              <p><strong>Grupo:</strong> {{ perro.breed_group }}</p>-->
+              <p><strong>Esperanza de vida:</strong> {{ perro.life_span }}</p>
+              @if (perro.imageUrl) {
+                <div class="animal-image">
+                  <img class="small-image" [src]="perro.imageUrl" [alt]="perro.name">
+                </div>
+              }
+              <hr>
+              </div>
+            </div>
+          }
+        </div>
+    
+    }
+
+  </div>

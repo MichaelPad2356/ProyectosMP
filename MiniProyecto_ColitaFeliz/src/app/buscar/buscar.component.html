@@ -1,0 +1,65 @@
+<div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h2 class="text-primary mb-4">🐾Encuentra a tu nueva mascota🐾</h2>
+        <p class="intro-text mb-3">
+          En nuestro refugio, nos esforzamos por brindar un hogar temporal a perros y gatos rescatados, hasta que encuentren una familia amorosa que los adopte. Utiliza el formulario de búsqueda para ver si tienes una cita programada con nosotros. Si no encuentras una cita previa, no te preocupes. ¡Puedes agendar una visita en cualquier momento!
+        </p>
+        <p class="intro-text mb-4">
+          Explora nuestro sitio web y conoce a nuestros inquilinos peludos en busca de un nuevo compañero de vida. Juntos, podemos brindarles un hogar amoroso.
+        </p>
+        <form class="form-inline search-form justify-content-center mb-5" role="search" (ngSubmit)="buscarCliente()">
+          <div class="input-group">
+            <input class="form-control search-input rounded-left" type="search" placeholder="Ingresa tu nombre" aria-label="Search" [(ngModel)]="nombreABuscar" name="nombreABuscar">
+            <div class="input-group-append">
+              <button class="btn btn-primary search-btn rounded-right" type="submit">
+                <i class="fas fa-paw"></i> Buscar
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+    @if (clienteEncontrado !== undefined)
+    {
+      <div class="pet-card">
+          <div class="card">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img [src]="clienteEncontrado.imagen" class="card-img" alt="Imagen de la mascota">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">🐾 {{ clienteEncontrado.nombre }} 🐾</h5>
+                    <p class="card-text"><i class="fas fa-dog"></i> <strong>Raza:</strong> {{ clienteEncontrado.raza }}</p>
+                    <p class="card-text"><i class="fas fa-venus-mars"></i> <strong>Sexo:</strong> {{ clienteEncontrado.sexo }}</p>
+                    <p class="card-text"><i class="fas fa-calendar-alt"></i> <strong>Edad:</strong> {{ clienteEncontrado.edad }}</p>
+                    <p class="card-text"><i class="fas fa-palette"></i> <strong>Color:</strong> {{ clienteEncontrado.color }}</p>
+                    <p class="card-text"><i class="fas fa-smile"></i> <strong>Comportamiento:</strong> {{ clienteEncontrado.comportamiento }}</p>
+                    <p class="card-text"><i class="fas fa-clock"></i> <strong>Tiempo de Residencia:</strong> {{ clienteEncontrado.tiempoR }}</p>
+                    <hr>
+                    <h6 class="appointment-title"><i class="fas fa-calendar-check"></i>🐾 Detalles de la Cita 🐾</h6>
+                    <p class="card-text"><i class="fas fa-user"></i> <strong>Nombre del Cliente:</strong> {{ clienteEncontrado.nombreCte }}</p>
+                    <p class="card-text"><i class="fas fa-calendar-day"></i> <strong>Fecha de Cita:</strong> {{ clienteEncontrado.fechaCte }}</p>
+                    <p class="card-text"><i class="fas fa-clock"></i> <strong>Hora de Cita:</strong> {{ clienteEncontrado.horaCte }}</p>
+                    <p class="card-text"><i class="fas fa-phone"></i> <strong>Teléfono del Cliente:</strong> {{ clienteEncontrado.telCte }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>   
+     
+    }
+    
+    @if (clienteEncontrado === undefined && buscado)
+    {
+      <div class="alert">
+        <span class="closebtn">&times;</span>
+        <strong>Error:</strong> El usuario no fue encontrado.
+      </div>
+    }
+    
+  
+  <br><br><br>

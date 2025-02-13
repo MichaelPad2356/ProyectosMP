@@ -1,0 +1,9 @@
+@for (faq of preguntas; track faq) {
+    <div class="principal">
+      <h3 class="faq-question" (click)="faq.mostrarResp = !faq.mostrarResp" [class.active]="faq.mostrarResp">
+        {{ faq.pregunta }}
+      </h3>
+      <p class="faq-answer" [class.show]="faq.mostrarResp">{{ faq.respuesta }}</p>
+    </div>
+  }
+  

@@ -1,0 +1,162 @@
+/*Estilos imagen*/
+.cardImg {
+    width: 100%;  
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.cardImg .imgBox {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+.cardImg .imgBox img {
+    width: 100%;
+    height: auto;  
+    object-fit: cover;
+    object-position: center;  
+    border-radius: inherit;
+    transition: 0.5s ease-in-out;
+}
+
+.cardImg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid white;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+
+.cardImg:hover::after {
+    opacity: 1;
+    inset: 20px;
+}
+
+.cardImg:hover img {
+    filter: grayscale(1) brightness(0.4); 
+}
+
+.ContImg {
+    width: 100%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    opacity: 0; 
+    transition: opacity 0.4s ease-in-out; 
+}
+
+.cardImg:hover .ContImg {
+    opacity: 1;
+}
+
+/*Estilos de los card info*/
+/* Estilos base para las filas y columnas */
+.row {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las columnas se envuelvan en pantallas más pequeñas */
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.column {
+  padding: 20px;
+  flex: 1 1 300px; /* Ajusta para que cada columna tenga al menos 300px antes de envolver */
+  max-width: 50%; /* Limita el ancho máximo a 50% para pantallas grandes */
+}
+
+.column img {
+  width: 100%; /* Hace que las imágenes sean flexibles y se adapten al contenedor */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los pasos */
+.step {
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.step-number {
+  font-size: 20px; /* Aumenta el tamaño para mejor visibilidad */
+  color: #ffffff;
+  background-color: #ffa500;
+  width: 40px; /* Ajusta según la visibilidad deseada */
+  height: 40px; /* Mantiene la proporción del círculo */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -20px;
+  left: 20px;
+}
+
+h2, h3 {
+  color: #333;
+}
+
+p {
+  color: #666;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .column {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+
+  .step-number {
+    top: 10px; 
+    left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .row {
+    flex-direction: column; 
+  }
+}
+
+/*Requisitos*/
+.col {
+    margin-bottom: 20px; 
+  }
+  
+  .card {
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    color: #333; 
+    margin-bottom: 10px; 
+  }
+  
+  .card-text {
+    color: #666; 
+  }
+  
+  .card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  }
+  

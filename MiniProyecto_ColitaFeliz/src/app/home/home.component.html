@@ -1,0 +1,62 @@
+<body>
+  <app-carrusel></app-carrusel>
+
+<div class="container">
+  <app-historias-adopciones (storySelected)="showStoryDetails($event)"></app-historias-adopciones>
+  @if (selectedStory)
+  {
+    <div class="story-details">
+      <h2 class="titulo">
+        <i class="fas fa-heart"></i> {{ selectedStory.title }}
+      </h2>
+      <div class="image-container">
+        <img src="{{ selectedStory.imageUrl }}" alt="" class="story-image" />
+      </div>
+      <p class="fecha"><i class="fas fa-calendar-alt"></i> Fecha de adopción: {{ selectedStory.date }}</p>
+      <p class="detalles">{{ selectedStory.details }}</p>
+    </div>
+  }
+</div>
+
+<div class="section-1">
+  <div class="content">
+    <h2 class="t1">Voluntariado y Donativo</h2>
+    <p class="p1" >¡Tu ayuda es fundamental para poder seguir con nuestra misión!</p>
+    <p class="p2" >Te invitamos a conocer las formas en que puedes ayudarnos, ya sea en forma de donativo o compartiéndote en voluntario.</p>
+    <button class="boton-ver-mas">VER MÁS</button>
+  </div>
+  <div class="imagen-container">
+    <img class="full-width-height" src="assets/imagenes/inicio/Voluntariado_Donativo.jpg" alt="Gato">
+  </div>
+</div>
+
+<div class="section-2">
+  <div class="imagen-container">
+    <img class="full-width-height" src="assets/imagenes/inicio/Esterilizar_acto_de_amor.jpg" alt="Perros">
+  </div>
+  <div class="content">
+    <h3 class="t1" >Esterilizar es un acto de amor</h3>
+    <ul class="p22" >
+      <li>Beneficioso a su salud.</li>
+      <li>Solucionaría el problema de perros y gatos en situación de calle.</li>
+      <li>Influencia positiva en problemas conducta.</li>
+      <li>Disminución de territorialidad.</li>
+      <li>No más peleas por celo.</li>
+    </ul>
+    <button class="boton-leer-mas">LEER MÁS</button>
+  </div>
+</div>
+
+
+<div class="d1">
+  <app-api-component> </app-api-component>
+</div>
+
+  <div class="faq-section">
+    <h2 class="pFrec">
+      <i class="fas fa-question-circle"></i> Preguntas Frecuentes - Colita Feliz
+    </h2>
+    <app-preguntas-frecuentes [preguntas]="faqs"></app-preguntas-frecuentes>
+  </div>
+
+</body>

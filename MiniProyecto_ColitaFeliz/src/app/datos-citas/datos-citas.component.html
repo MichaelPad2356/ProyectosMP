@@ -1,0 +1,50 @@
+<div class="container my-5">
+  <div class="main-container">
+    <div class="animal-details-container">
+      <div class="animal-img-container">
+        <img class="animal-img" src="{{animalSeleccionado.imagen}}" alt="">
+      </div>
+      <h2 class="animal-name">{{animalSeleccionado.nombre}}</h2>
+      <div class="animal-info">
+        <h5><span class="info-label">Edad:</span> {{animalSeleccionado.edad}}</h5>
+        <h5><span class="info-label">Sexo:</span> {{animalSeleccionado.sexo}}</h5>
+        <h5><span class="info-label">Color:</span> {{animalSeleccionado.color}}</h5>
+        <h5><span class="info-label">Raza:</span> {{animalSeleccionado.raza}}</h5>
+        <h5><span class="info-label">Tiempo en el Refugio:</span> {{animalSeleccionado.tiempoR}}</h5>
+        <h5><span class="info-label">Comportamiento:</span> {{animalSeleccionado.comportamiento}}</h5>
+      </div>
+    </div>
+    <div class="datos">
+      <h1>¡Ven a Conocerme!</h1>
+      <div class="form-group">
+        <label for="nombre">Selecciona la fecha de visita</label>
+        <br>
+        <mat-form-field>
+          <mat-label>Fecha</mat-label>
+          <input matInput [matDatepicker]="picker2" [(ngModel)]="cliente.fechaCte" [min]="fechaActual" disabled>
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+          <mat-datepicker #picker2 disabled="false"></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <label for="nombre">Selecciona el horario de visita</label>
+        <br>
+        <input placeholder="Hora" [ngxTimepicker]="picker" [(ngModel)]="cliente.horaCte">
+        <ngx-material-timepicker #picker></ngx-material-timepicker>
+      </div>
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" placeholder="Ingrese su nombre" [(ngModel)]="cliente.nombreCte">
+      </div>
+      <div class="form-group">
+        <label for="telefono">Teléfono</label>
+        <input type="tel" class="form-control" placeholder="Ingrese su teléfono" [(ngModel)]="cliente.telCte">
+      </div>
+      <div class="adopt-btn-container">
+        <button type="button" class="btn btn-custom hover-effect" (click)="validarYEnviar()">Enviar</button>
+        <a [routerLink]="['/adopciones']" class="btn btn-custom hover-effect">Regresar</a>
+      </div>
+    </div>
+  </div>
+</div>

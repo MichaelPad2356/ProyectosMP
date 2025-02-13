@@ -1,0 +1,33 @@
+<body>
+  <h1 class="text-center mt-4" [style.font-family]="'Courier New'" [style.font-weight]="'700'" [style.color]="'#010362'" [style.font-size]="'30px'">Colita Feliz Adopciones</h1>
+  <div class="card-columns">
+    @for(adopt of animalesAdop; track adopt; let i=$index){
+    <div class="card rounded-lg shadow-lg mb-4" [style.max-width]="'100%'">
+      <img src="{{adopt.imagen}}" class="card-img-top rounded-top" alt="...">
+      <div class="card-body">
+        <h3 class="card-title text-center mb-4" [style.font-family]="'Courier New'" [style.font-weight]="'900'" [style.color]="'#FF6347'">{{adopt.nombre}}</h3>
+        <div class="d-flex flex-wrap justify-content-between mb-3">
+          <div class="mr-3">
+            <h6 style="font-family: 'Courier New', Courier, monospace; font-size: 15px; color: #333;"><span style="color: #007bff;">Edad:</span> {{adopt.edad}}</h6>
+            <h6 style="font-family: 'Courier New', Courier, monospace; font-size: 15px; color: #333;"><span style="color: #007bff;">Sexo:</span> {{adopt.sexo}}</h6>
+            <h6 style="font-family: 'Courier New', Courier, monospace; font-size: 15px; color: #333;"><span style="color: #007bff;">Color:</span> {{adopt.color}}</h6>
+          </div>
+          <div>
+            <h6 style="font-family: 'Courier New', Courier, monospace; font-size: 15px; color: #333;"><span style="color: #007bff;">Raza:</span> {{adopt.raza}}</h6>
+            <h6 style="font-family: 'Courier New', Courier, monospace; font-size: 15px; color: #333;"><span style="color: #007bff;">Tiempo en el Refugio:</span> {{adopt.tiempoR}}</h6>
+            <h6 style="font-family: 'Courier New', Courier, monospace; font-size: 15px; color: #333;"><span style="color: #007bff;">Comportamiento:</span> {{adopt.comportamiento}}</h6>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <a class="btn adopt-link" [ngStyle]="{'background-color': randomColor, 'color': 'white', 'font-weight': 'bold', 'border-radius': '20px'}" [routerLink]="['/citas', i]"><i class="fa-solid fa-paw"></i> Adóptame</a>
+        </div>
+      </div>
+    </div>
+    }
+
+
+  </div>
+  <!-- <link rel="stylesheet" href="../../../node_modules/bootstrap/scss/bootstrap.scss"> -->
+  <!-- <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css"> -->
+
+</body>

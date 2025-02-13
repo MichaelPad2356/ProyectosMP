@@ -1,0 +1,240 @@
+.titulo{
+    text-align: center;
+}
+
+.d1{
+  margin-top: 10px;
+}
+
+body{
+  background-color: #fefefe;
+}
+
+.pFrec{
+    text-align: center;
+    margin-top: 20px;
+    font-size: xx-large;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .detalles{
+    font-size: large;
+    letter-spacing: 2px;
+    color: #00047b;
+  }
+
+  .fecha{
+    font-weight: bold;
+    font-size: large;
+  }
+  
+  .story-container {
+    margin-bottom: 30px;
+    margin-top: 195px;
+  }
+  
+  .story-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+  }
+  
+  .story-item {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .story-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .story-item h3:hover {
+    text-decoration: underline;
+  }
+  
+  
+  .story-details {
+    background-color: #ffffff;
+    max-width: 900px;
+    border-radius: 8px;
+    padding: 20px;
+    color: #333;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slide-up 0.5s ease-in-out forwards;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+  }
+  
+  .story-details h2 {
+    margin-top: 0;
+    color: #1a0067;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+  }
+  
+  .story-details h2 i {
+    margin-right: 10px;
+    color: #f50000;
+  }
+  
+  .story-details p {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+  }
+  
+  .story-details p i {
+    margin-right: 10px;
+    color: #00047b;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; 
+    max-width: 95%;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  img{
+    border-radius: 15px;
+  }
+  
+  .story-image {
+    max-width: 60%;
+    height: auto;
+    display: block;
+  }
+
+.t1{
+  font-size: 50px;
+}
+
+.p1{
+  color:#a3b314;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.p2{
+  font-size: 15px;
+}
+
+.p22{
+  font-size: 17px;
+  color: #3a1e70;
+  font-weight: bold;
+}
+
+  .section-1 {
+    display: flex;
+    background-color: #3a1e70;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .section-1 .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrado vertical */
+    align-items: center; /* Centrado horizontal */
+    text-align: center;
+  }
+  
+  
+  .section-1 .imagen-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Agregar esta línea */
+  }
+  
+  .section-1 .imagen-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .section-2 {
+    color: white;
+    display: flex;
+    background-color: #a3b314;
+
+  }
+  
+  .section-2 .imagen-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Agregar esta línea */
+  }
+  
+  .section-2 .imagen-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .section-2 .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrado vertical */
+    align-items: center; /* Centrado horizontal */
+  
+  }
+  
+  .boton-ver-mas,
+  .boton-leer-mas {
+    background-color: white;
+    color: #6f42c1;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+  
+  .full-width-height {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  @keyframes slide-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+

@@ -1,0 +1,217 @@
+/* Navbar Styles */
+.navbar {
+    background-color: #2C3E50; /* Navy blue background */
+    padding: 14px 28px; /* Increased padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Stronger box shadow */
+    font-family: 'Lato', sans-serif; /* Professional font */
+  }
+  
+  .navbar-brand img {
+    height: 110px; /* Increased logo height */
+  }
+  
+  .navbar-nav .nav-link {
+    color: #FFFFFF; /* White text color */
+    font-weight: 700; /* Bold font weight */
+    margin-right: 28px; /* Increased spacing between links */
+    padding: 10px 18px; /* Increased padding for links */
+    border-radius: 6px; /* More rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition effects */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    background-color: rgb(0, 7, 144); /* Slightly darker background on hover */
+    color: #8e93a0; /* Slightly lighter text color on hover */
+  }
+  
+  .navbar-nav .nav-link.active {
+    background-color: #1A2633; /* Darker navy blue for active link */
+    color: #FFFFFF; /* White text color for active link */
+  }
+  
+  .form-control {
+    border-color: #2C3E50; /* Match the border color with the navbar background */
+    border-radius: 22px; /* More rounded corners for the search input */
+    padding: 10px 18px; /* Increased padding for the search input */
+  }
+  
+  .btn-outline-success {
+    color: #2C3E50; /* Navy blue button color */
+    border-color: #2C3E50;
+    border-radius: 22px; /* More rounded corners for the button */
+    padding: 10px 18px; /* Increased padding for the button */
+    transition: all 0.3s ease;
+  }
+  
+  .btn-outline-success:hover {
+    background-color: #2C3E50; /* Navy blue background on hover */
+    color: #FFFFFF; /* White text color on hover */
+  }
+  
+
+  /* Estilos para pantallas grandes */
+@media (min-width: 992px) {
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-item {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .nav-link {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Estilos para pantallas grandes (desktop) */
+@media (min-width: 1200px) {
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-item {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .nav-link {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Estilos para pantallas medianas (4 columnas) */
+@media (max-width: 1200px) {
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-item {
+    margin-right: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .nav-link {
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Estilos para pantallas pequeñas (3 columnas) */
+@media (max-width: 992px) {
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-item {
+    margin-right: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .nav-link {
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+/* Estilos para pantallas muy pequeñas (2 columnas) */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-item {
+    margin-bottom: 1rem;
+    margin-right: 0;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Estilos para pantallas móviles (1 columna) */
+@media (max-width: 576px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-item {
+    margin-bottom: 1rem;
+    margin-right: 0;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.75rem 1rem;
+  }
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff; /* Cambia el color del texto de las etiquetas <a> */
+  background-color: #05006e;
+}
+
+.custom-color {
+  color: #ffffff; /* Cambia el color del texto de las etiquetas <a> con la clase custom-color */
+  background-color: #05006e;
+}
+
+
+.lema-container {
+  display: inline-block;
+  position: relative;
+  padding: 10px 20px;
+  background-color: #00047b;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  animation: lema-animation 1s ease-in-out infinite alternate;
+}
+
+.lema-container::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.1)
+  );
+  animation: lema-shimmer 5s ease-in-out infinite;
+}
+
+.lema-text {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes lema-animation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes lema-shimmer {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(360deg);
+  }
+}
+
+

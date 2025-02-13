@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <div class="d-flex flex-column align-items-start">
+      <a class="navbar-brand" href="#">
+        <img src="assets/imagenes/LogoCF.png" alt="Refugio de Adopción" height="30">
+      </a>
+      <div class="lema-container">
+        <span class="lema-text">¡Héroes de 4 patas te esperan!</span>
+      </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" [routerLink]="['/home']" routerLinkActive="router-link-active">
+            <i class="fa-solid fa-house"></i> Inicio
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/adopciones']" routerLinkActive="router-link-active">
+            <i class="fa-solid fa-dog"></i> Adopciones
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/buscar']" routerLinkActive="router-link-active">
+            <i class="fa-solid fa-circle-info"></i> Detalles de tu Cita
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link custom-color" [routerLink]="['/reporte']" routerLinkActive="router-link-active">
+            <i class="fa-solid fa-calendar-days"></i> Reportes
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/nosotros']" routerLinkActive="router-link-active">
+            <i class="fa-solid fa-user"></i> Acerca de Nosotros
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " [routerLink]="['/ayuda']" routerLinkActive="router-link-active"> <i class="fa-solid fa-handshake-angle"></i> Formas de Ayudar</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/equipo']" routerLinkActive="router-link-active">
+            <i class="fa-solid fa-users"></i> Desarrolladores
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>

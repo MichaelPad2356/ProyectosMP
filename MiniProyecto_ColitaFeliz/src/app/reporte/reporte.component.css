@@ -1,0 +1,115 @@
+.tituloP{
+  font-size: 50px;
+  font-weight: bold;
+  color:rgb(250, 182, 94);
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(6, 4, 101);
+  text-shadow: #333 3px 3px 2px;
+  border-radius: 5px;
+}
+
+.titulo-card {
+  text-align: center;
+  font-size: 24px;
+  background-color: rgb(173, 215, 247);
+}
+
+/* Estilos para los botones */
+.botones-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.boton-grande {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease; /* Efecto de transición */
+  text-shadow: #333 3px 3px 2px;
+}
+
+.boton-grande:hover {
+  background-color: #3e0c58; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilos para las tablas */
+.tabla-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.tabla-llamativa {
+  text-align: center;
+  border-collapse: collapse;
+  border: 5px solid #95e7da;
+  margin: 0 auto;
+}
+
+.tabla-llamativa th,
+.tabla-llamativa td {
+  font-size: 20px;
+  padding: 8px;
+  border: 1px solid #45dcec;
+}
+
+.tabla-llamativa th {
+  background-color: #cef0f2;
+  font-weight: bold;
+}
+
+.tabla-llamativa tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.imagen-mascotaT {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+/* Estilos para los títulos */
+.titulo {
+  text-align: center;
+  color:rgb(250, 182, 94);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: x-large;
+  font-weight: bold;
+  margin-top: 10px;
+ 
+}
+
+/* Animación para las tarjetas de mascotas */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInUp {
+  animation: fadeInUp 0.5s ease;
+}
+
+.fadeInDown {
+  animation: fadeInDown 0.5s ease;
+}

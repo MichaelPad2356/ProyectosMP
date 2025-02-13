@@ -1,0 +1,11 @@
+<div class="story-container">
+    <h2 class="section-title">Historias de Adopción</h2>
+    <div class="story-group">
+      @for (story of stories; track story) {
+        <div class="story-item">
+          <h3 (click)="selectStory(story)">{{ story.title }}</h3>
+          <p>{{ story.summary }}</p>
+        </div>
+      }
+    </div>
+  </div>

@@ -1,0 +1,166 @@
+.container{
+  margin-top: 50px;
+}
+
+.img-effect {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 10px; /* Para suavizar las esquinas del marco */
+    overflow: hidden; /* Para ocultar la sombra que se desborda */
+  }
+  
+  .img-effect:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3), 0px 0px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Para el contenedor de la imagen */
+  .img-container {
+    display: inline-block; /* Para ajustar el tamaño al contenido */
+  }
+  
+
+  img{
+    margin: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .titulo {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 30px;
+    font-size: 50px;
+    color: rgb(0, 0, 107);
+  }
+  
+  .historia {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal; 
+    font-size: 20px;
+    padding-right: 40px;
+  }
+
+  hr{
+    height: 4px;
+    background-color: lightgrey;
+  }
+
+  .circulo {
+    width: 220px; /* Tamaño del círculo */
+    height: 220px; /* Tamaño del círculo */
+    border-radius: 50%; /* Hace que el div tenga forma circular */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde */
+    margin: 20px; /* Margen entre los círculos */
+    display: inline-block; /* Para que los círculos se coloquen en línea */
+    border: 2px solid #ccc; /* Borde del círculo */
+    vertical-align: middle; /* Centra verticalmente los elementos */
+    position: relative;
+  }
+
+  .circulo img {
+    width: 100%; /* Para que la imagen llene todo el círculo */
+    height: 100%; /* Para que la imagen llene todo el círculo */
+    object-fit: cover; /* Escala la imagen para llenar el contenedor */
+    margin: auto;
+  }
+
+  .equipo{
+    text-align: center;
+  }
+
+  .nombre {
+    position: absolute; /* Posiciona el nombre de manera absoluta */
+    bottom: 0; /* Lo coloca al fondo del círculo */
+    width: 100%; /* Ajusta el ancho al 100% */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    padding: 5px; /* Espacio interior */
+    box-sizing: border-box; /* Incluye el padding en el ancho */
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  iframe {
+    width: 640px;
+    height: 360px;
+  }
+
+  .abandono{
+    text-align: center; 
+    font-weight: bold; 
+    font-size: 15px;
+  }
+  
+  .instalaciones {
+    display: flex;
+    flex-direction: row;
+    padding-left: 50px;
+    margin-bottom: 20px
+  }
+  
+  .video2 {
+    flex: 1;
+    margin-right: 30px; 
+  }
+  
+  .texto {
+    flex: 2;
+    font-size: 18px;
+    margin-top: 80px;
+  }
+
+  .imginsta {
+    display: flex;
+    justify-content: space-between; 
+  }
+  
+  .imginsta img {
+    width: calc(30% - 10px); 
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .txtimg{
+    margin-top: 150px;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .imginsta img:hover {
+    transform: scale(1.1); 
+  }
+
+
+  .container-estadisticas {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .estadisticas {
+    flex: 1;
+    margin-right: 20px; 
+  }
+
+  .txtesta{
+    font-size: large;
+    padding-left: 30px;
+  }
+  
+  .imagen-estadisticas {
+    flex: 1;
+  }
+  
+  .imagen-estadisticas img {
+    width: 90%; 
+  }
+  
+  

@@ -1,0 +1,148 @@
+.intro-text {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 1.2rem; 
+    line-height: 1.8; 
+    color: #333; 
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8); 
+  }
+
+  .container{
+    margin-top: 30px;
+  }
+  
+  .intro-text p {
+    margin-bottom: 1.5rem; 
+  }
+  
+  .closebtn {
+    visibility: hidden;
+  }
+  
+
+  .intro-text strong {
+    color: #E67E22; 
+    font-weight: 700; 
+  }
+  
+  .intro-text em {
+    color: #16A085; 
+    font-style: italic; 
+  }
+  
+  h2.text-primary {
+    font-family: 'Montserrat', sans-serif;
+    font-size:30px;
+    font-weight: 700;
+    color: #ff6b6b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .search-form {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+  
+    .search-input {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  
+    .search-btn {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      background-color: #1A2633;
+      border-color:#1A2633;
+  
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+  
+  .pet-card {
+     font-family: 'Montserrat', sans-serif;
+    .card {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s;
+  
+      &:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+  
+      .card-img {
+        object-fit: cover;
+        height: 100%;
+      }
+  
+      .card-body {
+        .card-title {
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin-bottom: 1rem;
+          color: #2C3E50;
+        }
+  
+        .card-text {
+          font-size: 0.9rem;
+          margin-bottom: 0.5rem;
+  
+          i {
+            margin-right: 8px;
+            color: #2C3E50;
+          }
+  
+          strong {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  
+  .appointment-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #2C3E50;
+      margin-top: 1rem;
+  
+      i {
+        margin-right: 5px;
+      }
+  }
+  
+  .no-pet-found {
+    font-family: 'Montserrat', sans-serif;
+    padding: 1rem;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 0.25rem;
+  
+    i {
+      margin-right: 5px;
+    }
+  }
+  
+  .alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }

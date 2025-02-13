@@ -1,0 +1,69 @@
+.card-columns´{
+  margin-top: 15px;
+}
+
+.adopt-link {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+  }
+
+  .adopt-link::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  .adopt-link:hover {
+    filter: brightness(0.9);
+  }
+
+  .adopt-link:hover::before {
+    width: 200%;
+    height: 200%;
+    opacity: 1;
+  }
+
+   /* Estilos para pantallas grandes (5 columnas) */
+   .card-columns {
+    column-count: 5;
+    column-gap: 1.25rem;
+  }
+
+  /* Estilos para pantallas medianas (4 columnas) */
+  @media (max-width: 1200px) {
+    .card-columns {
+      column-count: 4;
+    }
+  }
+
+  /* Estilos para pantallas pequeñas (3 columnas) */
+  @media (max-width: 992px) {
+    .card-columns {
+      column-count: 3;
+    }
+  }
+
+  /* Estilos para pantallas muy pequeñas (2 columnas) */
+  @media (max-width: 768px) {
+    .card-columns {
+      column-count: 2;
+    }
+  }
+
+  /* Estilos para pantallas móviles (1 columna) */
+  @media (max-width: 576px) {
+    .card-columns {
+      column-count: 1;
+    }
+  }
